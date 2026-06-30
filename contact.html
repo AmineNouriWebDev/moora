@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis | Moora Motors Tunisie</title>
+    <meta name="description" content="Contactez Moora Motors pour toute demande d'information, réclamation ou pour obtenir un devis pour nos motos et scooters.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="scrolled"> <!-- Always scrolled on subpages -->
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe</a></li>
+                            <li><a href="haojin.html">Haojin</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Casques <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Axor (Bientôt)</a></li>
+                            <li><a href="#">Vega (Bientôt)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Huiles</a></li>
+                    <li><a href="#" class="nav-link">Pneus</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li>
+                        <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-section">
+        <div class="container">
+            <h1 class="section-title" data-aos="fade-up">Contact & Demande de Devis</h1>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 3rem;">
+                Vous êtes intéressé par nos modèles ou vous avez une question ?<br>
+                Remplissez le formulaire ci-dessous ou contactez-nous directement.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-form" data-aos="fade-right" data-aos-delay="200">
+                    <form action="#" method="POST" id="devisForm">
+                        <div class="form-group">
+                            <label for="nom">Nom & Prénom / Société *</label>
+                            <input type="text" id="nom" name="nom" class="form-control" required placeholder="Votre nom complet">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telephone">Numéro de téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" class="form-control" required placeholder="+216 XX XXX XXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="exemple@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="modele">Modèle qui vous intéresse</label>
+                            <select id="modele" name="modele" class="form-control">
+                                <option value="">Choisir un modèle...</option>
+                                <option value="Letbe Neon">Letbe Neon 125cc (5 900 DT)</option>
+                                <option value="Haojin Lyra">Haojin Lyra 2 110cc (3 800 DT)</option>
+                                <option value="Autre">Demande Générale</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre Message *</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Détaillez votre demande ici..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+                    </form>
+                </div>
+                
+                <div class="contact-details" data-aos="fade-left" data-aos-delay="300">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-content">
+                                <h3>Notre Adresse</h3>
+                                <p>Usine d'assemblage Moora Motors<br>Près de Mornag, Tunisie</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="info-content">
+                                <h3>Téléphone</h3>
+                                <p>+216 29 444 650</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="info-content">
+                                <h3>WhatsApp</h3>
+                                <p>+216 28 485 424</p>
+                                <a href="https://wa.me/21628485424" target="_blank" class="text-accent" style="font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: inline-block;">Discuter sur WhatsApp <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div class="info-content">
+                                <h3>Horaires d'ouverture</h3>
+                                <p>Lundi - Vendredi: 8h00 - 17h00<br>Samedi: 8h00 - 13h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container" data-aos="fade-up" data-aos-delay="400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102377.92384752678!2d10.1555!3d36.6788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd35fb2912a7eb%3A0xc68e31a0e0e0a!2sMornag!5e0!3m2!1sfr!2stn!4v1700000000000!5m2!1sfr!2stn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Note: The exact coords for Moora Motors aren't public, using Mornag general area as placeholder in iframe, but link in footer points to specific pin -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie. Distributeur officiel Haojin et Letbe.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="contact.html">Demander un devis</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1rem;">Voir sur la carte</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Moora Motors. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('devisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre demande a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

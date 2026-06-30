@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letbe Neon 125cc | Moora Motors</title>
+    <meta name="description" content="Découvrez le scooter Letbe Neon 125cc chez Moora Motors. Design Neo Retro, Injection électronique BOSCH, technologie Honda.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-hero {
+            padding: 8rem 0 4rem;
+            background-color: var(--bg-tertiary);
+        }
+        
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .product-gallery {
+            position: relative;
+        }
+        
+        .main-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-info h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-family: 'Rajdhani', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .specs-table th, .specs-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+        
+        .specs-table th {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-primary);
+            width: 40%;
+        }
+        
+        .video-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .video-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+            .video-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe</a></li>
+                            <li><a href="haojin.html">Haojin</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Casques <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Axor (Bientôt)</a></li>
+                            <li><a href="#">Vega (Bientôt)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Huiles</a></li>
+                    <li><a href="#" class="nav-link">Pneus</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li>
+                        <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-hero">
+            <div class="container product-container">
+                <div class="product-gallery" data-aos="fade-right">
+                    <img id="letbe-product-img" src="img/moto/letbe/neon/letbe-neon-jaune.jpg" alt="Letbe Neon 125cc" class="main-image">
+                </div>
+                
+                <div class="product-info" data-aos="fade-left">
+                    <div class="badge" style="position: static; display: inline-block; margin-bottom: 1rem;">Nouveau Modèle</div>
+                    <h1>LETBE NEON 125cc</h1>
+                    <div class="product-price">5 900 DT TTC</div>
+                    <p style="font-weight: 600; color: var(--accent-secondary);">Garantie : 1 an / 10.000 KM</p>
+                    
+                    <p>Scooter urbain alliant design Neo Retro, confort et économie. Idéal pour la ville.</p>
+                    
+                    <div style="margin: 2rem 0;">
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Couleurs disponibles :</p>
+                        <div class="color-selector">
+                            <div class="color-dot active" title="Vert/Blanc" data-image="img/moto/letbe/neon/vert-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #4CAF50;"></div>
+                            <div class="color-dot" title="Noir Mat" data-image="img/moto/letbe/neon/letbe-neon-noir-mat.jpg" data-target="letbe-product-img" style="background-color: #212121;"></div>
+                            <div class="color-dot" title="Orange/Blanc" data-image="img/moto/letbe/neon/orange-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #FF9800;"></div>
+                            <div class="color-dot" title="Bleu Ciel/Blanc" data-image="img/moto/letbe/neon/bleu-ciel-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #03A9F4;"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="moto-features" style="margin-bottom: 2rem;">
+                        <li><i class="fas fa-check-circle"></i> Injection électronique BOSCH 🇩🇪</li>
+                        <li><i class="fas fa-check-circle"></i> Moteur Technologie Honda 🇯🇵</li>
+                        <li><i class="fas fa-check-circle"></i> Démarrage Keyless & Freinage CBS</li>
+                        <li><i class="fas fa-check-circle"></i> Consommation faible (2.2L/100km)</li>
+                    </ul>
+                    
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="https://wa.me/21628485424?text=Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20LETBE%20NEON" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> Réserver un essai</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Fiche Technique</h2>
+                <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <th>Catégorie</th>
+                                <td>Scooter urbain</td>
+                            </tr>
+                            <tr>
+                                <th>Moteur</th>
+                                <td>Monocylindre 4 temps, 125 cc</td>
+                            </tr>
+                            <tr>
+                                <th>Puissance</th>
+                                <td>8.5 ch</td>
+                            </tr>
+                            <tr>
+                                <th>Couple</th>
+                                <td>9.4 Nm</td>
+                            </tr>
+                            <tr>
+                                <th>Refroidissement</th>
+                                <td>Air</td>
+                            </tr>
+                            <tr>
+                                <th>Alimentation</th>
+                                <td>Injection électronique Bosch</td>
+                            </tr>
+                            <tr>
+                                <th>Freinage</th>
+                                <td>Disque/Tambour - ABS/CBS</td>
+                            </tr>
+                            <tr>
+                                <th>Poids</th>
+                                <td>108 kg</td>
+                            </tr>
+                            <tr>
+                                <th>Vitesse maximale</th>
+                                <td>88 km/h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="video-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-container">
+                        <video controls autoplay muted loop>
+                            <source src="img/moto/letbe/neon/let-be-neon-rouge.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-container">
+                        <video controls autoplay muted loop>
+                            <source src="img/moto/letbe/neon/letbe-neon-bleu-blanc.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

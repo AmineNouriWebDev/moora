@@ -1,0 +1,350 @@
+Rôle : Tu es un expert en web design (UI/UX) et en développement web (Front-end, Responsive Design, intégration d'animations). Tu possèdes une grande expérience dans la création de sites e-commerce et vitrines pour le secteur automobile et motocycliste.
+
+Objectif : Générer le code complet 
+
+(HTML, CSS, Tailwind CSS,JavaScript) et la structure d'un site web vitrine moderne, performant et responsive pour Moora Motors, un concessionnaire et usine d'assemblage de motos et scooters en Tunisie.
+
+
+
+
+1. Identité de la Marque et Informations Générales
+
+•
+Nom de l'entreprise : MOORA MOTORS (Usine d'assemblage motos et scooters)
+
+•
+Slogan / Sous-titre : HAOJIN🏍️ & LETBE🛵 BY MOORA MOTORS
+
+•
+Logo principal : ./img/logo.png
+
+•
+Contact :
+
+•
+Téléphone : 29 444 650
+
+•
+WhatsApp : +216 28 485 424
+
+
+
+•
+Réseaux Sociaux :
+
+•
+Facebook : https://www.facebook.com/profile.php?id=61573713938458
+
+•
+Instagram : https://www.instagram.com/moora_motors_tn/
+
+•
+TikTok : https://www.tiktok.com/@letbe.haojin.moora
+
+
+
+
+
+
+2. Structure du Site et Navigation
+
+Le site doit comporter une page d'accueil générale et un menu de navigation clair.
+
+Menu Principal :
+
+•
+Accueil
+
+•
+Motos (Menu déroulant )
+
+•
+Letbe
+
+•
+Haojin
+
+
+
+•
+Casques (Menu déroulant - Coming Soon)
+
+•
+Axor
+
+•
+Vega
+
+
+
+•
+Huiles (Coming Soon)
+
+•
+Pneus (Coming Soon)
+
+•
+Contact
+
+
+
+
+3. Design et Expérience Utilisateur (UI/UX)
+
+•
+Thème Principal : Thème clair (Light Mode) dominant, inspiré par des sites comme novago.com.tn et qjmotor.fr. Le design doit être épuré, professionnel, avec beaucoup d'espace blanc pour mettre en valeur les produits.
+
+•
+Fonctionnalité requise : Un bouton "Dark Mode" (Mode Sombre) accessible dans le header pour basculer l'interface.
+
+•
+Inspiration UI : Prendre exemple sur ki-motors.tn pour les options interactives fantastiques, notamment la possibilité de changer la couleur des motos directement sur la page (sélecteur de couleurs interactif).
+
+•
+Responsive Design : Le site doit être parfaitement adapté aux mobiles, tablettes et ordinateurs de bureau (Mobile-First approach).
+
+3.1. Animations et Interactions (Inspirations)
+
+Pour une expérience utilisateur dynamique et moderne, les animations suivantes sont requises :
+
+•
+Transitions de Page : Effets de fondu (fade-in) fluides lors du chargement des sections au défilement, inspirés par QJ Motor France.
+
+•
+Menu de Navigation :
+
+•
+Menu "sticky" (fixe) qui reste visible au défilement.
+
+•
+Soulignement animé des liens au survol (hover) avec une transition douce.
+
+•
+Menus déroulants (dropdowns) avec une légère transition de haut en bas.
+
+
+
+•
+Interactions Produits (survol) :
+
+•
+Légère élévation de la carte produit (box-shadow) et zoom discret sur l'image de la moto, similaire à QJ Motor France.
+
+•
+Effets de "glow" ou de changement de couleur sur les boutons "Coming Soon" pour les rendre interactifs.
+
+
+
+•
+Carrousels : Glissement fluide (swipe) entre les modèles phares dans le Hero Banner, avec des indicateurs de progression.
+
+•
+Animations au Défilement (Scroll Animations) : Apparition des éléments (icônes, texte, images) avec des effets de glissement (slide-up) ou de zoom-in progressifs, inspirés par Novago Tunisia. L'utilisation de bibliothèques comme AOS (Animate On Scroll) ou WOW.js est recommandée.
+
+•
+Boutons Flottants : Un bouton WhatsApp ou "Réserver un essai" fixe dans un coin de l'écran avec une petite animation de pulsation pour attirer l'attention (Novago Tunisia).
+
+•
+Sélecteur de Couleurs Dynamique : L'animation de changement d'image de la moto doit être instantanée mais fluide (fondu croisé) lors de la sélection d'une couleur.
+
+•
+Mode Sombre : Transition globale de la palette de couleurs (background et texte) avec une durée de 0.3s à 0.5s pour une expérience visuelle agréable.
+
+•
+Vidéo Background : Intégration de vidéos en arrière-plan (muted, autoplay, loop) dans le Hero Banner pour un aspect premium, comme observé sur QJ Motor France.
+
+
+
+
+4. Contenu de la Page d'Accueil
+
+La page d'accueil doit être structurée en plusieurs sections :
+
+Section 1 : Hero Banner (En-tête)
+
+•
+Mise en avant des deux modèles phares (Letbe Neon et Haojin Lyra 2).
+
+•
+Utilisation du logo et du slogan.
+
+•
+Boutons d'appel à l'action (CTA) clairs (ex: "Découvrir nos modèles").
+
+Section 2 : Nos Motos (Produits Actuels)
+
+Modèle 1 : LETBE NEON 125cc
+
+•
+Prix : 5900 DT TTC
+
+•
+Garantie : 1 an / 10.000 KM
+
+•
+Couleurs disponibles (avec sélecteur interactif) : Vert/Blanc, Noir mat, Orange/Blanc, Bleu clair (ciel)/Blanc.
+
+•
+Description : Scooter urbain alliant design Neo Retro, confort et économie. Idéal pour la ville.
+
+•
+Points forts : Injection électronique BOSCH 🇩🇪, Moteur Technologie Honda 🇯🇵, Éclairage Full LED, Écran numérique, Démarrage Keyless, Freinage CBS, Consommation faible (2.2L/100km).
+
+•
+Fiche Technique :
+
+•
+Moteur : Monocylindre 4 temps, 125 cc
+
+•
+Puissance : 8.5 ch | Couple : 9.4 Nm
+
+•
+Refroidissement : Air
+
+•
+Alimentation : Injection électronique Bosch
+
+•
+Freinage : Disque/Tambour - ABS
+
+•
+Poids : 108 kg | Vitesse max : 88 km/h
+
+
+
+•
+Images/Vidéos : Les médias sont dans ./img/moto/letbe/. Les noms de fichiers sont descriptifs (ex: moto-vue-complete-arriere.jpg).
+
+Modèle 2 : HAOJIN LYRA 2 110cc (Euro 2 🇪🇺)
+
+•
+Prix : 3800 DT TTC (Carte grise gratuite)
+
+•
+Couleurs disponibles (avec sélecteur interactif) : Bleu💙/Gris nardo, Noir⚫️/Dorée🟡.
+
+•
+Description : Moto sportive et robuste, conçue pour la performance et l'économie, adaptée à la ville et aux voies rapides.
+
+•
+Points forts : Moteur C110CC Euro 2, Carburateur DENI 🇹🇼, Double embrayage, Freins à disque (avant/arrière), Jantes alliage 18 rayons, Compteur LCD, Phares LED, Alarme avec télécommande, Lecteur MP3/Bluetooth/Radio.
+
+•
+Fiche Technique :
+
+•
+Moteur : Monocylindre 4 temps, 110 cc
+
+•
+Puissance : 10 ch (4.7 kW à 7500 tr/min) | Couple : 14 Nm
+
+•
+Refroidissement : Air
+
+•
+Transmission : Semi-automatique 4 vitesses
+
+•
+Vitesse max : 100 km/h
+
+
+
+•
+Images/Vidéos : Les médias sont dans ./img/moto/haojin/.
+
+Section 3 : Équipements & Accessoires (Coming Soon)
+
+Une présentation élégante des futures marques distribuées.
+
+•
+Casques Axor : Casques premium alliant style et sécurité. Modèles intégraux (Apex, Brutale) avec designs agressifs, aérodynamisme (spoilers), et technologies comme le Bluetooth intelligent (Mercury Intercom).
+
+•
+Casques Vega : Leader du marché indien depuis 1982. Focus sur la sécurité et l'innovation ("Quality above Quantity"). Gamme variée (Bolt, Zap, Dirt-X) avec des designs audacieux.
+
+•
+Huiles Putoline 🟡 : Fabriquées en Hollande depuis 1970. Spécialiste exclusif des lubrifiants pour deux-roues ("Driven by Technology"). Huiles de haute qualité (technologie N-TECH®) pour une performance optimale.
+
+•
+Pneus Eurogrip : Spécialiste des pneus haute performance pour motos et scooters. Offre un grip supérieur, une grande durabilité et un contrôle parfait sur tous les terrains (gammes Sport, Scooter, Tout-terrain).
+
+
+
+
+5. Structure des Dossiers (Ressources)
+
+Le code généré doit respecter l'arborescence suivante pour les images :
+
+•
+Racine : ./img/
+
+•
+Logo : ./img/logo.png
+
+•
+Motos : ./img/moto/
+
+•
+Letbe : ./img/moto/letbe/ (contient images et vidéos nommées de façon descriptive)
+
+•
+Haojin : ./img/moto/haojin/ (contient images et vidéos nommées de façon descriptive)
+
+
+
+•
+Casques : ./img/casques/
+
+•
+Axor : ./img/casques/axor/
+
+•
+Vega : ./img/casques/vega/
+
+
+
+•
+Huiles : ./img/oil/
+
+•
+Pneus : ./img/pneu/
+
+
+
+
+
+
+6. Instructions pour la Génération du Code
+
+1.
+HTML5 Sémantique : Utiliser des balises claires (<header>, <nav>, <section>, <article>, <footer>).
+
+2.
+CSS3 Moderne : Utiliser Flexbox et CSS Grid pour la mise en page. Implémenter des variables CSS (Custom Properties) pour gérer facilement le basculement entre le thème clair (par défaut) et le thème sombre.
+
+3.
+JavaScript (Vanilla) :
+
+•
+Créer la logique pour le bouton "Dark Mode".
+
+•
+Créer la logique pour le sélecteur de couleurs des motos (changer l'image affichée en fonction de la couleur sélectionnée par l'utilisateur).
+
+•
+Gérer le menu de navigation responsive (menu hamburger sur mobile).
+
+•
+Implémenter les animations au défilement (scroll animations) et les effets de survol (hover effects) décrits dans la section 3.1.
+
+
+
+4.
+Design System : Proposer une palette de couleurs élégante (dominante blanche/grise claire pour le fond, avec des accents de couleur pour les boutons et les éléments interactifs). Choisir des polices Google Fonts modernes (ex: Roboto, Montserrat ou Poppins).
+
+Génère le code complet (HTML, CSS, JS) dans des blocs séparés, prêt à être intégré par un développeur. Assure-toi que le design soit à la hauteur des références fournies (Novago, QJ Motor, KIM Motors).
+
+
+
+

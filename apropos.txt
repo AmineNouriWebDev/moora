@@ -1,0 +1,211 @@
+JE VAIS CREER UN SITE POUR un concessionnaire de motos en Tunisie moora-motors.tn
+Actuellement il fournit que deux marques de scooter:
+Letbe et Haojin
+En futur il va aussi fournir les casques pour deux marques :
+Vega et Axor
+Et aussi au futur il va fournir de l'huile moteur de la parque Petoline et des pneu de la marque Eurogrip
+
+Je veux créer un site dans la page d'accueil on affiche les deux motos disponibles et une petite présentation des casques , huiles et pneu
+
+J'ai créé un dossier img en racine qui contient les dossier (moto (contient aussi deux dossiers (letbe et haojin) , casques(contient deux dossier (axor et Vega) , oil , pneu)
+Actuellement dans chaque dossier et sous dossier il y'a un logo de la marque et pour les deux dossiers img/moto/letbe img/moto/letbe et img/moto/haojin il contiennent les images de motos et des vidéos
+J'ai nommé les noms des images pour que l'agent ia connait le contenu de l'image par exemple moto-vue-complete-arriere (veux dire que l'image est prise par arrière du moto complete ) ou bien rétroviseur-droit veux dire image du rétroviseur droit pareil pour les vidéos
+Les couleurs des deux marques de motos disponibles sont:
+- Letbe neon : (verts/blanc,noir mate,oranger/blanc,bleu claire (ciel) / blanc)
+
+- Lyra 2 ( Blue💙 / Gris nardo) et Noir ⚫️ / Dorée 🟡 ⏱️ 
+
+J'ai collecté des info mais d'une façon séparé car le propriétaire du site ne m'a pas fourni des documents et des informations donc j'étais obligé à les collecter depuis internet
+
+Toi aussi tu dois vérifier sur internet pour trouver des informations surtout sur les marques de casques et peu et l'huile (je t'ai fourni les sites officiels)
+
+Les huiles sont de la marque putoline en arrivage ceci est le site fr https://www.putoline.com/fr/
+
+ Huile de Putoline 🟡
+Fabriqué en Hollande
+
+Les pneu sont eurogrip
+Site officiel : https://eurogriptyres.eu/fr
+
+Casques Axor : https://axorhelmets.com/?srsltid=AfmBOooqYoi8CZj_Zaw0jzBh2j1DmIS6tXryeHEFT059ch0GX97UJVcH
+
+Casques vega : https://vegaauto.com/?srsltid=AfmBOoqPu8X3NwgbD2rSwhbhFxXvK7bkqvvuHAQhXCsOol5fR0TYUvzy
+
+
+
+=> Donc je créé une page d'accueil générale pour tout les produits disponible et coming soon
+Et un menu pour les motos , les casques les huiles , les pneu et des sous menu pour les motos et casques parce que chacun possède deux marques
+
+Je veux que tu jette un coup d'oeil sur ces deux sites :
+- https://www.novago.com.tn/
+- https://qjmotor.fr/
+
+Ceci est un site que j'ai créé pour ki-motors.tn mais pour moora-motors.tn je ne veux pas un thème sombre 
+Je veux des thème blanc comme Novago et qjmotor avec la possibilité d'ajouter un bouton darkmode
+https://ki-motors.tn/
+Jette un coup d'oeuil aussi su ki-motors il est beaux avec des options fantastiques comme le changement des couleurs 
+
+
+Je veux que tu me donne un prompt avec tout les informations pour lui donner à gemini ai de google antigravity
+Tu doit être professionnel et expert en web design et web développement (responsive design)
+Logo principal : ./img/logo.png
+
+A propos de moora motors:
+Usine d'assemblage motos et scooters
+HAOJIN🏍️& LETBE🛵BY ~MOORA MOTORS~
+Tel 29 444 650
+Whatsapp. +216 28 485 424
+
+Facebook: https://www.facebook.com/profile.php?id=61573713938458
+Instagram : https://www.instagram.com/moora_motors_tn/
+Tiktok: : https://www.tiktok.com/@letbe.haojin.moora 
+
+
+
+
+Haojin Lyra 2 : carte grise gratuite: style performant et économique au meilleur prix 3800 dinar tunisien
+
+HAOJIN LYRA  في سوق الأوروبية اليونان 🇬🇷🇪🇺
+‎دراجة الناريه رياضية و المتينه صممت لأداء أفضل و أسرع معا استهلاكً اقل للوقود  l 
+و صديقة للبيئه لأقل انبعاثات  من الوقود Euro 2 بنضام 🇪🇺
+
+HAOJIN Lyra 2 110  Euro 2 🇪🇺
+النوع: أحادي الأسطوانة، رباعي الأشواط
+* السعة: 107 سم مكعب (C110)
+* التبريد: هوائي
+* carburateur Déni :نظام الوقود
+* التشغيل: كهربائي + تشغيل يدوي
+* الإشعال: CDI
+* ناقل الحركة: شبه أوتوماتيكي بأربع سرعات
+* معيار الانبعاثات: يورو 2
+* القدرة: حوالي 4.7 كيلوواط (6.3 حصان) عند 7500 دورة في الدقيقة
+صُمم محرك C110 من أجل:
+*   التنقل اليومي داخل المدينة و على طرق سريعة 
+* استهلاك منخفض للوقود.
+* صيانة بسيطة واقتصادية.
+* موثوقية عالية للاستخدام اليومي والمهني.
+مزايا محرك يورو 2
+* استهلاك أقل للوقود.
+* انبعاثات محدودة وفقًا لمعيار يورو 2.
+* تصميم ميكانيكي بسيط ومتين.
+* قطع غيار متوفرة بسهولة.
+يتميز محرك هاوجين ليرا C110 بالموثوقية والاقتصاد والمتانة. بفضل تقنية يورو 2 رباعية الأشواط، يوفر تشغيلًا سلسًا واستهلاكًا منخفضًا للوقود ومتانة فائقة للاستخدام اليومي في المدينة وعلى الطرق السريعة.
+HAOJIN LYRA 2  110
+Les couleurs qui existent actuellement son deux:
+
+- Blue💙 / Gris nardo 🩶  
+- HAOJIN LYRA 110cc Noir ⚫️ / Dorée 🟡 ⏱️ 
+
+
+HAOJIN Lyra-2. Moteur à chaîne de distribution C110CC, Euro 2, 🇪🇺double embrayage.
+ Carburateur DENI. 🇹🇼 Frein à main disque avant et arrière.
+Jantes en alliage à 18 rayons, compteur de vitesse LCD.
+Phare LED.
+Feu avant LED / clignotants avant LED.
+Pneus CST : avant 2.5-17, arrière 2.75-17 tubeless 
+Carter de chaine / repose dos, pare-brise.
+Alarme Avec télécommande
+Avec lecteur MP3 et Bluetooth.Radio 
+
+
+
+
+LETBE NEON ❤️ROUGE انتضروا مزيد من جديد ⏱️
+سكوتر LETBE NEON 125cc يجمع بين التصميم العصري والأداء العملي ليمنحك تجربة قيادة مريحة وأنيقة داخل المدينة. يتميز بخطوطه الهادئة ولمساته الراقية مع مصابيح LED حديثة وشاشة رقمية تعطيه مظهراً متطوراً يناسب الشباب ومحبي الأناقة.
+المحرك بسعة 125cc مع نظام حقن إلكتروني BOSCH يوفر استهلاكاً اقتصادياً للوقود وأداءً سلساً وثابتاً في التنقل اليومي. كما يتمتع السكوتر بخفة الحركة وسهولة التحكم، مما يجعله مثالياً للشوارع المزدحمة والتنقل المريح داخل المدينة.  
+من أبرز مميزاته:
+* تصميم Neo Retro عصري وأنيق
+* محرك اقتصادي وقوي 125cc
+* إضاءة LED كاملة
+* شاشة رقمية حديثة
+* تشغيل Keyless بدون مفتاح
+* فرامل CBS / لمزيد من الأمان
+* مساحة تخزين عملية ومقعد مريح
+* استهلاك منخفض للوقود حوالي 2.2L/100km  
+✨ LETBE NEON 125 ليس مجرد سكوتر، بل أسلوب حياة يجمع بين الراحة، 
+التكنولوجيا، والأناقة في كل رحله
+
+
+
+
+HAOJIN LYRA 110cc EURO 2 🇪🇺
+Stay tuned ⏱️ قريبا..
+Lyra-2 Moteur à chaîne de distribution C110CC, double embrayage.
+. 
+Carburateur DENI Taiwan 🇹🇼 Frein à disque avant et arrière.
+Jantes en alliage à 18 rayons, 
+compteur de vitesse LCD.
+Repose dos à lumière et stop 
+Phare LED.
+Feu arrière complet, clignotants avant LED.
+Pneus CST : avant 2.5-17, arrière 2.75-17 tubelless
+Carter de chaîne complet, dosseret arrière, pare-brise.
+Avec télécommande. System alarme 
+Avec lecteur MP3 et Bluetooth et radio 
+
+
+
+Les couleurs qui existent actuellement pour letbe neon sont:
+-verts-blanc
+-noir mate
+-oranger-blanc
+-bleu claire (ciel) - blanc
+
+
+
+
+
+
+LETBE NEON 125 🛵 
+garantie 1 ans / 10.000KM
+LETBE NEON 125 🛵
+INJECTION BOSCH 🇩🇪
+Moteur Technologie Honda 🇯🇵 
+
+✨ اكتشفوا سكوتر LETBE NEON 125cc الجديد كلياً، بتصميم عصري وأنيق يجمع بين الراحة، الأداء والاقتصاد في استهلاك الوقود. تم تصميمه ليمنحكم تجربة قيادة سلسة وممتعة داخل المدينة وخارجها.
+🏍️ محرك بتقنيه يابانيه 🇯🇵 125cc عملي وموثوق
+💡 تصميم حديث مع لمسات عصرية مميزة
+🛣️ قيادة مريحة وثبات ممتاز على الطريق
+⛽ استهلاك اقتصادي للوقود
+🎨 وقريباً سيكون متوفراً بألوان جديدة ومميزة لتناسب جميع الأذواق.
+
+NEON — Smart, Stylish, and Built for Everyday Freedom ⚡
+
+Lightweight, agile, and designed for urban riders, the NEON brings together performance and safety in one sleek package.
+
+🔹 125cc air-cooled engine — smooth and efficient
+🔹 Max speed up to 88 km/h — perfect for city cruising
+🔹 ABS + TCS — enhanced stability and confident braking
+🔹 Front & rear disc brakes — reliable stopping power
+🔹 Only 108 kg — easy handling for daily rides
+🔹 Fuel consumption ≤2.1L/100km — ride more, spend less
+
+With its modern design, comfortable 740mm seat height, and compact build, NEON is made to navigate the city with ease and style
+
+LETBE SPAIN 🇪🇸🇪🇺 🛵 
+
+
+Fiche technique lyra2 (3800 dt)ttc:
+Catégorie	Scooter
+Type moteur	monocylindre 4 temps
+Cylindrée	110 cc
+Puissance	10 ch
+Couple Maximal	14 Nm
+Refroidissement	A air
+Vitesse Maximale	100 km/h
+Réservoir	-
+Alimentation	Carburateur CDI
+Freinage	Disque/Disque
+
+Fiche technique letbe neon (prix 5900 dt ttc):
+Catégorie	Scooter
+Type moteur	Monocylindre 4 temps
+Cylindrée	125 cc
+Puissance	8.5 ch
+Couple Maximal	9.4 Nm
+Refroidissement	Air
+Vitesse Maximale	-
+Réservoir	-
+Alimentation	Injection électronique Bosch
+Freinage	Disque/Tambour - ABS
+
