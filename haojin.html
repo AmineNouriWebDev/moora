@@ -25,6 +25,7 @@
             <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
             <nav>
                 <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="nav-item-dropdown">
                         <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
@@ -41,9 +42,6 @@
                         </ul>
                     </li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li>
-                        <button class="dark-mode-toggle" aria-label="Mode"><i class="fas fa-sun"></i></button>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -72,8 +70,8 @@
                     </p>
 
                     <div style="margin-bottom:1.75rem;">
-                        <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.75rem;">Couleurs disponibles</p>
-                        <div class="color-selector">
+                        <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.75rem;">Couleurs disponibles — <span style="color:var(--accent-primary);font-size:0.7rem;"><i class="fas fa-hand-pointer"></i> Cliquez pour changer</span></p>
+                        <div class="color-selector color-selector-interactive">
                             <div class="color-dot active" title="Bleu / Gris Nardo"
                                  data-image="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg"
                                  data-target="haojin-product-img"

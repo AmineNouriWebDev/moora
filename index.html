@@ -35,6 +35,7 @@
 
             <nav>
                 <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
                     <li class="nav-item-dropdown">
                         <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
@@ -53,11 +54,6 @@
                         </ul>
                     </li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li>
-                        <button class="dark-mode-toggle" aria-label="Mode">
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -65,10 +61,13 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
+        <video id="hero-video" class="hero-video" autoplay loop muted playsinline preload="auto">
+            <source src="img/moora.mp4" type="video/mp4">
             <source src="img/presentation-societe-moora.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
+        <!-- Masque le filigrane IA en bas à droite -->
+        <div style="position:absolute;bottom:0;right:0;width:220px;height:60px;background:linear-gradient(135deg,transparent 0%,rgba(8,8,14,0.95) 60%);z-index:5;pointer-events:none;"></div>
         <canvas id="hero-canvas"></canvas>
 
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
@@ -114,7 +113,7 @@
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
                     <span class="stat-number" data-target="100" data-suffix="%">0%</span>
-                    <span class="stat-label">Made in Tunisia</span>
+                    <span class="stat-label">Pièces de Rechange Dispo.</span>
                 </div>
             </div>
         </div>
@@ -123,7 +122,7 @@
     <!-- ===== NOS MOTOS — SHOWCASE TRANSPARENT ===== -->
     <section id="motos" class="moto-showcase-section">
         <div class="container">
-            <h2 class="section-title" data-label="Notre Gamme" data-aos="fade-up">Nos Modèles Phares</h2>
+            <h2 class="section-title" data-label="Notre Gamme" data-aos="fade-up">Découvrez Nos Motos</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                 Deux références incontournables du marché tunisien, assemblées localement avec rigueur.
             </p>
@@ -147,13 +146,13 @@
                     <h2 class="showcase-title">LETBE NEON<br><span style="color:var(--accent-primary);">125cc</span></h2>
                     <div class="showcase-price">5 900 DT TTC</div>
 
-                    <!-- Color selector -->
+                    <!-- Color display (non-cliquable sur accueil) -->
                     <div class="showcase-color-bar">
-                        <span class="color-selector-label">Couleur</span>
-                        <div class="color-dot active" title="Orange Classic" data-image="img/moto/letbe/neon/1-orange-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#FF6B00;"></div>
-                        <div class="color-dot" title="Gris Nardo" data-image="img/moto/letbe/neon/1-gris-nardo-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#7D7D8D;"></div>
-                        <div class="color-dot" title="Bleu Aqua" data-image="img/moto/letbe/neon/1-bleu-aqua-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#00B4D8;"></div>
-                        <div class="color-dot" title="Vert Perle" data-image="img/moto/letbe/neon/1-vert-perle-vue-complete-gauche.jpg" data-target="letbe-showcase-img" style="background:#4CAF50;"></div>
+                        <span class="color-selector-label">Couleurs disponibles</span>
+                        <span class="color-display-dot" title="Orange Classic" style="background:#FF6B00;"></span>
+                        <span class="color-display-dot" title="Gris Nardo" style="background:#7D7D8D;"></span>
+                        <span class="color-display-dot" title="Bleu Aqua" style="background:#00B4D8;"></span>
+                        <span class="color-display-dot" title="Vert Perle" style="background:#4CAF50;"></span>
                     </div>
 
                     <!-- Specs -->
@@ -214,11 +213,11 @@
                     <div class="showcase-price">3 800 DT TTC</div>
                     <p class="showcase-promo">✓ Carte grise gratuite</p>
 
-                    <!-- Color selector -->
+                    <!-- Color display (non-cliquable sur accueil) -->
                     <div class="showcase-color-bar">
-                        <span class="color-selector-label">Couleur</span>
-                        <div class="color-dot active" title="Bleu / Gris Nardo" data-image="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg" data-target="haojin-showcase-img" style="background:#1E88E5;"></div>
-                        <div class="color-dot" title="Noir / Doré" data-image="img/moto/haojin/Lyra/1-dore-vue-avant-droite.jpeg" data-target="haojin-showcase-img" style="background:linear-gradient(135deg,#111 50%,#C9A227 50%);"></div>
+                        <span class="color-selector-label">Couleurs disponibles</span>
+                        <span class="color-display-dot" title="Bleu / Gris Nardo" style="background:#1E88E5;"></span>
+                        <span class="color-display-dot" title="Noir / Doré" style="background:linear-gradient(135deg,#111 50%,#C9A227 50%);"></span>
                     </div>
 
                     <!-- Specs -->

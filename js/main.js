@@ -14,6 +14,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =====================================================
+  // Hero Video — Force Play (file:// protocol fix)
+  // =====================================================
+  const heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    // Force load and play
+    heroVideo.load();
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay blocked — try on first user interaction
+        const triggerPlay = () => {
+          heroVideo.play().catch(() => {});
+          document.removeEventListener('click', triggerPlay);
+          document.removeEventListener('scroll', triggerPlay);
+          document.removeEventListener('touchstart', triggerPlay);
+        };
+        document.addEventListener('click', triggerPlay, { once: true });
+        document.addEventListener('scroll', triggerPlay, { once: true });
+        document.addEventListener('touchstart', triggerPlay, { once: true });
+      });
+    }
+
+    // If moora.mp4 fails to load, fall back to presentation video
+    heroVideo.addEventListener('error', () => {
+      const currentSrc = heroVideo.currentSrc || '';
+      if (currentSrc.includes('moora.mp4') || heroVideo.networkState === 3) {
+        heroVideo.src = 'img/presentation-societe-moora.mp4';
+        heroVideo.load();
+        heroVideo.play().catch(() => {});
+      }
+    }, true);
+  }
+
+  // =====================================================
   // Navbar Scroll Effect
   // =====================================================
   const header = document.querySelector('header');
@@ -29,12 +63,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const navDropdowns = document.querySelectorAll('.nav-item-dropdown');
+  const mobileCloseLi = document.querySelector('.mobile-close-li');
+  const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+
+  function openMenu() {
+    navMenu.classList.add('active');
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    if (mobileCloseLi) mobileCloseLi.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('active');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    if (mobileCloseLi) mobileCloseLi.style.display = 'none';
+    document.body.style.overflow = '';
+    // Reset dropdowns
+    navDropdowns.forEach(d => d.classList.remove('active'));
+  }
 
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', () => {
-      const isActive = navMenu.classList.toggle('active');
-      const icon = mobileToggle.querySelector('i');
-      icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
+      if (navMenu.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', closeMenu);
+  }
+
+  // Close menu if clicking the backdrop (::before pseudo)
+  if (navMenu) {
+    navMenu.addEventListener('click', (e) => {
+      if (e.target === navMenu) closeMenu();
     });
   }
 
@@ -49,21 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =====================================================
-  // Dark Mode Toggle (kept for compatibility)
-  // =====================================================
-  const darkModeToggle = document.querySelector('.dark-mode-toggle');
-  if (darkModeToggle) {
-    // Site is always dark by default — toggle can switch to a slightly different dark variant
-    const icon = darkModeToggle.querySelector('i');
-    if (icon) {
-      icon.className = 'fas fa-sun'; // always show sun since we're always dark
-    }
-    darkModeToggle.addEventListener('click', () => {
-      // subtle brightness toggle
-      document.body.classList.toggle('mode-alt');
-    });
-  }
+  // Dark mode toggle removed — site is always in dark mode.
 
   // =====================================================
   // Color Selector (image swap with crossfade)
