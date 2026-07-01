@@ -3,133 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haojin Lyra 2 110cc | Moora Motors</title>
-    <meta name="description" content="Découvrez la moto Haojin Lyra 2 110cc chez Moora Motors. Performante, économique, Euro 2 avec carte grise gratuite.">
-    
+    <title>Haojin Lyra 2 110cc — Fiche Technique | Moora Motors</title>
+    <meta name="description" content="Découvrez la moto Haojin Lyra 2 110cc chez Moora Motors. Performante, économique, Euro 2 avec carte grise gratuite en Tunisie. Disponible en bleu et doré.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .product-hero {
-            padding: 8rem 0 4rem;
-            background-color: var(--bg-tertiary);
-        }
-        
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .product-gallery {
-            position: relative;
-        }
-        
-        .main-image {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-            background-color: var(--bg-secondary);
-            padding: 2rem;
-            transition: opacity 0.3s ease;
-        }
-        
-        .product-info h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-price {
-            font-size: 2rem;
-            color: var(--accent-primary);
-            font-weight: 700;
-            font-family: 'Rajdhani', sans-serif;
-            margin-bottom: 0.5rem;
-        }
-        
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 2rem;
-        }
-        
-        .specs-table th, .specs-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            text-align: left;
-        }
-        
-        .specs-table th {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary);
-            width: 40%;
-        }
-        
-        .video-section {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .video-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .video-container video {
-            width: 100%;
-            display: block;
-        }
-
-        @media (max-width: 992px) {
-            .product-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header class="scrolled">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="Moora Motors Logo">
             </a>
-            
-            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
-            
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="letbe.html">Letbe</a></li>
-                            <li><a href="haojin.html">Haojin</a></li>
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link">Casques <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="#">Axor (Bientôt)</a></li>
-                            <li><a href="#">Vega (Bientôt)</a></li>
+                            <li><a href="#">Casques Axor (Bientôt)</a></li>
+                            <li><a href="#">Casques Vega (Bientôt)</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Huiles</a></li>
-                    <li><a href="#" class="nav-link">Pneus</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                     <li>
-                        <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                        <button class="dark-mode-toggle" aria-label="Mode"><i class="fas fa-sun"></i></button>
                     </li>
                 </ul>
             </nav>
@@ -137,107 +50,382 @@
     </header>
 
     <main>
+        <!-- ===== PRODUCT HERO ===== -->
         <section class="product-hero">
             <div class="container product-container">
+                <!-- Gallery -->
                 <div class="product-gallery" data-aos="fade-right">
-                    <img id="haojin-product-img" src="img/moto/haojin/Lyra/bleu-gris-nardo-vue-complete.jpeg" alt="Haojin Lyra 2" class="main-image">
+                    <img id="haojin-product-img" src="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg" alt="Haojin Lyra 2 110cc" class="main-image">
                 </div>
-                
+
+                <!-- Info -->
                 <div class="product-info" data-aos="fade-left">
-                    <div class="badge" style="position: static; display: inline-block; margin-bottom: 1rem; background-color: var(--accent-secondary);">Euro 2 🇪🇺</div>
+                    <img src="img/moto/haojin/Lyra/logo-haojin.jpeg" alt="Haojin" style="height:32px;object-fit:contain;object-position:left;margin-bottom:1rem;filter:brightness(1.3);">
+                    <span class="product-tag tag-euro">🇪🇺 Norme Euro 2</span>
                     <h1>HAOJIN LYRA 2 110cc</h1>
                     <div class="product-price">3 800 DT TTC</div>
-                    <p style="font-weight: 700; color: #25D366; margin-bottom: 1.5rem; font-size: 1.2rem;">CARTE GRISE GRATUITE</p>
-                    
-                    <p>Moto sportive et robuste, conçue pour la performance et l'économie, adaptée à la ville et aux voies rapides.</p>
-                    
-                    <div style="margin: 2rem 0;">
-                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Couleurs disponibles :</p>
+                    <p class="product-promo"><i class="fas fa-gift"></i> CARTE GRISE GRATUITE</p>
+                    <p class="product-desc">
+                        Moto sportive et robuste, conçue pour la performance et l'économie. Parfaite pour la ville et les voies rapides, avec double embrayage et équipements multimédia intégrés.
+                        <br><br>
+                        <strong style="color:var(--accent-primary);">Garantie :</strong> 1 an / 10 000 KM
+                    </p>
+
+                    <div style="margin-bottom:1.75rem;">
+                        <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.75rem;">Couleurs disponibles</p>
                         <div class="color-selector">
-                            <div class="color-dot active" title="Bleu/Gris Nardo" data-image="img/moto/haojin/Lyra/bleu-gris-nardo-vue-complete.jpeg" data-target="haojin-product-img" style="background-color: #1E88E5;"></div>
-                            <div class="color-dot" title="Noir/Doré" data-image="img/moto/haojin/Lyra/noir-doree-vue-complete.jpeg" data-target="haojin-product-img" style="background: linear-gradient(135deg, #000 50%, #FFC107 50%);"></div>
+                            <div class="color-dot active" title="Bleu / Gris Nardo"
+                                 data-image="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg"
+                                 data-target="haojin-product-img"
+                                 style="background:#1E88E5;"></div>
+                            <div class="color-dot" title="Noir / Doré"
+                                 data-image="img/moto/haojin/Lyra/1-dore-vue-avant-droite.jpeg"
+                                 data-target="haojin-product-img"
+                                 style="background:linear-gradient(135deg,#111 50%,#C9A227 50%);"></div>
                         </div>
                     </div>
-                    
-                    <ul class="moto-features" style="margin-bottom: 2rem;">
+
+                    <ul class="moto-features" style="margin-bottom:2rem;">
                         <li><i class="fas fa-check-circle"></i> Moteur C110CC Euro 2, Carburateur DENI 🇹🇼</li>
                         <li><i class="fas fa-check-circle"></i> Double embrayage, Freins à disque avant/arrière</li>
                         <li><i class="fas fa-check-circle"></i> Compteur LCD, Phares LED</li>
-                        <li><i class="fas fa-check-circle"></i> Lecteur MP3/Bluetooth/Radio & Alarme</li>
+                        <li><i class="fas fa-check-circle"></i> Lecteur MP3/Bluetooth/Radio</li>
+                        <li><i class="fas fa-check-circle"></i> Alarme avec télécommande</li>
                     </ul>
-                    
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
-                        <a href="https://wa.me/21628485424?text=Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20HAOJIN%20LYRA%202" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> Réserver un essai</a>
+
+                    <div class="product-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20HAOJIN%20LYRA%202" class="btn btn-secondary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Réserver un essai
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===== FICHE TECHNIQUE ===== -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Fiche Technique</h2>
-                <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="section-title" data-label="Spécifications" data-aos="fade-up">Fiche Technique</h2>
+
+                <div style="max-width:800px; margin:0 auto;" data-aos="fade-up" data-aos-delay="100">
                     <table class="specs-table">
                         <tbody>
-                            <tr>
-                                <th>Catégorie</th>
-                                <td>Scooter/Moto utilitaire</td>
-                            </tr>
-                            <tr>
-                                <th>Moteur</th>
-                                <td>Monocylindre 4 temps, 110 cc (C110)</td>
-                            </tr>
-                            <tr>
-                                <th>Puissance</th>
-                                <td>10 ch (4.7 kW à 7500 tr/min)</td>
-                            </tr>
-                            <tr>
-                                <th>Couple</th>
-                                <td>14 Nm</td>
-                            </tr>
-                            <tr>
-                                <th>Refroidissement</th>
-                                <td>Air</td>
-                            </tr>
-                            <tr>
-                                <th>Transmission</th>
-                                <td>Semi-automatique 4 vitesses</td>
-                            </tr>
-                            <tr>
-                                <th>Freinage</th>
-                                <td>Disque avant/arrière</td>
-                            </tr>
-                            <tr>
-                                <th>Vitesse maximale</th>
-                                <td>100 km/h</td>
-                            </tr>
-                            <tr>
-                                <th>Jantes</th>
-                                <td>Alliage 18 rayons</td>
-                            </tr>
+                            <tr><th>Catégorie</th><td>Moto / Scooter utilitaire sportif</td></tr>
+                            <tr><th>Moteur</th><td>Monocylindre 4 temps, 110 cc (C110)</td></tr>
+                            <tr><th>Puissance</th><td>10 ch (4.7 kW à 7 500 tr/min)</td></tr>
+                            <tr><th>Couple</th><td>14 Nm</td></tr>
+                            <tr><th>Refroidissement</th><td>Air</td></tr>
+                            <tr><th>Alimentation</th><td>Carburateur DENI 🇹🇼</td></tr>
+                            <tr><th>Norme émissions</th><td>Euro 2 🇪🇺</td></tr>
+                            <tr><th>Transmission</th><td>Semi-automatique 4 vitesses</td></tr>
+                            <tr><th>Freinage</th><td>Disque avant / Disque arrière</td></tr>
+                            <tr><th>Jantes</th><td>Alliage 18 rayons</td></tr>
+                            <tr><th>Compteur</th><td>LCD numérique</td></tr>
+                            <tr><th>Multimédia</th><td>MP3 / Bluetooth / Radio FM</td></tr>
+                            <tr><th>Sécurité</th><td>Alarme avec télécommande</td></tr>
+                            <tr><th>Vitesse maximale</th><td>100 km/h</td></tr>
+                            <tr><th>Garantie</th><td>1 an / 10 000 KM</td></tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </section>
 
-                <div class="video-section" data-aos="fade-up" data-aos-delay="200">
-                    <div class="video-container">
-                        <video controls autoplay muted loop>
-                            <source src="img/moto/haojin/Lyra/lyra-deux-couleurs-disponibles.mp4" type="video/mp4">
-                        </video>
+        <!-- ===== COMPOSANTS DÉTAIL ===== -->
+        <section class="components-section">
+            <div class="container">
+                <h2 class="section-title" data-label="Détail" data-aos="fade-up">Composants &amp; Équipements</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Une moto pensée jusque dans les moindres détails pour la performance et la sécurité.
+                </p>
+
+                <div class="component-grid" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/boutons-.jpg" alt="Boutons de commande" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Boutons Commande</div>
+                            <p class="component-card-desc">Commandes au guidon ergonomiques : clignotants, klaxon, démarreur et commutateur de phare.</p>
+                        </div>
                     </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/phare-avant-gauche.jpg" alt="Phare avant" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Phare Avant LED</div>
+                            <p class="component-card-desc">Projecteur avant LED haute luminosité offrant une excellente visibilité nocturne.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/feu-droite-avant.jpeg" alt="Feu avant droit" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Feu Avant Droit</div>
+                            <p class="component-card-desc">Clignotant avant intégré au carénage pour un design aérodynamique et une signalisation claire.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/feu-ariere.jpeg" alt="Feu arrière" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Feu Arrière LED</div>
+                            <p class="component-card-desc">Feu stop LED arrière à haute visibilité pour une sécurité optimale en circulation.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/feu-ariere-droite.jpeg" alt="Feu arrière droit" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Clignotant Arrière</div>
+                            <p class="component-card-desc">Clignotant arrière droit intégré au carénage pour des changements de direction sécurisés.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/guidon-droite.jpeg" alt="Guidon droit" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Guidon Droit</div>
+                            <p class="component-card-desc">Poignée de gaz progressive avec levier de frein avant réglable pour une conduite précise.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/retroviseur-guidon-droit.jpg" alt="Rétroviseur" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Rétroviseur &amp; Guidon</div>
+                            <p class="component-card-desc">Rétroviseur large champ avec tige anti-vibration pour une vision arrière nette.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/roue-avant.jpeg" alt="Roue avant" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Roue Avant</div>
+                            <p class="component-card-desc">Roue alliage 18 rayons avec pneu large et disque de frein avant pour une adhérence maximale.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/roue-avant-vue-droite.jpg" alt="Roue avant vue droite" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Roue Avant — Vue Droite</div>
+                            <p class="component-card-desc">Architecture de la fourche avant et du système de freinage à disque vue en détail.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/suspension.jpeg" alt="Suspension" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Suspension Avant</div>
+                            <p class="component-card-desc">Fourche télescopique hydraulique absorbant les chocs pour un confort de conduite exceptionnel.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/suspension-roue-ariere.jpg" alt="Suspension arrière" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Suspension Arrière</div>
+                            <p class="component-card-desc">Amortisseur arrière double avec réglage de précharge pour adapter la suspension à votre charge.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/siege.jpeg" alt="Selle" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Selle Confort</div>
+                            <p class="component-card-desc">Selle biplace rembourrée avec mousse haute densité pour un confort optimal sur longs trajets.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/vue-chaise-siege.jpg" alt="Vue selle" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Espace Conducteur</div>
+                            <p class="component-card-desc">Position de conduite naturelle et ergonomique pour une fatigue réduite sur routes tunisiennes.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/pneu.jpeg" alt="Pneu" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Pneumatiques</div>
+                            <p class="component-card-desc">Pneus larges profil mixte pour une accroche optimale sur route sèche et mouillée.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/haojin/Lyra/logo-haojin.jpeg" alt="Logo Haojin" class="component-card-img" style="object-fit:contain;padding:1.5rem;background:#111;">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Marque Haojin</div>
+                            <p class="component-card-desc">Haojin — marque internationale de motos performantes alliant ingénierie avancée et fiabilité.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- ===== VIDÉOS PREMIUM ===== -->
+        <section class="video-premium-section">
+            <div class="container">
+                <h2 class="section-title" data-label="En Action" data-aos="fade-up">Haojin Lyra 2 en Vidéo</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    La Lyra 2 sous tous les angles, dans les deux coloris disponibles.
+                </p>
+
+                <div class="video-premium-grid" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="video-premium-item featured">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="img/moto/haojin/Lyra/lyra-deux-couleurs-disponibles.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Lyra 2 — Les deux couleurs</div>
+                    </div>
+
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/haojin/Lyra/lyra-bleu-gris-nardo.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Lyra 2 — Bleu Gris Nardo</div>
+                    </div>
+
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/haojin/Lyra/haojin-lira-noir-doreeresolution-720X1280.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Lyra 2 — Noir &amp; Doré</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALERIE PAR COULEUR ===== -->
+        <section class="gallery-section" style="background:var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title" data-label="Galerie" data-aos="fade-up">Galerie Photo</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Explorez chaque couleur sous tous les angles.
+                </p>
+
+                <!-- Color Tabs -->
+                <div class="gallery-tabs" data-aos="fade-up" data-aos-delay="150">
+                    <button class="gallery-tab active" data-tab="bleu">
+                        <span class="gallery-tab-dot" style="background:#1E88E5;"></span> Bleu / Gris Nardo
+                    </button>
+                    <button class="gallery-tab" data-tab="dore">
+                        <span class="gallery-tab-dot" style="background:#C9A227;"></span> Noir / Doré
+                    </button>
+                    <button class="gallery-tab" data-tab="details">
+                        <span class="gallery-tab-dot" style="background:#FF1E3A;"></span> Vues générales
+                    </button>
+                </div>
+
+                <!-- Bleu / Gris Nardo -->
+                <div class="gallery-panel active gallery-grid" id="gallery-bleu">
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg" alt="Bleu — Vue avant droite">
+                        <div class="gallery-item-caption">Vue avant droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/2-blue-vue-gauche.jpg" alt="Bleu — Vue gauche">
+                        <div class="gallery-item-caption">Vue gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/3-bleu-vue-complete-gauche-ariere.jpg" alt="Bleu — Vue gauche arrière">
+                        <div class="gallery-item-caption">Vue gauche arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/4-bleu-vue-complete-deriere-droite.jpg" alt="Bleu — Vue arrière droite">
+                        <div class="gallery-item-caption">Vue arrière droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/5-bleu-vue-droite.jpeg" alt="Bleu — Vue droite">
+                        <div class="gallery-item-caption">Vue droite</div>
+                    </div>
+                </div>
+
+                <!-- Noir / Doré -->
+                <div class="gallery-panel gallery-grid" id="gallery-dore">
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/1-dore-vue-avant-droite.jpeg" alt="Doré — Vue avant droite">
+                        <div class="gallery-item-caption">Vue avant droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/2-dore-vue-gauche.jpeg" alt="Doré — Vue gauche">
+                        <div class="gallery-item-caption">Vue gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/3-dore-vue-complete-gauche-ariere.jpeg" alt="Doré — Vue gauche arrière">
+                        <div class="gallery-item-caption">Vue gauche arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/4-dore-vue-complete-deriere-droite.jpeg" alt="Doré — Vue arrière droite">
+                        <div class="gallery-item-caption">Vue arrière droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/5-dore-vue-droite.jpeg" alt="Doré — Vue droite">
+                        <div class="gallery-item-caption">Vue droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/6-dore-vue-face.jpeg" alt="Doré — Vue de face">
+                        <div class="gallery-item-caption">Vue de face</div>
+                    </div>
+                </div>
+
+                <!-- Vues générales -->
+                <div class="gallery-panel gallery-grid" id="gallery-details">
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/vue-avant-droite.jpeg" alt="Vue avant droite">
+                        <div class="gallery-item-caption">Vue avant droite</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/vue-face-avant.jpg" alt="Vue de face">
+                        <div class="gallery-item-caption">Vue de face</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/vue-arriere-echappement.jpg" alt="Vue arrière échappement">
+                        <div class="gallery-item-caption">Arrière &amp; échappement</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/vue-complete-arriere.jpg" alt="Vue arrière complète">
+                        <div class="gallery-item-caption">Vue arrière complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/roue-avant-vue-gauche.jpg" alt="Roue avant vue gauche">
+                        <div class="gallery-item-caption">Roue avant</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/haojin/Lyra/logo-haojn-avant.jpeg" alt="Logo Haojin avant">
+                        <div class="gallery-item-caption">Logo Haojin</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
                     <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
@@ -248,11 +436,35 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Gallery Tabs -->
+    <script>
+        document.querySelectorAll('.gallery-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.dataset.tab;
+                document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.gallery-panel').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('gallery-' + target).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>

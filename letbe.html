@@ -3,133 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letbe Neon 125cc | Moora Motors</title>
-    <meta name="description" content="Découvrez le scooter Letbe Neon 125cc chez Moora Motors. Design Neo Retro, Injection électronique BOSCH, technologie Honda.">
-    
+    <title>Letbe Neon 125cc — Fiche Technique | Moora Motors</title>
+    <meta name="description" content="Découvrez le scooter Letbe Neon 125cc chez Moora Motors. Design Neo Retro, Injection électronique BOSCH, technologie Honda. 4 couleurs disponibles en Tunisie.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .product-hero {
-            padding: 8rem 0 4rem;
-            background-color: var(--bg-tertiary);
-        }
-        
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .product-gallery {
-            position: relative;
-        }
-        
-        .main-image {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-            background-color: var(--bg-secondary);
-            padding: 2rem;
-            transition: opacity 0.3s ease;
-        }
-        
-        .product-info h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-price {
-            font-size: 2rem;
-            color: var(--accent-primary);
-            font-weight: 700;
-            font-family: 'Rajdhani', sans-serif;
-            margin-bottom: 1.5rem;
-        }
-        
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 2rem;
-        }
-        
-        .specs-table th, .specs-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            text-align: left;
-        }
-        
-        .specs-table th {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary);
-            width: 40%;
-        }
-        
-        .video-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .video-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .video-container video {
-            width: 100%;
-            display: block;
-        }
-
-        @media (max-width: 992px) {
-            .product-container {
-                grid-template-columns: 1fr;
-            }
-            .video-section {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header class="scrolled">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="Moora Motors Logo">
             </a>
-            
-            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
-            
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link active">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="letbe.html">Letbe</a></li>
-                            <li><a href="haojin.html">Haojin</a></li>
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link">Casques <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="#">Axor (Bientôt)</a></li>
-                            <li><a href="#">Vega (Bientôt)</a></li>
+                            <li><a href="#">Casques Axor (Bientôt)</a></li>
+                            <li><a href="#">Casques Vega (Bientôt)</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Huiles</a></li>
-                    <li><a href="#" class="nav-link">Pneus</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                     <li>
-                        <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                        <button class="dark-mode-toggle" aria-label="Mode"><i class="fas fa-sun"></i></button>
                     </li>
                 </ul>
             </nav>
@@ -137,114 +50,414 @@
     </header>
 
     <main>
+        <!-- ===== PRODUCT HERO ===== -->
         <section class="product-hero">
             <div class="container product-container">
+                <!-- Gallery -->
                 <div class="product-gallery" data-aos="fade-right">
-                    <img id="letbe-product-img" src="img/moto/letbe/neon/letbe-neon-jaune.jpg" alt="Letbe Neon 125cc" class="main-image">
+                    <img id="letbe-product-img" src="img/moto/letbe/neon/1-orange-vue-complete-gauche.jpeg" alt="Letbe Neon 125cc" class="main-image">
                 </div>
-                
+
+                <!-- Info -->
                 <div class="product-info" data-aos="fade-left">
-                    <div class="badge" style="position: static; display: inline-block; margin-bottom: 1rem;">Nouveau Modèle</div>
+                    <img src="img/moto/letbe/neon/logo-letbe.jpeg" alt="Letbe" style="height:32px;object-fit:contain;object-position:left;margin-bottom:1rem;filter:brightness(1.3);">
+                    <span class="product-tag tag-new"><i class="fas fa-star"></i> Nouveau Modèle</span>
                     <h1>LETBE NEON 125cc</h1>
                     <div class="product-price">5 900 DT TTC</div>
-                    <p style="font-weight: 600; color: var(--accent-secondary);">Garantie : 1 an / 10.000 KM</p>
-                    
-                    <p>Scooter urbain alliant design Neo Retro, confort et économie. Idéal pour la ville.</p>
-                    
-                    <div style="margin: 2rem 0;">
-                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Couleurs disponibles :</p>
+                    <p class="product-desc">
+                        Scooter urbain alliant design Neo Retro, confort et économie. Idéal pour la ville grâce à son injection BOSCH et sa technologie Honda.
+                        <br><br>
+                        <strong style="color:var(--accent-primary);">Garantie :</strong> 1 an / 10 000 KM
+                    </p>
+
+                    <div style="margin-bottom: 1.75rem;">
+                        <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.75rem;">Couleurs disponibles</p>
                         <div class="color-selector">
-                            <div class="color-dot active" title="Vert/Blanc" data-image="img/moto/letbe/neon/vert-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #4CAF50;"></div>
-                            <div class="color-dot" title="Noir Mat" data-image="img/moto/letbe/neon/letbe-neon-noir-mat.jpg" data-target="letbe-product-img" style="background-color: #212121;"></div>
-                            <div class="color-dot" title="Orange/Blanc" data-image="img/moto/letbe/neon/orange-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #FF9800;"></div>
-                            <div class="color-dot" title="Bleu Ciel/Blanc" data-image="img/moto/letbe/neon/bleu-ciel-vue-complete.jpeg" data-target="letbe-product-img" style="background-color: #03A9F4;"></div>
+                            <div class="color-dot active" title="Orange Classic"
+                                 data-image="img/moto/letbe/neon/1-orange-vue-complete-gauche.jpeg"
+                                 data-target="letbe-product-img"
+                                 style="background:#FF6B00;"></div>
+                            <div class="color-dot" title="Gris Nardo"
+                                 data-image="img/moto/letbe/neon/1-gris-nardo-vue-complete-gauche.jpeg"
+                                 data-target="letbe-product-img"
+                                 style="background:#7D7D8D;"></div>
+                            <div class="color-dot" title="Bleu Aqua"
+                                 data-image="img/moto/letbe/neon/1-bleu-aqua-vue-complete-gauche.jpeg"
+                                 data-target="letbe-product-img"
+                                 style="background:#00B4D8;"></div>
+                            <div class="color-dot" title="Vert Perle"
+                                 data-image="img/moto/letbe/neon/1-vert-perle-vue-complete-gauche.jpg"
+                                 data-target="letbe-product-img"
+                                 style="background:#4CAF50;"></div>
                         </div>
                     </div>
-                    
-                    <ul class="moto-features" style="margin-bottom: 2rem;">
+
+                    <ul class="moto-features" style="margin-bottom:2rem;">
                         <li><i class="fas fa-check-circle"></i> Injection électronique BOSCH 🇩🇪</li>
                         <li><i class="fas fa-check-circle"></i> Moteur Technologie Honda 🇯🇵</li>
-                        <li><i class="fas fa-check-circle"></i> Démarrage Keyless & Freinage CBS</li>
-                        <li><i class="fas fa-check-circle"></i> Consommation faible (2.2L/100km)</li>
+                        <li><i class="fas fa-check-circle"></i> Démarrage Keyless &amp; Freinage CBS</li>
+                        <li><i class="fas fa-check-circle"></i> Consommation 2.2 L/100km</li>
+                        <li><i class="fas fa-check-circle"></i> Éclairage Full LED</li>
                     </ul>
-                    
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="contact.html" class="btn btn-primary">Demander un devis</a>
-                        <a href="https://wa.me/21628485424?text=Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20LETBE%20NEON" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> Réserver un essai</a>
+
+                    <div class="product-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20LETBE%20NEON" class="btn btn-secondary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Réserver un essai
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===== BANNIÈRE 4 COULEURS ===== -->
+        <section class="section-padding color-banner-section" style="padding: 4rem 0;">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section-title" data-label="Coloris" data-aos="fade-up">4 Couleurs Disponibles</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Un design neo-retro décliné en quatre coloris exclusifs pour s'adapter à votre personnalité.
+                </p>
+                <div class="color-banner-wrapper" style="margin-top:2rem;">
+                    <img src="img/moto/letbe/neon/banniere-4-couleurs.jpg" alt="Letbe Neon — 4 couleurs : Orange Classic, Gris Nardo, Bleu Aqua, Vert Perle">
+                    <div class="color-banner-overlay">
+                        <h3>Letbe Neon 125cc</h3>
+                        <div class="color-chips">
+                            <span class="color-chip"><span class="color-chip-dot" style="background:#FF6B00;"></span>Orange Classic</span>
+                            <span class="color-chip"><span class="color-chip-dot" style="background:#7D7D8D;"></span>Gris Nardo</span>
+                            <span class="color-chip"><span class="color-chip-dot" style="background:#00B4D8;"></span>Bleu Aqua</span>
+                            <span class="color-chip"><span class="color-chip-dot" style="background:#4CAF50;"></span>Vert Perle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FICHE TECHNIQUE ===== -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Fiche Technique</h2>
-                <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="section-title" data-label="Spécifications" data-aos="fade-up">Fiche Technique</h2>
+
+                <div style="max-width:800px; margin:0 auto;" data-aos="fade-up" data-aos-delay="100">
                     <table class="specs-table">
                         <tbody>
-                            <tr>
-                                <th>Catégorie</th>
-                                <td>Scooter urbain</td>
-                            </tr>
-                            <tr>
-                                <th>Moteur</th>
-                                <td>Monocylindre 4 temps, 125 cc</td>
-                            </tr>
-                            <tr>
-                                <th>Puissance</th>
-                                <td>8.5 ch</td>
-                            </tr>
-                            <tr>
-                                <th>Couple</th>
-                                <td>9.4 Nm</td>
-                            </tr>
-                            <tr>
-                                <th>Refroidissement</th>
-                                <td>Air</td>
-                            </tr>
-                            <tr>
-                                <th>Alimentation</th>
-                                <td>Injection électronique Bosch</td>
-                            </tr>
-                            <tr>
-                                <th>Freinage</th>
-                                <td>Disque/Tambour - ABS/CBS</td>
-                            </tr>
-                            <tr>
-                                <th>Poids</th>
-                                <td>108 kg</td>
-                            </tr>
-                            <tr>
-                                <th>Vitesse maximale</th>
-                                <td>88 km/h</td>
-                            </tr>
+                            <tr><th>Catégorie</th><td>Scooter urbain Neo Retro</td></tr>
+                            <tr><th>Moteur</th><td>Monocylindre 4 temps, 125 cc</td></tr>
+                            <tr><th>Puissance</th><td>8.5 ch</td></tr>
+                            <tr><th>Couple</th><td>9.4 Nm</td></tr>
+                            <tr><th>Refroidissement</th><td>Air</td></tr>
+                            <tr><th>Alimentation</th><td>Injection électronique BOSCH 🇩🇪</td></tr>
+                            <tr><th>Technologie moteur</th><td>Honda 🇯🇵</td></tr>
+                            <tr><th>Freinage</th><td>Disque/Tambour — ABS/CBS</td></tr>
+                            <tr><th>Démarrage</th><td>Keyless (sans clé)</td></tr>
+                            <tr><th>Éclairage</th><td>Full LED</td></tr>
+                            <tr><th>Poids</th><td>108 kg</td></tr>
+                            <tr><th>Vitesse maximale</th><td>88 km/h</td></tr>
+                            <tr><th>Consommation</th><td>2.2 L/100 km</td></tr>
+                            <tr><th>Garantie</th><td>1 an / 10 000 KM</td></tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </section>
 
-                <div class="video-section" data-aos="fade-up" data-aos-delay="200">
-                    <div class="video-container">
-                        <video controls autoplay muted loop>
-                            <source src="img/moto/letbe/neon/let-be-neon-rouge.mp4" type="video/mp4">
-                        </video>
+        <!-- ===== COMPOSANTS DÉTAIL ===== -->
+        <section class="components-section">
+            <div class="container">
+                <h2 class="section-title" data-label="Détail" data-aos="fade-up">Composants &amp; Équipements</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Chaque pièce pensée pour la performance, le confort et la durabilité.
+                </p>
+
+                <div class="component-grid" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/compteur.jpg" alt="Compteur" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Compteur LCD</div>
+                            <p class="component-card-desc">Tableau de bord numérique LCD avec vitesse, kilométrage, niveau carburant et indicateurs.</p>
+                        </div>
                     </div>
-                    <div class="video-container">
-                        <video controls autoplay muted loop>
-                            <source src="img/moto/letbe/neon/letbe-neon-bleu-blanc.mp4" type="video/mp4">
-                        </video>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/guidon-droite.jpg" alt="Guidon droit" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Guidon Droit</div>
+                            <p class="component-card-desc">Commandes ergonomiques côté droit : accélérateur, frein avant et bouton de démarrage keyless.</p>
+                        </div>
                     </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/guidon-gauche-klaxon.jpg" alt="Guidon gauche" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Guidon Gauche &amp; Klaxon</div>
+                            <p class="component-card-desc">Commandes gauche avec klaxon, interrupteur de phare et système CBS de freinage combiné.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/fnar-avant.jpg" alt="Feu avant LED" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Phare Avant LED</div>
+                            <p class="component-card-desc">Éclairage Full LED haute intensité pour une visibilité optimale de nuit et en conditions difficiles.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/roue-avant.jpg" alt="Roue avant" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Roue Avant</div>
+                            <p class="component-card-desc">Roue avant avec disque de frein haute performance et pneu large pour une tenue de route excellente.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/bloc-roue-ariere.jpg" alt="Bloc roue arrière" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Bloc Roue Arrière</div>
+                            <p class="component-card-desc">Ensemble roue arrière avec suspension intégrée et système de freinage CBS pour une sécurité maximale.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/siege.jpg" alt="Selle" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Selle Confort</div>
+                            <p class="component-card-desc">Selle biplace ergonomique rembourrée pour un confort optimal en ville et sur les longs trajets.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/retroviseur.jpg" alt="Rétroviseur" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Rétroviseur</div>
+                            <p class="component-card-desc">Rétroviseurs grand angle ajustables offrant une visibilité arrière complète pour une conduite sécurisée.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/push-open-buton.jpg" alt="Bouton ouverture" class="component-card-img">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Bouton Push-Open</div>
+                            <p class="component-card-desc">Système d'ouverture du coffre sous selle par simple pression, facilité et praticité au quotidien.</p>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <img src="img/moto/letbe/neon/logo-letbe.jpeg" alt="Logo Letbe" class="component-card-img" style="object-fit:contain;padding:1.5rem;background:#111;">
+                        <div class="component-card-body">
+                            <div class="component-card-name">Marque Letbe</div>
+                            <p class="component-card-desc">Letbe — marque internationale de scooters urbains alliant design contemporain et technologie avancée.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- ===== VIDÉOS PREMIUM ===== -->
+        <section class="video-premium-section">
+            <div class="container">
+                <h2 class="section-title" data-label="En Action" data-aos="fade-up">Letbe Neon en Vidéo</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Découvrez la Letbe Neon sous tous les angles et dans toutes les couleurs.
+                </p>
+
+                <div class="video-premium-grid" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="video-premium-item featured">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="img/moto/letbe/neon/letbe-neon-bleu-blanc.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Letbe Neon — Bleu &amp; Blanc</div>
+                    </div>
+
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/letbe/neon/let-be-neon-rouge.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Letbe Neon — Rouge</div>
+                    </div>
+
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/letbe/neon/letbe-neon-black-mat.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Letbe Neon — Noir Mat</div>
+                    </div>
+
+                </div>
+
+                <!-- Extra videos row -->
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/letbe/neon/letbe-neon-rouge.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-play-circle"></i> Letbe Neon — Présentation</div>
+                    </div>
+                    <div class="video-premium-item">
+                        <video controls muted loop playsinline>
+                            <source src="img/moto/letbe/neon/letbe-test-reel-vitesse-compteur.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-premium-label"><i class="fas fa-tachometer-alt"></i> Test Réel — Vitesse &amp; Compteur</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== GALERIE PAR COULEUR ===== -->
+        <section class="gallery-section" style="background:var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title" data-label="Galerie" data-aos="fade-up">Galerie Photo</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Explorez chaque couleur sous tous les angles.
+                </p>
+
+                <!-- Color Tabs -->
+                <div class="gallery-tabs" data-aos="fade-up" data-aos-delay="150">
+                    <button class="gallery-tab active" data-tab="orange">
+                        <span class="gallery-tab-dot" style="background:#FF6B00;"></span> Orange Classic
+                    </button>
+                    <button class="gallery-tab" data-tab="gris">
+                        <span class="gallery-tab-dot" style="background:#7D7D8D;"></span> Gris Nardo
+                    </button>
+                    <button class="gallery-tab" data-tab="bleu">
+                        <span class="gallery-tab-dot" style="background:#00B4D8;"></span> Bleu Aqua
+                    </button>
+                    <button class="gallery-tab" data-tab="vert">
+                        <span class="gallery-tab-dot" style="background:#4CAF50;"></span> Vert Perle
+                    </button>
+                </div>
+
+                <!-- Orange Classic -->
+                <div class="gallery-panel active gallery-grid" id="gallery-orange">
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/1-orange-vue-complete-gauche.jpeg" alt="Orange — Vue gauche complète">
+                        <div class="gallery-item-caption">Vue gauche complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/2-orange-classic-vue-droite-derriere.jpeg" alt="Orange — Vue droite arrière">
+                        <div class="gallery-item-caption">Vue droite arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/3-orange-vue-droite-complete.jpeg" alt="Orange — Vue droite complète">
+                        <div class="gallery-item-caption">Vue droite complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/4-orange-vue-avant-gauche.jpeg" alt="Orange — Vue avant gauche">
+                        <div class="gallery-item-caption">Vue avant gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/5-orange-vue-face.jpeg" alt="Orange — Vue de face">
+                        <div class="gallery-item-caption">Vue de face</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/6-orange-vue-deriere.jpeg" alt="Orange — Vue arrière">
+                        <div class="gallery-item-caption">Vue arrière</div>
+                    </div>
+                </div>
+
+                <!-- Gris Nardo -->
+                <div class="gallery-panel gallery-grid" id="gallery-gris">
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/1-gris-nardo-vue-complete-gauche.jpeg" alt="Gris — Vue gauche complète">
+                        <div class="gallery-item-caption">Vue gauche complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/2-gris-nardo-vue-droite-derriere.jpeg" alt="Gris — Vue droite arrière">
+                        <div class="gallery-item-caption">Vue droite arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/3-gris-complete-droite.jpeg" alt="Gris — Vue droite complète">
+                        <div class="gallery-item-caption">Vue droite complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/4-gris-vue-avant-gauche.jpeg" alt="Gris — Vue avant gauche">
+                        <div class="gallery-item-caption">Vue avant gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/5-gris-vue-face.jpeg" alt="Gris — Vue de face">
+                        <div class="gallery-item-caption">Vue de face</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/6-gris-vue-derriere.jpeg" alt="Gris — Vue arrière">
+                        <div class="gallery-item-caption">Vue arrière</div>
+                    </div>
+                </div>
+
+                <!-- Bleu Aqua -->
+                <div class="gallery-panel gallery-grid" id="gallery-bleu">
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/1-bleu-aqua-vue-complete-gauche.jpeg" alt="Bleu — Vue gauche complète">
+                        <div class="gallery-item-caption">Vue gauche complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/2-bleu-aqua-vue-droite-deriere.jpeg" alt="Bleu — Vue droite arrière">
+                        <div class="gallery-item-caption">Vue droite arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/3-bleu-aqua-vue-droite-complete.jpeg" alt="Bleu — Vue droite complète">
+                        <div class="gallery-item-caption">Vue droite complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/4-bleu-vue-avant-gauche.jpeg" alt="Bleu — Vue avant gauche">
+                        <div class="gallery-item-caption">Vue avant gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/5-bleu-vue-face.jpeg" alt="Bleu — Vue de face">
+                        <div class="gallery-item-caption">Vue de face</div>
+                    </div>
+                </div>
+
+                <!-- Vert Perle -->
+                <div class="gallery-panel gallery-grid" id="gallery-vert">
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/1-vert-perle-vue-complete-gauche.jpg" alt="Vert — Vue gauche complète">
+                        <div class="gallery-item-caption">Vue gauche complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/2-vert-perle-vue-droite-derriere.jpeg" alt="Vert — Vue droite arrière">
+                        <div class="gallery-item-caption">Vue droite arrière</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/3-vert-vue-complete-droite.jpeg" alt="Vert — Vue droite complète">
+                        <div class="gallery-item-caption">Vue droite complète</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/4-vert-vue-avant-gauche.jpg" alt="Vert — Vue avant gauche">
+                        <div class="gallery-item-caption">Vue avant gauche</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/moto/letbe/neon/6-vert-vue-derriere.jpg" alt="Vert — Vue arrière">
+                        <div class="gallery-item-caption">Vue arrière</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
                     <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
@@ -255,11 +468,35 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Gallery Tabs -->
+    <script>
+        document.querySelectorAll('.gallery-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.dataset.tab;
+                document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.gallery-panel').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('gallery-' + target).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>

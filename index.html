@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moora Motors | Usine d'assemblage motos et scooters en Tunisie</title>
-    <meta name="description" content="Moora Motors, concessionnaire et usine d'assemblage de motos et scooters en Tunisie. Découvrez nos modèles Haojin et Letbe.">
-    
-    <!-- Fonts -->
+    <title>Moora Motors | Motos & Scooters — Concessionnaire Tunisie</title>
+    <meta name="description" content="Moora Motors, concessionnaire et usine d'assemblage de motos et scooters en Tunisie. Découvrez nos modèles Haojin Lyra 2 et Letbe Neon. Design futuriste, qualité premium.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS CSS -->
+
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
+
+    <!-- ===== NAVBAR ===== -->
+    <header id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="Moora Motors Logo">
             </a>
-            
-            <button class="mobile-toggle">
+
+            <button class="mobile-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="letbe.html">Letbe</a></li>
-                            <li><a href="haojin.html">Haojin</a></li>
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-dropdown">
-                        <a href="#" class="nav-link">Casques <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></a>
+                        <a href="#" class="nav-link">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="#">Axor (Bientôt)</a></li>
-                            <li><a href="#">Vega (Bientôt)</a></li>
+                            <li><a href="#">Casques Axor (Bientôt)</a></li>
+                            <li><a href="#">Casques Vega (Bientôt)</a></li>
+                            <li><a href="#">Huiles Putoline (Bientôt)</a></li>
+                            <li><a href="#">Pneus Eurogrip (Bientôt)</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Huiles</a></li>
-                    <li><a href="#" class="nav-link">Pneus</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                     <li>
-                        <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
-                            <i class="fas fa-moon"></i>
+                        <button class="dark-mode-toggle" aria-label="Mode">
+                            <i class="fas fa-sun"></i>
                         </button>
                     </li>
                 </ul>
@@ -62,183 +63,299 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <video class="hero-video" autoplay loop muted playsinline>
             <source src="img/presentation-societe-moora.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
-        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
-            <h1 class="hero-title"><span class="text-accent">HAOJIN</span> & <span class="text-accent">LETBE</span><br>BY MOORA MOTORS</h1>
-            <p class="hero-subtitle">Concessionnaire et Usine d'assemblage en Tunisie</p>
+        <canvas id="hero-canvas"></canvas>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-eyebrow">
+                <span>Tunisie</span> Concessionnaire Officiel <span>2026</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="text-accent">HAOJIN</span> &amp; <span class="text-accent">LETBE</span><br>
+                BY MOORA MOTORS
+            </h1>
+            <p class="hero-subtitle">Assemblage local · Qualité internationale · Performance urbaine</p>
             <div class="hero-buttons">
-                <a href="#motos" class="btn btn-primary">Découvrir nos motos</a>
-                <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
+                <a href="#motos" class="btn btn-primary">
+                    <i class="fas fa-motorcycle"></i> Découvrir nos motos
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-file-invoice"></i> Demander un devis
+                </a>
             </div>
         </div>
-        <a href="#motos" class="scroll-indicator">
+
+        <a href="#stats" class="scroll-indicator">
+            <span>Scroll</span>
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
 
-    <!-- Nos Motos -->
-    <section id="motos" class="section-padding">
+    <!-- ===== STATS STRIP ===== -->
+    <section id="stats" class="stats-strip">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Nos Modèles Phares</h2>
-            
-            <div class="products-grid">
-                <!-- LETBE NEON -->
-                <article class="moto-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="badge">Nouveau</div>
-                    <div class="moto-image-container">
-                        <img id="letbe-main-img" src="img/moto/letbe/neon/letbe-neon-jaune.jpg" alt="LETBE NEON 125cc">
-                    </div>
-                    <div class="moto-content">
-                        <h3 class="moto-title">LETBE NEON 125cc</h3>
-                        <div class="moto-price">5 900 DT TTC</div>
-                        
-                        <div class="color-selector">
-                            <div class="color-dot active" title="Vert/Blanc" data-image="img/moto/letbe/neon/vert-vue-complete.jpeg" data-target="letbe-main-img" style="background-color: #4CAF50;"></div>
-                            <div class="color-dot" title="Noir Mat" data-image="img/moto/letbe/neon/letbe-neon-noir-mat.jpg" data-target="letbe-main-img" style="background-color: #212121;"></div>
-                            <div class="color-dot" title="Orange/Blanc" data-image="img/moto/letbe/neon/orange-vue-complete.jpeg" data-target="letbe-main-img" style="background-color: #FF9800;"></div>
-                            <div class="color-dot" title="Bleu Ciel/Blanc" data-image="img/moto/letbe/neon/bleu-ciel-vue-complete.jpeg" data-target="letbe-main-img" style="background-color: #03A9F4;"></div>
-                        </div>
-                        
-                        <ul class="moto-features">
-                            <li><i class="fas fa-check-circle"></i> Moteur Technologie Honda 🇯🇵</li>
-                            <li><i class="fas fa-check-circle"></i> Injection BOSCH 🇩🇪</li>
-                            <li><i class="fas fa-check-circle"></i> Éclairage Full LED</li>
-                            <li><i class="fas fa-shield-alt"></i> Garantie 1 an / 10.000 KM</li>
-                        </ul>
-                        
-                        <div class="card-actions">
-                            <a href="letbe.html" class="btn btn-secondary">Voir en détail</a>
-                            <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20LETBE%20NEON" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- HAOJIN LYRA 2 -->
-                <article class="moto-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="badge" style="background-color: #1D3557;">Euro 2 🇪🇺</div>
-                    <div class="moto-image-container">
-                        <img id="haojin-main-img" src="img/moto/haojin/Lyra/bleu-gris-nardo-vue-complete.jpeg" alt="HAOJIN LYRA 2 110cc">
-                    </div>
-                    <div class="moto-content">
-                        <h3 class="moto-title">HAOJIN LYRA 2 110cc</h3>
-                        <div class="moto-price">3 800 DT TTC</div>
-                        <p style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: -1rem; margin-bottom: 1rem;">Carte grise gratuite</p>
-                        
-                        <div class="color-selector">
-                            <div class="color-dot active" title="Bleu/Gris Nardo" data-image="img/moto/haojin/Lyra/bleu-gris-nardo-vue-complete.jpeg" data-target="haojin-main-img" style="background-color: #1E88E5;"></div>
-                            <div class="color-dot" title="Noir/Doré" data-image="img/moto/haojin/Lyra/noir-doree-vue-complete.jpeg" data-target="haojin-main-img" style="background: linear-gradient(135deg, #000 50%, #FFC107 50%);"></div>
-                        </div>
-                        
-                        <ul class="moto-features">
-                            <li><i class="fas fa-check-circle"></i> Double embrayage</li>
-                            <li><i class="fas fa-check-circle"></i> Carburateur DENI 🇹🇼</li>
-                            <li><i class="fas fa-check-circle"></i> Alarme avec télécommande</li>
-                            <li><i class="fas fa-check-circle"></i> Lecteur MP3/Bluetooth/Radio</li>
-                        </ul>
-                        
-                        <div class="card-actions">
-                            <a href="haojin.html" class="btn btn-secondary">Voir en détail</a>
-                            <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20HAOJIN%20LYRA%202" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </article>
+            <div class="stats-strip-inner">
+                <div class="stat-item" data-aos="fade-up">
+                    <span class="stat-number" data-target="2" data-suffix="">2</span>
+                    <span class="stat-label">Marques Officielles</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-number" data-target="1" data-suffix=" an">1 an</span>
+                    <span class="stat-label">Garantie Constructeur</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-number" data-target="10000" data-suffix=" KM">0 KM</span>
+                    <span class="stat-label">Couverture Garantie</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+                    <span class="stat-label">Made in Tunisia</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pourquoi Moora -->
+    <!-- ===== NOS MOTOS — SHOWCASE TRANSPARENT ===== -->
+    <section id="motos" class="moto-showcase-section">
+        <div class="container">
+            <h2 class="section-title" data-label="Notre Gamme" data-aos="fade-up">Nos Modèles Phares</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Deux références incontournables du marché tunisien, assemblées localement avec rigueur.
+            </p>
+
+            <!-- LETBE NEON -->
+            <div class="moto-showcase-item" data-aos="fade-up" data-aos-delay="100">
+                <!-- Image -->
+                <div class="showcase-visual">
+                    <img
+                        id="letbe-showcase-img"
+                        src="img/moto/letbe/neon/neon-without-background.webp"
+                        alt="LETBE NEON 125cc"
+                        class="showcase-moto-img"
+                    >
+                </div>
+
+                <!-- Info -->
+                <div class="showcase-info">
+                    <img src="img/moto/letbe/neon/logo-letbe.jpeg" alt="Letbe" class="showcase-brand-logo">
+                    <span class="product-tag tag-new" style="align-self:flex-start; margin-bottom:0.75rem;"><i class="fas fa-star"></i> Nouveau Modèle</span>
+                    <h2 class="showcase-title">LETBE NEON<br><span style="color:var(--accent-primary);">125cc</span></h2>
+                    <div class="showcase-price">5 900 DT TTC</div>
+
+                    <!-- Color selector -->
+                    <div class="showcase-color-bar">
+                        <span class="color-selector-label">Couleur</span>
+                        <div class="color-dot active" title="Orange Classic" data-image="img/moto/letbe/neon/1-orange-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#FF6B00;"></div>
+                        <div class="color-dot" title="Gris Nardo" data-image="img/moto/letbe/neon/1-gris-nardo-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#7D7D8D;"></div>
+                        <div class="color-dot" title="Bleu Aqua" data-image="img/moto/letbe/neon/1-bleu-aqua-vue-complete-gauche.jpeg" data-target="letbe-showcase-img" style="background:#00B4D8;"></div>
+                        <div class="color-dot" title="Vert Perle" data-image="img/moto/letbe/neon/1-vert-perle-vue-complete-gauche.jpg" data-target="letbe-showcase-img" style="background:#4CAF50;"></div>
+                    </div>
+
+                    <!-- Specs -->
+                    <div class="showcase-specs">
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">125</span>
+                            <span class="showcase-spec-lbl">cc</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">8.5</span>
+                            <span class="showcase-spec-lbl">ch</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">88</span>
+                            <span class="showcase-spec-lbl">km/h max</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">2.2</span>
+                            <span class="showcase-spec-lbl">L/100km</span>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <ul class="showcase-features">
+                        <li><i class="fas fa-check-circle"></i> Moteur Technologie Honda 🇯🇵</li>
+                        <li><i class="fas fa-check-circle"></i> Injection électronique BOSCH 🇩🇪</li>
+                        <li><i class="fas fa-check-circle"></i> Éclairage Full LED</li>
+                        <li><i class="fas fa-check-circle"></i> Démarrage Keyless &amp; CBS</li>
+                        <li><i class="fas fa-check-circle"></i> Garantie 1 an / 10 000 KM</li>
+                    </ul>
+
+                    <div class="showcase-actions">
+                        <a href="letbe.html" class="btn btn-primary"><i class="fas fa-motorcycle"></i> Voir en détail</a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20LETBE%20NEON" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:4px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAOJIN LYRA 2 -->
+            <div class="moto-showcase-item reverse" data-aos="fade-up" data-aos-delay="150">
+                <!-- Image -->
+                <div class="showcase-visual">
+                    <img
+                        id="haojin-showcase-img"
+                        src="img/moto/haojin/Lyra/haojin-without-background.webp"
+                        alt="HAOJIN LYRA 2 110cc"
+                        class="showcase-moto-img"
+                    >
+                </div>
+
+                <!-- Info -->
+                <div class="showcase-info">
+                    <img src="img/moto/haojin/Lyra/logo-haojin.jpeg" alt="Haojin" class="showcase-brand-logo">
+                    <span class="product-tag tag-euro" style="align-self:flex-start; margin-bottom:0.75rem;">🇪🇺 Norme Euro 2</span>
+                    <h2 class="showcase-title">HAOJIN LYRA 2<br><span style="color:var(--accent-primary);">110cc</span></h2>
+                    <div class="showcase-price">3 800 DT TTC</div>
+                    <p class="showcase-promo">✓ Carte grise gratuite</p>
+
+                    <!-- Color selector -->
+                    <div class="showcase-color-bar">
+                        <span class="color-selector-label">Couleur</span>
+                        <div class="color-dot active" title="Bleu / Gris Nardo" data-image="img/moto/haojin/Lyra/1-bleu-vue-avant-droite.jpeg" data-target="haojin-showcase-img" style="background:#1E88E5;"></div>
+                        <div class="color-dot" title="Noir / Doré" data-image="img/moto/haojin/Lyra/1-dore-vue-avant-droite.jpeg" data-target="haojin-showcase-img" style="background:linear-gradient(135deg,#111 50%,#C9A227 50%);"></div>
+                    </div>
+
+                    <!-- Specs -->
+                    <div class="showcase-specs">
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">110</span>
+                            <span class="showcase-spec-lbl">cc</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">10</span>
+                            <span class="showcase-spec-lbl">ch</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">100</span>
+                            <span class="showcase-spec-lbl">km/h max</span>
+                        </div>
+                        <div class="showcase-spec">
+                            <span class="showcase-spec-val">14</span>
+                            <span class="showcase-spec-lbl">Nm couple</span>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <ul class="showcase-features">
+                        <li><i class="fas fa-check-circle"></i> Double embrayage</li>
+                        <li><i class="fas fa-check-circle"></i> Carburateur DENI 🇹🇼</li>
+                        <li><i class="fas fa-check-circle"></i> Alarme avec télécommande</li>
+                        <li><i class="fas fa-check-circle"></i> Lecteur MP3 / Bluetooth / Radio FM</li>
+                        <li><i class="fas fa-check-circle"></i> Garantie 1 an / 10 000 KM</li>
+                    </ul>
+
+                    <div class="showcase-actions">
+                        <a href="haojin.html" class="btn btn-primary"><i class="fas fa-motorcycle"></i> Voir en détail</a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20HAOJIN%20LYRA%202" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:4px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== POURQUOI MOORA ===== -->
     <section class="section-padding features-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Pourquoi choisir Moora Motors ?</h2>
-            
+            <h2 class="section-title" data-label="Nos Avantages" data-aos="fade-up">Pourquoi choisir Moora Motors ?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Un partenaire de confiance pour votre mobilité en Tunisie.
+            </p>
+
             <div class="features-grid">
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-cogs feature-icon"></i>
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-industry feature-icon"></i>
+                    </div>
                     <h3>Assemblage Local</h3>
-                    <p>Qualité contrôlée et main-d'œuvre tunisienne experte dans notre usine.</p>
+                    <p>Qualité contrôlée et main-d'œuvre tunisienne experte dans notre propre usine d'assemblage.</p>
                 </div>
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-shield-check feature-icon"></i>
-                    <h3>Garantie & Fiabilité</h3>
-                    <p>Nos motos sont garanties 1 an ou 10.000 KM avec un SAV performant.</p>
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                    </div>
+                    <h3>Garantie &amp; SAV</h3>
+                    <p>Nos motos sont garanties 1 an ou 10 000 KM avec un service après-vente réactif.</p>
                 </div>
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-leaf feature-icon"></i>
-                    <h3>Économie</h3>
-                    <p>Moteurs de dernière génération à faible consommation de carburant (Euro 2).</p>
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-leaf feature-icon"></i>
+                    </div>
+                    <h3>Économie &amp; Écologie</h3>
+                    <p>Moteurs de dernière génération à très faible consommation, conformes à la norme Euro 2.</p>
                 </div>
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-hand-holding-usd feature-icon"></i>
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-tags feature-icon"></i>
+                    </div>
                     <h3>Meilleur Prix</h3>
-                    <p>Des tarifs compétitifs sur le marché avec carte grise gratuite sur certains modèles.</p>
+                    <p>Des tarifs compétitifs avec carte grise offerte sur certains modèles pour vous faciliter la vie.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Équipements & Accessoires (Coming Soon) -->
+    <!-- ===== ÉQUIPEMENTS & ACCESSOIRES ===== -->
     <section class="section-padding">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Équipements & Accessoires</h2>
-            <p class="text-center" style="margin-bottom: 3rem;" data-aos="fade-up">Bientôt disponibles dans nos showrooms</p>
-            
-            <div class="accessories-grid">
-                <div class="accessory-card" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="img/logo.png" alt="Axor Helmets"> <!-- Placeholder, replace with Axor logo later -->
-                    <div class="coming-soon-overlay">
-                        <span>Casques Axor</span>
-                        <p>Bientôt</p>
-                    </div>
+            <h2 class="section-title" data-label="Bientôt Disponible" data-aos="fade-up">Équipements &amp; Accessoires</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                De grandes marques arrivent bientôt dans nos showrooms.
+            </p>
+
+            <div class="accessories-brand-grid">
+                <div class="brand-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/casques/axor/WhatsApp Image 2026-06-18 at 12.43.31.jpeg" alt="Axor" class="brand-card-logo">
+                    <span class="brand-card-name">Axor</span>
+                    <span class="brand-card-badge">Casques · Bientôt</span>
                 </div>
-                <div class="accessory-card" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="img/logo.png" alt="Vega Helmets"> <!-- Placeholder -->
-                    <div class="coming-soon-overlay">
-                        <span>Casques Vega</span>
-                        <p>Bientôt</p>
-                    </div>
+                <div class="brand-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/casques/vega/logo.avif" alt="Vega" class="brand-card-logo">
+                    <span class="brand-card-name">Vega</span>
+                    <span class="brand-card-badge">Casques · Bientôt</span>
                 </div>
-                <div class="accessory-card" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="img/logo-putoline.jpeg" alt="Huiles Putoline">
-                    <div class="coming-soon-overlay">
-                        <span>Huiles Putoline</span>
-                        <p>Bientôt</p>
-                    </div>
+                <div class="brand-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/oil/logo-putoline.jpeg" alt="Putoline" class="brand-card-logo">
+                    <span class="brand-card-name">Putoline</span>
+                    <span class="brand-card-badge">Huiles · Bientôt</span>
                 </div>
-                <div class="accessory-card" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="img/logo-eurogrip.jpeg" alt="Pneus Eurogrip">
-                    <div class="coming-soon-overlay">
-                        <span>Pneus Eurogrip</span>
-                        <p>Bientôt</p>
-                    </div>
+                <div class="brand-card" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="img/pneu/logo-eurogrip.jpeg" alt="Eurogrip" class="brand-card-logo">
+                    <span class="brand-card-name">Eurogrip</span>
+                    <span class="brand-card-badge">Pneus · Bientôt</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
-                    <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie. Distributeur officiel Haojin et Letbe.</p>
+                    <p>Concessionnaire et usine d'assemblage de motos et scooters en Tunisie. Distributeur officiel <span style="color:var(--accent-primary)">Haojin</span> et <span style="color:var(--accent-primary)">Letbe</span>.</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/21628485424" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
                     <ul class="footer-links">
@@ -248,7 +365,7 @@
                         <li><a href="contact.html">Demander un devis</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Contactez-nous</h4>
                     <ul class="footer-links">
@@ -256,12 +373,14 @@
                         <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
                         <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
                     </ul>
-                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1rem;">Voir sur la carte</a>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-secondary" style="margin-top:1.25rem; font-size:0.85rem; padding:0.6rem 1.25rem;">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur la carte
+                    </a>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Moora Motors. Tous droits réservés.</p>
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

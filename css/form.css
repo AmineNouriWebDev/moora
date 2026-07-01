@@ -1,59 +1,25 @@
-/* Forms */
-.contact-section {
-  padding: 8rem 0 4rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.contact-info {
-  background-color: var(--bg-secondary);
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
-}
-
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.info-icon {
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-tertiary);
-  color: var(--accent-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.info-content h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.info-content p {
-  margin-bottom: 0;
-  color: var(--text-secondary);
-}
+/* =====================================================
+   MOORA MOTORS — FORM STYLES (Cyber-Moto Dark)
+   ===================================================== */
 
 .contact-form {
-  background-color: var(--bg-secondary);
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), transparent 70%);
 }
 
 .form-group {
@@ -63,49 +29,59 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .form-control {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  background-color: var(--bg-primary);
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+  background: rgba(255, 30, 58, 0.03);
+  box-shadow: 0 0 0 3px rgba(255, 30, 58, 0.1), 0 0 15px rgba(255, 30, 58, 0.05);
+}
+
+select.form-control {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23FF1E3A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+select.form-control option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 textarea.form-control {
   resize: vertical;
-  min-height: 150px;
-}
-
-.map-container {
-  margin-top: 4rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  height: 400px;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+  min-height: 140px;
+  line-height: 1.6;
 }
 
 @media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  .contact-form { padding: 2rem 1.5rem; }
 }
