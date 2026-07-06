@@ -41,15 +41,15 @@
 
     panel.classList.add('panel-active');
 
-    // After the bike "drives in" (transition ~900ms), trigger brake bounce
+    // After the bike "drives in" (600ms delay + 900ms transition = 1500ms), trigger brake bounce
     setTimeout(() => {
       panel.classList.add('panel-braking');
       setTimeout(() => panel.classList.remove('panel-braking'), 600);
-    }, 900);
+    }, 1550);
 
-    // Animate counters
+    // Animate counters (after info slides in: 400ms delay + 700ms)
     panel.querySelectorAll('.panel-stat__value').forEach((el, i) => {
-      setTimeout(() => animateCounter(el), 300 + i * 120);
+      setTimeout(() => animateCounter(el), 700 + i * 120);
     });
 
     // After the bike "stops", enter idle float

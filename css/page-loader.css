@@ -1,0 +1,228 @@
+/* =====================================================
+   MOORA MOTORS — PAGE LOADER
+   ===================================================== */
+
+#moora-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #08080E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  overflow: hidden;
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Exit animation ───────────────────────────────── */
+#moora-loader.loader-hiding {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+#moora-loader.loader-gone {
+  display: none;
+}
+
+/* ── Ambient background glow ──────────────────────── */
+#moora-loader::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 30, 58, 0.12) 0%, transparent 65%);
+  animation: loaderGlowPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+#moora-loader::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 65%);
+  animation: loaderGlowPulse 2.4s ease-in-out infinite 1.2s;
+  pointer-events: none;
+}
+
+@keyframes loaderGlowPulse {
+  0%, 100% { transform: scale(0.9); opacity: 0.5; }
+  50%       { transform: scale(1.1); opacity: 1;   }
+}
+
+/* ── Logo wrapper ─────────────────────────────────── */
+.loader-logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Pulse ring 1 */
+.loader-logo-wrap::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 30, 58, 0.25);
+  animation: loaderRingPulse 2s ease-out infinite;
+}
+
+/* Pulse ring 2 (delayed) */
+.loader-logo-wrap::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 30, 58, 0.12);
+  animation: loaderRingPulse 2s ease-out infinite 0.7s;
+}
+
+@keyframes loaderRingPulse {
+  0%   { transform: scale(0.7); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0;   }
+}
+
+/* The logo itself */
+.loader-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(255, 30, 58, 0.5))
+          drop-shadow(0 0 60px rgba(255, 30, 58, 0.2));
+  animation: loaderLogoBreathe 2.4s ease-in-out infinite,
+             loaderLogoIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes loaderLogoIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1);   }
+}
+
+@keyframes loaderLogoBreathe {
+  0%, 100% { filter: drop-shadow(0 0 25px rgba(255, 30, 58, 0.4))
+                     drop-shadow(0 0 50px rgba(255, 30, 58, 0.15)); }
+  50%       { filter: drop-shadow(0 0 40px rgba(255, 30, 58, 0.7))
+                     drop-shadow(0 0 80px rgba(255, 30, 58, 0.25)); }
+}
+
+/* ── Progress bar ─────────────────────────────────── */
+.loader-progress-track {
+  position: relative;
+  z-index: 1;
+  width: 180px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #FF1E3A, #FF6B6B);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 30, 58, 0.6);
+  transition: width 0.1s linear;
+  animation: loaderProgress 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loaderProgress {
+  0%   { width: 0%; }
+  60%  { width: 75%; }
+  85%  { width: 88%; }
+  100% { width: 100%; }
+}
+
+/* ── Brand name text ──────────────────────────────── */
+.loader-brand {
+  position: relative;
+  z-index: 1;
+  font-family: 'Barlow Condensed', 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(240, 240, 255, 0.35);
+  animation: loaderBrandIn 0.5s ease 0.3s both;
+}
+
+@keyframes loaderBrandIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ── Scan line decorative effect ──────────────────── */
+.loader-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 30, 58, 0.4) 40%,
+    rgba(255, 30, 58, 0.8) 50%,
+    rgba(255, 30, 58, 0.4) 60%,
+    transparent 100%
+  );
+  animation: loaderScan 1.8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes loaderScan {
+  0%   { top: 0%;   opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ── Corner brackets decoration ──────────────────── */
+.loader-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+}
+
+.loader-corner--tl { top: 2rem; left: 2rem;
+  border-top: 2px solid var(--accent-primary, #FF1E3A);
+  border-left: 2px solid var(--accent-primary, #FF1E3A);
+}
+.loader-corner--tr { top: 2rem; right: 2rem;
+  border-top: 2px solid var(--accent-primary, #FF1E3A);
+  border-right: 2px solid var(--accent-primary, #FF1E3A);
+}
+.loader-corner--bl { bottom: 2rem; left: 2rem;
+  border-bottom: 2px solid var(--accent-primary, #FF1E3A);
+  border-left: 2px solid var(--accent-primary, #FF1E3A);
+}
+.loader-corner--br { bottom: 2rem; right: 2rem;
+  border-bottom: 2px solid var(--accent-primary, #FF1E3A);
+  border-right: 2px solid var(--accent-primary, #FF1E3A);
+}
+
+/* ── Reduced motion ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .loader-logo,
+  .loader-logo-wrap::before,
+  .loader-logo-wrap::after,
+  .loader-scanline,
+  #moora-loader::before,
+  #moora-loader::after {
+    animation: none;
+  }
+  .loader-progress-fill {
+    animation: none;
+    width: 100%;
+  }
+}
