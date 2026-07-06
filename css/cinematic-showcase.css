@@ -1,0 +1,755 @@
+/* =====================================================
+   MOORA MOTORS — CINEMATIC MOTO SHOWCASE
+   ===================================================== */
+
+/* ─── Section wrapper ─────────────────────────────── */
+.moto-cinematic-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── Section header ──────────────────────────────── */
+.moto-cinematic-header {
+  padding: 5rem 0 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.moto-cinematic-header .section-subtitle {
+  margin-bottom: 0;
+}
+
+
+.moto-panel {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+.moto-panel--letbe {
+  background:
+    radial-gradient(ellipse 80% 60% at 85% 50%, rgba(0, 180, 216, 0.07) 0%, transparent 70%),
+    linear-gradient(160deg, #08080E 0%, #0a0a18 60%, #07101a 100%);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.12);
+}
+
+.moto-panel--haojin {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(255, 30, 58, 0.08) 0%, transparent 70%),
+    linear-gradient(200deg, #08080E 0%, #100808 60%, #0f0808 100%);
+  border-bottom: 1px solid rgba(255, 30, 58, 0.12);
+}
+
+/* ─── Ambient glow orbs ───────────────────────────── */
+.panel-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+.panel-glow--cyan {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.18) 0%, transparent 70%);
+}
+
+.panel-glow--red {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(255, 30, 58, 0.15) 0%, transparent 70%);
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: translateY(-50%) scale(1); }
+  50%       { opacity: 1;   transform: translateY(-50%) scale(1.15); }
+}
+
+/* ─── Speed lines ─────────────────────────────────── */
+.speed-lines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.speed-lines--right { right: 0; }
+.speed-lines--left  { left: 0; }
+
+.speed-lines span {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  opacity: 0;
+  border-radius: 1px;
+  transform-origin: left center;
+}
+
+/* Lines from right (Letbe panel) */
+.speed-lines--right span {
+  right: 0;
+  background: linear-gradient(to left, transparent, rgba(0, 180, 216, 0.25));
+}
+
+/* Lines from left (Haojin panel) */
+.speed-lines--left span {
+  left: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 30, 58, 0.2));
+}
+
+/* Individual positions & sizes */
+.speed-lines span:nth-child(1)  { top: 25%; width: 220px; }
+.speed-lines span:nth-child(2)  { top: 35%; width: 320px; }
+.speed-lines span:nth-child(3)  { top: 45%; width: 280px; }
+.speed-lines span:nth-child(4)  { top: 50%; width: 400px; }
+.speed-lines span:nth-child(5)  { top: 55%; width: 360px; }
+.speed-lines span:nth-child(6)  { top: 62%; width: 250px; }
+.speed-lines span:nth-child(7)  { top: 70%; width: 190px; }
+.speed-lines span:nth-child(8)  { top: 78%; width: 130px; }
+
+/* Speed line animation: active when .panel-active is set */
+.moto-panel.panel-active .speed-lines--right span,
+.moto-panel.panel-active .speed-lines--left span {
+  animation: speedLine 0.9s ease-out forwards;
+}
+
+.moto-panel.panel-active .speed-lines span:nth-child(1) { animation-delay: 0.05s; }
+.moto-panel.panel-active .speed-lines span:nth-child(2) { animation-delay: 0.10s; }
+.moto-panel.panel-active .speed-lines span:nth-child(3) { animation-delay: 0.15s; }
+.moto-panel.panel-active .speed-lines span:nth-child(4) { animation-delay: 0.12s; }
+.moto-panel.panel-active .speed-lines span:nth-child(5) { animation-delay: 0.18s; }
+.moto-panel.panel-active .speed-lines span:nth-child(6) { animation-delay: 0.22s; }
+.moto-panel.panel-active .speed-lines span:nth-child(7) { animation-delay: 0.25s; }
+.moto-panel.panel-active .speed-lines span:nth-child(8) { animation-delay: 0.28s; }
+
+@keyframes speedLine {
+  0%   { opacity: 0;    transform: scaleX(0); }
+  30%  { opacity: 0.8;  transform: scaleX(1); }
+  100% { opacity: 0;    transform: scaleX(1); }
+}
+
+/* ─── Panel inner grid ────────────────────────────── */
+.moto-panel__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.moto-panel__inner--reverse {
+  /* explicit column placement to reverse the visual order */
+}
+
+/* In reverse layout: visual goes to column 1, info to column 2 */
+.moto-panel__inner--reverse .moto-panel__visual {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.moto-panel__inner--reverse .moto-panel__info {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* ─── Info column ─────────────────────────────────── */
+.moto-panel__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* Haojin: info is on the RIGHT → slides in from right */
+.moto-panel__inner--reverse .moto-panel__info {
+  transform: translateX(40px);
+}
+
+.moto-panel.panel-active .moto-panel__info {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Haojin ride container: slides from the LEFT (off-screen left) */
+.moto-panel__inner--reverse .moto-ride-container {
+  transform: translateX(-120px);
+}
+
+/* Badge */
+.panel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.panel-badge--new {
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  color: #00D4FF;
+}
+
+.panel-badge--euro {
+  background: rgba(255, 183, 0, 0.1);
+  border: 1px solid rgba(255, 183, 0, 0.35);
+  color: #FFB800;
+}
+
+/* Brand logo */
+.panel-brand-logo img {
+  height: 28px;
+  object-fit: contain;
+  object-position: left;
+  filter: brightness(1.3);
+}
+
+/* Title stacked layout */
+.panel-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.panel-title__name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.panel-title__model {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  -webkit-text-stroke: 0px;
+  text-shadow: 0 0 30px rgba(255, 30, 58, 0.5);
+}
+
+.panel-title__cc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  margin-top: 0.3rem;
+}
+
+.panel-title__cc em {
+  font-style: normal;
+}
+
+/* Tagline */
+.panel-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 420px;
+  margin: 0;
+}
+
+/* ─── Stats row ───────────────────────────────────── */
+.panel-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  width: fit-content;
+}
+
+.panel-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+
+.panel-stat__value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.panel-stat__unit {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.1rem;
+}
+
+.panel-stat__label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.15rem;
+}
+
+.panel-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+/* ─── Feature pills list ──────────────────────────── */
+.panel-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.panel-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 100px;
+  padding: 0.35rem 0.85rem 0.35rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.moto-panel.panel-active .panel-feature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered feature animation */
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(1) { transition-delay: 0.2s; }
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(2) { transition-delay: 0.28s; }
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(3) { transition-delay: 0.36s; }
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(4) { transition-delay: 0.44s; }
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(5) { transition-delay: 0.52s; }
+.moto-panel.panel-active .panel-features .panel-feature:nth-child(6) { transition-delay: 0.60s; }
+
+.panel-feature:hover {
+  background: rgba(255, 30, 58, 0.1);
+  border-color: rgba(255, 30, 58, 0.35);
+  color: var(--text-primary);
+}
+
+.pf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 30, 58, 0.15);
+  color: var(--accent-primary);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* ─── Color dots ──────────────────────────────────── */
+.panel-colors {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.panel-colors__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.panel-colors__dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pcd {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  cursor: default;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.pcd:hover {
+  transform: scale(1.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ─── Price + CTA row ─────────────────────────────── */
+.panel-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.panel-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.panel-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.panel-price span {
+  font-size: 0.55em;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 0.2rem;
+}
+
+.panel-promo-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #00C853;
+  letter-spacing: 0.5px;
+}
+
+.panel-cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-whatsapp--panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: #25D366;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp--panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* ─── Visual column ───────────────────────────────── */
+.moto-panel__visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 420px;
+}
+
+/* ─── Ride container — the "driving" element ──────── */
+.moto-ride-container {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+
+  /* Off-screen to the right by default (Letbe comes from right) */
+  transform: translateX(120px);
+  opacity: 0;
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease;
+}
+
+
+
+/* Active state: bike "drives in" to stop position */
+.moto-panel.panel-active .moto-ride-container {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Brake bounce: added via JS after the drive-in transition ends */
+@keyframes brakeStop {
+  0%   { transform: translateX(0) rotate(0deg); }
+  30%  { transform: translateX(6px) rotate(0.5deg); }
+  55%  { transform: translateX(-3px) rotate(-0.3deg); }
+  80%  { transform: translateX(2px) rotate(0.15deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+.moto-panel.panel-braking .moto-ride-container {
+  animation: brakeStop 0.55s ease;
+}
+
+/* The bike image */
+.moto-ride-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.7));
+}
+
+/* Hover tilt */
+.moto-panel.panel-active .moto-ride-container:hover .moto-ride-img {
+  transform: perspective(600px) rotateY(-4deg) scale(1.03);
+  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.8));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* ─── Ground shadow ───────────────────────────────── */
+.moto-shadow {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 22px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 1;
+  transition: width 0.9s ease, opacity 0.9s ease;
+  opacity: 0;
+}
+
+.moto-panel.panel-active .moto-shadow {
+  opacity: 1;
+}
+
+/* ─── Wheel glow rings ────────────────────────────── */
+.wheel-glow {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease 1.2s;
+}
+
+.moto-panel.panel-active .wheel-glow {
+  opacity: 1;
+  animation: wheelSpin 2s linear infinite;
+}
+
+.moto-panel--letbe .wheel-glow {
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+
+.moto-panel--haojin .wheel-glow {
+  border: 1px solid rgba(255, 30, 58, 0.3);
+  box-shadow: 0 0 12px rgba(255, 30, 58, 0.15);
+}
+
+/* Rear wheel position (approx for scooter/moto) */
+.wheel-glow--rear {
+  width: 115px;
+  height: 115px;
+  bottom: 6%;
+  left: 8%;
+}
+
+.wheel-glow--front {
+  width: 110px;
+  height: 110px;
+  bottom: 6%;
+  right: 12%;
+}
+
+@keyframes wheelSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── Parallax floating on idle (after stop) ──────── */
+@keyframes floatMoto {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.moto-panel.panel-idle .moto-ride-img {
+  animation: floatMoto 4s ease-in-out infinite;
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .moto-panel {
+    min-height: auto;
+    padding: 4rem 0 3.5rem;
+  }
+
+  .moto-panel__inner,
+  .moto-panel__inner--reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.25rem;
+  }
+
+  /* Reset explicit grid placements on mobile */
+  .moto-panel__inner--reverse .moto-panel__visual,
+  .moto-panel__inner--reverse .moto-panel__info {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Visual always on top on mobile */
+  .moto-panel__visual {
+    order: -1;
+    min-height: 260px;
+  }
+
+  .moto-panel__info {
+    order: 1;
+    transform: translateY(30px) !important;
+  }
+
+  .moto-panel.panel-active .moto-panel__info {
+    transform: translateY(0) !important;
+  }
+
+  .moto-ride-container {
+    max-width: 320px;
+    margin: 0 auto;
+    transform: translateY(30px) !important;
+  }
+
+  .moto-panel.panel-active .moto-ride-container {
+    transform: translateY(0) !important;
+  }
+
+  .panel-glow--cyan { right: -120px; width: 300px; height: 300px; }
+  .panel-glow--red  { left: -120px;  width: 300px; height: 300px; }
+
+  .speed-lines { display: none; }
+
+  .wheel-glow--rear  { width: 70px;  height: 70px;  bottom: 4%; left: 6%;  }
+  .wheel-glow--front { width: 65px;  height: 65px;  bottom: 4%; right: 8%; }
+
+  .panel-stats {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .panel-stat {
+    padding: 0 0.75rem;
+  }
+
+  .panel-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .panel-cta-btns {
+    width: 100%;
+  }
+
+  .panel-cta-btns .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .panel-title__name,
+  .panel-title__model {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .panel-stats {
+    gap: 0.5rem;
+  }
+
+  .panel-stat-divider {
+    display: none;
+  }
+
+  .panel-stat {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .panel-features {
+    gap: 0.4rem;
+  }
+
+  .panel-feature {
+    font-size: 0.72rem;
+  }
+
+  .panel-price {
+    font-size: 1.8rem;
+  }
+}
+
+/* ─── Reduced motion preference ──────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .moto-ride-container,
+  .moto-panel__info,
+  .panel-feature,
+  .wheel-glow,
+  .panel-glow,
+  .moto-shadow {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
