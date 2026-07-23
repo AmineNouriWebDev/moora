@@ -1,11 +1,35 @@
 /**
  * MOORA MOTORS — Page Loader
  * Injects a full-screen loader on every page load, then fades it out.
+ *
+ * Logo path fix: capture document.currentScript.src immediately (only valid
+ * while the script is executing), strip "js/page-loader.js" to get the site
+ * root as an absolute URL. This works on GitHub Pages sub-repos like
+ * /moora/ and on local file:// without any manual depth calculation.
  */
 (function () {
   'use strict';
 
-  /* ── 1. Build the loader DOM immediately (before DOMContentLoaded) ─ */
+  /* ── 0. Capture the script's own absolute URL right now ────────────── */
+  // document.currentScript is only non-null during initial script execution.
+  const _scriptSrc = (document.currentScript && document.currentScript.src) || '';
+
+  /* ── 1. Derive the site root from the script URL ──────────────────── */
+  function getBasePath() {
+    if (_scriptSrc) {
+      // e.g. https://aminenouriwebdev.github.io/moora/js/page-loader.js
+      //   → https://aminenouriwebdev.github.io/moora/
+      return _scriptSrc.replace(/js\/page-loader\.js.*$/, '');
+    }
+    // Fallback (inline scripts / very old browsers): count path slashes.
+    // NOTE: this was the original logic that broke on GitHub Pages sub-repos.
+    const depth = (window.location.pathname.match(/\//g) || []).length - 1;
+    return depth > 0 ? '../'.repeat(depth) : '';
+  }
+
+  const BASE = getBasePath();
+
+  /* ── 2. Build the loader DOM immediately (before DOMContentLoaded) ── */
   const loader = document.createElement('div');
   loader.id = 'moora-loader';
   loader.setAttribute('role', 'status');
@@ -25,7 +49,7 @@
     <div class="loader-logo-wrap">
       <img
         class="loader-logo"
-        src="${getLogoPath()}img/logo.png"
+        src="${BASE}img/logo.png"
         alt="Moora Motors"
         width="130"
         height="130"
@@ -44,18 +68,12 @@
   /* Insert as first element so it covers everything */
   document.documentElement.appendChild(loader);
 
-  /* ── 2. Resolve logo path relative to current page depth ─────────── */
-  function getLogoPath() {
-    const depth = (window.location.pathname.match(/\//g) || []).length - 1;
-    return depth > 0 ? '../'.repeat(depth) : '';
-  }
-
   /* ── 3. Hide the loader after page is ready ───────────────────────── */
   const MIN_SHOW_MS = 1400;   // always show for at least this long
   const startTime   = Date.now();
 
   function hideLoader() {
-    const elapsed  = Date.now() - startTime;
+    const elapsed   = Date.now() - startTime;
     const remaining = Math.max(0, MIN_SHOW_MS - elapsed);
 
     setTimeout(() => {
