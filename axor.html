@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casques Axor — Équipements Moto | Moora Motors Tunisie</title>
+    <meta name="description" content="Découvrez la gamme complète de casques Axor disponibles chez Moora Motors en Tunisie. Casques full face, open face et accessoires moto de qualité premium conçus en Italie.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page-loader.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ===== AXOR PAGE SPECIFIC STYLES ===== */
+
+        /* Hero Section */
+        .axor-hero {
+            min-height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .axor-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,30,58,0.12) 0%, transparent 65%),
+                radial-gradient(ellipse 50% 80% at 10% 20%, rgba(0,212,255,0.06) 0%, transparent 60%);
+        }
+
+        /* Grid lines decoration */
+        .axor-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,30,58,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,30,58,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+        }
+
+        .axor-hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .axor-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid rgba(255,30,58,0.4);
+            border-radius: 999px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            background: rgba(255,30,58,0.08);
+        }
+
+        .axor-hero-title {
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .axor-hero-title .brand-accent {
+            color: var(--accent-primary);
+            display: block;
+        }
+
+        .axor-hero-title .brand-sub {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        .axor-hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .axor-hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .axor-stat-item {
+            text-align: center;
+        }
+
+        .axor-stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .axor-stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .axor-hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .axor-hero-img-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .axor-hero-img-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,30,58,0.25) 0%, transparent 70%);
+            animation: heroGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            from { transform: scale(0.95); opacity: 0.6; }
+            to   { transform: scale(1.05); opacity: 1; }
+        }
+
+        .axor-hero-main-img {
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(255,30,58,0.35));
+            animation: floatHelmet 6s ease-in-out infinite;
+        }
+
+        @keyframes floatHelmet {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
+
+        /* Section nav tabs */
+        .section-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid rgba(255,30,58,0.15);
+            margin-bottom: 3rem;
+            overflow-x: auto;
+        }
+
+        .section-tab {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .section-tab:hover { color: var(--text-primary); }
+
+        .section-tab.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* Helmet cards grid */
+        .helmets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .helmet-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-med);
+            position: relative;
+            cursor: pointer;
+            group: true;
+        }
+
+        .helmet-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,30,58,0.06) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+        }
+
+        .helmet-card:hover {
+            border-color: rgba(255,30,58,0.35);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(255,30,58,0.15), 0 0 0 1px rgba(255,30,58,0.1);
+        }
+
+        .helmet-card:hover::before { opacity: 1; }
+
+        .helmet-card-img-wrap {
+            position: relative;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-card) 100%);
+            padding: 2rem;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .helmet-card-img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, var(--bg-secondary), transparent);
+        }
+
+        .helmet-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+        }
+
+        .helmet-card:hover .helmet-card-img {
+            transform: scale(1.08) translateY(-4px);
+        }
+
+        .helmet-card-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-primary);
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .helmet-card-type.open-face {
+            background: linear-gradient(135deg, #00B4D8, #0077A8);
+        }
+
+        .helmet-card-body {
+            padding: 1.25rem 1.5rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .helmet-card-series {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .helmet-card-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .helmet-card-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .helmet-card-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .helmet-card-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .helmet-card-features li i {
+            color: var(--accent-primary);
+            width: 14px;
+            font-size: 0.7rem;
+        }
+
+        .helmet-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .helmet-card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            background: rgba(0,212,255,0.08);
+            border: 1px solid rgba(0,212,255,0.15);
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .helmet-card-link {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: gap 0.2s ease;
+        }
+
+        .helmet-card-link:hover { gap: 0.6rem; }
+
+        /* ===== ACCESSORIES GRID — Premium Horizontal Cards ===== */
+        .accessories-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .accessory-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-med);
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: 220px;
+            position: relative;
+        }
+
+        .accessory-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,212,255,0.04) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .accessory-card:hover {
+            border-color: rgba(0,212,255,0.35);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,212,255,0.12), 0 0 0 1px rgba(0,212,255,0.08);
+        }
+
+        .accessory-card:hover::before { opacity: 1; }
+
+        .accessory-card-img-wrap {
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accessory-card-img-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            background: linear-gradient(to right, transparent, var(--bg-secondary));
+        }
+
+        .accessory-card-img {
+            width: 100%;
+            height: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+            position: relative;
+            z-index: 1;
+        }
+
+        .accessory-card:hover .accessory-card-img {
+            transform: scale(1.08) translateX(-6px);
+        }
+
+        .accessory-card-body {
+            padding: 1.75rem 2rem 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .accessory-card-cat {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            background: rgba(0,212,255,0.08);
+            border: 1px solid rgba(0,212,255,0.15);
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            width: fit-content;
+        }
+
+        .accessory-card-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+
+        .accessory-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .accessory-card-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .accessory-card-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .accessory-card-features li i {
+            color: var(--accent-secondary);
+            font-size: 0.65rem;
+            width: 12px;
+        }
+
+        .accessory-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            transition: gap 0.2s ease;
+        }
+
+        .accessory-card-cta:hover { gap: 0.75rem; }
+
+        @media (max-width: 1100px) {
+            .accessories-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .accessory-card { grid-template-columns: 1fr; }
+            .accessory-card-img-wrap { min-height: 200px; }
+            .accessory-card-img-wrap::after { display: none; }
+        }
+
+        /* Brand story section */
+        .brand-story {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-story::before {
+            content: 'AXOR';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14rem;
+            font-weight: 900;
+            color: rgba(255,30,58,0.04);
+            letter-spacing: -10px;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .brand-story-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-story-logo {
+            height: 60px;
+            object-fit: contain;
+            object-position: left;
+            margin-bottom: 1.5rem;
+            filter: brightness(1.3);
+        }
+
+        .brand-story-title {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .brand-story-text {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+        }
+
+        .brand-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .brand-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: rgba(255,30,58,0.04);
+            border: 1px solid rgba(255,30,58,0.08);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+
+        .brand-feature-item:hover {
+            background: rgba(255,30,58,0.08);
+            border-color: rgba(255,30,58,0.2);
+        }
+
+        .brand-feature-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,30,58,0.1);
+            border: 1px solid rgba(255,30,58,0.2);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .brand-feature-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .brand-feature-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(255,30,58,0.12) 0%, rgba(255,30,58,0.04) 100%);
+            border: 1px solid rgba(255,30,58,0.2);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-size: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Floating label */
+        .coming-soon-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background: rgba(255,30,58,0.15);
+            border: 2px solid rgba(255,30,58,0.5);
+            color: var(--accent-primary);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            z-index: 3;
+            white-space: nowrap;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .axor-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .axor-hero-desc { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .axor-hero-stats { justify-content: center; }
+            .axor-hero-visual { display: none; }
+            .brand-story-inner { grid-template-columns: 1fr; }
+            .brand-story { padding: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .helmets-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+            .accessories-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+            .cta-banner { padding: 2.5rem 1.5rem; }
+            .brand-features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link active">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="axor.html">Casques Axor</a></li>
+                            <li><a href="vega.html">Casques Vega</a></li>
+                            <li><a href="#">Huiles Putoline (Bientôt)</a></li>
+                            <li><a href="#">Pneus Eurogrip (Bientôt)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="axor-hero">
+            <div class="container">
+                <div class="axor-hero-inner">
+                    <div class="axor-hero-content" data-aos="fade-right">
+                        <div class="axor-hero-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            Équipements Premium — Conçu en Italie
+                        </div>
+                        <h1 class="axor-hero-title">
+                            <span class="brand-accent">AXOR</span>
+                            <span>HELMETS</span>
+                            <span class="brand-sub">Safety Redefined</span>
+                        </h1>
+                        <p class="axor-hero-desc">
+                            Conceptualisés en Italie, promus par les pionniers de l'industrie. Axor allie ingénierie de pointe et design avant-gardiste pour des casques qui redéfinissent les standards de sécurité mondiale.
+                        </p>
+                        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                            <a href="#helmets" class="btn btn-primary">
+                                <i class="fas fa-helmet-safety"></i> Voir les casques
+                            </a>
+                            <a href="contact.html" class="btn btn-secondary">
+                                <i class="fas fa-file-invoice"></i> Demander un devis
+                            </a>
+                        </div>
+                        <div class="axor-hero-stats">
+                            <div class="axor-stat-item">
+                                <span class="axor-stat-number">2015</span>
+                                <span class="axor-stat-label">Fondée</span>
+                            </div>
+                            <div class="axor-stat-item">
+                                <span class="axor-stat-number">50+</span>
+                                <span class="axor-stat-label">Pays</span>
+                            </div>
+                            <div class="axor-stat-item">
+                                <span class="axor-stat-number">ECE</span>
+                                <span class="axor-stat-label">Certifié</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="axor-hero-visual" data-aos="fade-left" data-aos-delay="200">
+                        <div class="axor-hero-img-wrap">
+                            <img class="axor-hero-main-img"
+                                 src="img/casques/axor/AXOR-APEX-GRAPHICS-WITH-IRIDUIM-EXTRA-VISOR .png"
+                                 alt="Axor Apex Graphics — Casque Full Face Premium">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BRAND STORY ===== -->
+        <section class="section-padding" id="about-axor">
+            <div class="container">
+                <div class="brand-story" data-aos="fade-up">
+                    <div class="brand-story-inner">
+                        <div>
+                            <div class="brand-story-badge" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent-primary);margin-bottom:1rem;">
+                                <i class="fas fa-star"></i> À propos d'Axor
+                            </div>
+                            <h2 class="brand-story-title">Conçu en Italie.<br>Fabriqué pour le monde.</h2>
+                            <p class="brand-story-text">
+                                Axor a débuté son aventure en <strong style="color:var(--accent-primary)">2015</strong> avec la collaboration de designers internationaux et d'experts du secteur. Les casques Axor sont conceptualisés et conçus en <strong style="color:var(--text-primary)">Italie</strong>, promus par les pionniers de l'industrie, <strong style="color:var(--text-primary)">Vega</strong>.
+                            </p>
+                            <p class="brand-story-text">
+                                Certifiés <strong style="color:var(--accent-secondary)">ECE 22.06</strong>, les casques Axor sont présents dans plus de 50 pays et répondent aux normes de sécurité les plus exigeantes au monde. Design avant-gardiste, matériaux composites premium et technologie de pointe pour chaque rider.
+                            </p>
+                        </div>
+                        <div class="brand-features">
+                            <div class="brand-feature-item">
+                                <div class="brand-feature-icon"><i class="fas fa-certificate"></i></div>
+                                <div>
+                                    <div class="brand-feature-label">ECE 22.06</div>
+                                    <div class="brand-feature-sub">Certification européenne de sécurité maximale</div>
+                                </div>
+                            </div>
+                            <div class="brand-feature-item">
+                                <div class="brand-feature-icon"><i class="fas fa-drafting-compass"></i></div>
+                                <div>
+                                    <div class="brand-feature-label">Design Italien</div>
+                                    <div class="brand-feature-sub">Conceptualisé par des designers de renom en Italie</div>
+                                </div>
+                            </div>
+                            <div class="brand-feature-item">
+                                <div class="brand-feature-icon"><i class="fas fa-wind"></i></div>
+                                <div>
+                                    <div class="brand-feature-label">Aérodynamique</div>
+                                    <div class="brand-feature-sub">Coque optimisée pour réduire la traînée et le bruit</div>
+                                </div>
+                            </div>
+                            <div class="brand-feature-item">
+                                <div class="brand-feature-icon"><i class="fas fa-feather-alt"></i></div>
+                                <div>
+                                    <div class="brand-feature-label">Ultra léger</div>
+                                    <div class="brand-feature-sub">Fibre de carbone et composites avancés pour moins de fatigue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HELMETS & ACCESSORIES SECTION ===== -->
+        <section class="section-padding" id="helmets">
+            <div class="container">
+                <h2 class="section-title" data-label="Notre Sélection" data-aos="fade-up">Casques &amp; Accessoires Axor</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Toute la gamme Axor disponible chez Moora Motors — du casque full face aux équipements de protection.
+                </p>
+
+                <!-- Section Tabs -->
+                <div class="section-tabs" data-aos="fade-up" data-aos-delay="150">
+                    <button class="section-tab active" data-tab="full-face" id="tab-full-face">
+                        <i class="fas fa-user-shield"></i> Full Face
+                    </button>
+                    <button class="section-tab" data-tab="open-face" id="tab-open-face">
+                        <i class="fas fa-user"></i> Open Face
+                    </button>
+                    <button class="section-tab" data-tab="accessories" id="tab-accessories">
+                        <i class="fas fa-vest-patches"></i> Accessoires
+                    </button>
+                </div>
+
+                <!-- ===== FULL FACE TAB ===== -->
+                <div class="tab-panel active" id="panel-full-face">
+                    <div class="helmets-grid">
+
+                        <!-- AXOR APEX Graphics -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="50">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-GRAPHICS.png"
+                                     alt="Axor Apex Graphics">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Full Face</div>
+                                <div class="helmet-card-name">APEX Graphics</div>
+                                <p class="helmet-card-desc">Casque full face haut de gamme aux finitions graphiques exclusives. Coque en polycarbonate composite, intérieur antibactérien amovible et lavable.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Certification ECE 22.06</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière anti-UV ultra-claire</li>
+                                    <li><i class="fas fa-check-circle"></i> Système de ventilation avancé</li>
+                                    <li><i class="fas fa-check-circle"></i> Intérieur extractible lavable</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-SC.png"
+                                     alt="Axor Apex SC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Full Face</div>
+                                <div class="helmet-card-name">APEX SC</div>
+                                <p class="helmet-card-desc">L'APEX en finition Solid Color — le classique revisité. Élégance épurée, performance maximale. Disponible en plusieurs coloris intemporels.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Coque monolithique renforcée</li>
+                                    <li><i class="fas fa-check-circle"></i> Mentonnière détachable d'urgence</li>
+                                    <li><i class="fas fa-check-circle"></i> Fermeture double D-Ring</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX Carbon -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-CARBON-SMALL-CHECKS.png"
+                                     alt="Axor Apex Carbon Small Checks">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Premium Carbon</div>
+                                <div class="helmet-card-name">APEX Carbon</div>
+                                <p class="helmet-card-desc">La crème des casques Axor. Coque en fibre de carbone avec motif Small Checks emblématique — ultra léger, ultra résistant, ultra stylé.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Coque 100% fibre de carbone</li>
+                                    <li><i class="fas fa-check-circle"></i> Poids réduit à moins de 1 400g</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière Pinlock 120 incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Certification DOT + ECE</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-gem"></i> Premium</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX Forged Carbon -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-FORGED-CARBON.png"
+                                     alt="Axor Apex Forged Carbon">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Racing Edition</div>
+                                <div class="helmet-card-name">APEX Forged Carbon</div>
+                                <p class="helmet-card-desc">La technologie du carbone forgé au service de la route. Texture 3D unique, résistance exceptionnelle aux impacts et poids plume — le choix des riders exigeants.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Carbone forgé haute résistance</li>
+                                    <li><i class="fas fa-check-circle"></i> Texture 3D exclusive Axor</li>
+                                    <li><i class="fas fa-check-circle"></i> Aération menton optimisée</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-gem"></i> Premium</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX SMART -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-SMART .png"
+                                     alt="Axor Apex Smart">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Smart Series</div>
+                                <div class="helmet-card-name">APEX Smart</div>
+                                <p class="helmet-card-desc">Le casque connecté de demain. Prêt pour l'intercom Bluetooth, avec haut-parleurs intégrés et pré-câblé pour une expérience audio immersive en route.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Compatible Bluetooth intégré</li>
+                                    <li><i class="fas fa-check-circle"></i> Logements haut-parleurs pré-découpés</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière double (solaire + claire)</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-bluetooth"></i> Smart</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX Hunter Graphics -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-HUNTER-GRAPHICS-WITH-IRIDUIM-EXTRA-CLEAR.png"
+                                     alt="Axor Apex Hunter Graphics">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Hunter Series</div>
+                                <div class="helmet-card-name">APEX Hunter Graphics</div>
+                                <p class="helmet-card-desc">Le style chasseur — graphismes accrocheurs et protection maximale. Livrée avec visor iridium extra-clear pour une visibilité parfaite dans toutes les conditions.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Visière Iridium incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Graphismes exclusifs Hunter</li>
+                                    <li><i class="fas fa-check-circle"></i> Coque composite renforcée</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR BRUTALE SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="350">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-BRUTALE-SC.png"
+                                     alt="Axor Brutale SC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Street Fighter</div>
+                                <div class="helmet-card-name">BRUTALE SC</div>
+                                <p class="helmet-card-desc">Agressif, musclé, iconique. Le Brutale incarne l'esprit des naked bikes — design brutal, protection intégrale et silhouette qui impose le respect dans chaque rue.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Design Street Fighter exclusif</li>
+                                    <li><i class="fas fa-check-circle"></i> Aération menton + couronne avancée</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière large champ de vision</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR BRUTALE Graphics -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-BRUTALE-GRAPHIICS.png"
+                                     alt="Axor Brutale Graphics">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Street Fighter</div>
+                                <div class="helmet-card-name">BRUTALE Graphics</div>
+                                <p class="helmet-card-desc">Le Brutale avec graphismes — tout le caractère du modèle SC avec une personnalisation graphique audacieuse qui fait tourner les têtes à chaque carrefour.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Graphismes bold exclusifs</li>
+                                    <li><i class="fas fa-check-circle"></i> Double aération frontale</li>
+                                    <li><i class="fas fa-check-circle"></i> Mentonnière aérée optimisée</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR ROUGH SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="450">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-ROUGH-SC.png"
+                                     alt="Axor Rough SC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Adventure</div>
+                                <div class="helmet-card-name">ROUGH SC</div>
+                                <p class="helmet-card-desc">Taillé pour l'aventure — le Rough SC combine la robustesse d'un casque tout-terrain avec le confort d'un full face. Prêt pour la ville et les chemins non balisés.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Pic détachable intégré</li>
+                                    <li><i class="fas fa-check-circle"></i> Protection supérieure impacts</li>
+                                    <li><i class="fas fa-check-circle"></i> Compatible lunettes de trail</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-mountain"></i> Adventure</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR X-CROSS DV SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-X-CROSS-DV-SC.jpg"
+                                     alt="Axor X-Cross DV SC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · X-Cross</div>
+                                <div class="helmet-card-name">X-CROSS DV SC</div>
+                                <p class="helmet-card-desc">Le casque modulable redéfini. Design double visière intégré — visière solaire rétractable pour s'adapter instantanément à toutes les conditions lumineuses.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Double visière intégrée</li>
+                                    <li><i class="fas fa-check-circle"></i> Système flip intuitif</li>
+                                    <li><i class="fas fa-check-circle"></i> Aération couronne 4 canaux</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-sun"></i> Double visor</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR SABER Marvel & DC SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="550">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-SABER-MARVEL-AND-DC-SC.png"
+                                     alt="Axor Saber Marvel DC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Édition Limitée</div>
+                                <div class="helmet-card-name">SABER Marvel &amp; DC</div>
+                                <p class="helmet-card-desc">Pour les fans de super-héros ! Édition spéciale en collaboration avec Marvel et DC Comics — des graphismes iconiques sur un casque full face de compétition.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Édition limitée Marvel / DC</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière iridium incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Numérotée et certifiée ECE</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-star"></i> Édition Limitée</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR X-CROSS DV Graphics -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-X-CROSS-DV-GRAPHICS.png"
+                                     alt="Axor X-Cross DV Graphics">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · X-Cross</div>
+                                <div class="helmet-card-name">X-CROSS DV Graphics</div>
+                                <p class="helmet-card-desc">Le X-Cross habillé de graphismes dynamiques — toutes les fonctionnalités du modulable avec une personnalité visuelle affirmée pour se démarquer en route.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Double visière solaire / claire</li>
+                                    <li><i class="fas fa-check-circle"></i> Graphismes performance racing</li>
+                                    <li><i class="fas fa-check-circle"></i> Garniture antimicrobienne</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX GRAPHICS + IRIDIUM EXTRA VISOR -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="650">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-GRAPHICS-WITH-IRIDUIM-EXTRA-VISOR .png"
+                                     alt="Axor Apex Graphics + Iridium Extra Visor">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Apex Pack</div>
+                                <div class="helmet-card-name">APEX Graphics + Iridium Visor</div>
+                                <p class="helmet-card-desc">L'APEX Graphics livré avec une visière Iridium supplémentaire — changez d'ambiance instantanément entre la visière extra-claire pour la nuit et l'iridium pour le soleil.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Pack double visière inclus</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière Iridium miroir chromé</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière extra-claire de nuit</li>
+                                    <li><i class="fas fa-check-circle"></i> Certification ECE 22.06</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-gem"></i> Pack Complet</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX CARBON SMALL CHECKS GRAPHICS -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-CARBON-SMALL-CHECKS-GRAPHICS .png"
+                                     alt="Axor Apex Carbon Small Checks Graphics">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Premium Carbon</div>
+                                <div class="helmet-card-name">APEX Carbon Graphics</div>
+                                <p class="helmet-card-desc">Le carbone Small Checks dans une version graphique encore plus exclusive. Les motifs géométriques du carbone se marient à une identité graphique percutante pour un rendu unique sur la route.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Coque carbone Small Checks</li>
+                                    <li><i class="fas fa-check-circle"></i> Graphismes sur fond carbone</li>
+                                    <li><i class="fas fa-check-circle"></i> Ultra léger — &lt; 1 400g</li>
+                                    <li><i class="fas fa-check-circle"></i> Certifié ECE + DOT</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-gem"></i> Premium</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX HUNTER GRAPHICS + SMOKE -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="750">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-HUNTER-GRAPHICS-WITH-SMOKE-EXTRA-CLEAR.png"
+                                     alt="Axor Apex Hunter Graphics Smoke">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Hunter Series</div>
+                                <div class="helmet-card-name">APEX Hunter Graphics + Smoke</div>
+                                <p class="helmet-card-desc">La version Smoke du Hunter — visière fumée incluse pour les journées ensoleillées. Graphismes Hunter dynamiques, protection ECE et pack visière smoke + extra-claire pour s'adapter à toute lumière.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Visière Fumée incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière extra-claire de nuit</li>
+                                    <li><i class="fas fa-check-circle"></i> Graphismes exclusifs Hunter</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR APEX HUNTER SC + SMOKE VISOR -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="800">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type">Full Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-APEX-HUNTER-SC-WITH-SMOKE-EXTRA-VISOR .png"
+                                     alt="Axor Apex Hunter SC Smoke Visor">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Hunter Series</div>
+                                <div class="helmet-card-name">APEX Hunter SC + Smoke Visor</div>
+                                <p class="helmet-card-desc">Hunter SC en finition monochrome livrée avec visière fumée. Design épuré et pur de la gamme Hunter — la puissance du casque de compétition dans une finition Solid Color intemporelle avec protection lumineuse.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Finition Solid Color</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière Smoke extra-visor</li>
+                                    <li><i class="fas fa-check-circle"></i> Coque composite renforcée</li>
+                                    <li><i class="fas fa-check-circle"></i> Certification ECE 22.06</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== OPEN FACE TAB ===== -->
+                <div class="tab-panel" id="panel-open-face">
+                    <div class="helmets-grid">
+
+                        <!-- AXOR JET IBIZA -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="50">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type open-face">Open Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-JET-IBIZA-WITH-SMOKE-EXTRA-CLEAR.png"
+                                     alt="Axor Jet Ibiza">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Rétro Jet</div>
+                                <div class="helmet-card-name">JET IBIZA</div>
+                                <p class="helmet-card-desc">Inspiration rétro des années 60, finition contemporaine — le Jet Ibiza est le casque des urbains élégants. Parfait pour les scooters, il allie style vintage et protection moderne.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Design inspiré des années 60</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière fumée + extra-claire incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Jugulaire microlock</li>
+                                    <li><i class="fas fa-check-circle"></i> Mousse EPS multi-densité</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-motorcycle"></i> Scooter</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR KYLO SC -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type open-face">Open Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-KYLO-SC WITH-SMOKE-EXTRA-CLEAR.png"
+                                     alt="Axor Kylo SC">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Kylo Series</div>
+                                <div class="helmet-card-name">KYLO SC</div>
+                                <p class="helmet-card-desc">Minimaliste et aérodynamique — le Kylo SC est l'ouvert parfait pour les riders urbains qui veulent liberté et style sans compromis sur la sécurité.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Coque aérodynamique Kylo</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière fumée + extra-claire</li>
+                                    <li><i class="fas fa-check-circle"></i> Ventilation optimisée</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR KYLO Graphics with Iridium -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type open-face">Open Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-KYLO-GRAPHICS-WTH-IRIDIUM-EXTRA-CLEAR.png"
+                                     alt="Axor Kylo Graphics Iridium">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Kylo Series</div>
+                                <div class="helmet-card-name">KYLO Graphics + Iridium</div>
+                                <p class="helmet-card-desc">Le Kylo habillé de graphismes dynamiques et livré avec visière iridium pour un look chromé spectaculaire. L'expression ultime du style rétro moderne.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Visière Iridium miroir incluse</li>
+                                    <li><i class="fas fa-check-circle"></i> Graphismes exclusifs racing</li>
+                                    <li><i class="fas fa-check-circle"></i> Compatibilité intercom</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-star"></i> Best-seller</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR KYLO SC Iridium Extra Clear -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type open-face">Open Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR KYLO-SC-WITH-IRIDUIM-EXTRA CLEAR.jpg"
+                                     alt="Axor Kylo SC Iridium">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Kylo Series</div>
+                                <div class="helmet-card-name">KYLO SC + Iridium</div>
+                                <p class="helmet-card-desc">Le Kylo SC en version Iridium — le même design épuré avec une visière miroir chromée qui reflète l'ambiance de chaque route traversée.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Visière Iridium extra-clear</li>
+                                    <li><i class="fas fa-check-circle"></i> Revêtement antibuée</li>
+                                    <li><i class="fas fa-check-circle"></i> Fermeture sécurisée micrométrique</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AXOR KYLO GRAPHICS + SMOKE EXTRA VISOR -->
+                        <div class="helmet-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="helmet-card-img-wrap">
+                                <span class="helmet-card-type open-face">Open Face</span>
+                                <img class="helmet-card-img"
+                                     src="img/casques/axor/AXOR-KYLO-GRAPHICS-WITH-SMOKE-EXTRA-VISOR.png"
+                                     alt="Axor Kylo Graphics Smoke Extra Visor">
+                            </div>
+                            <div class="helmet-card-body">
+                                <div class="helmet-card-series">Axor · Kylo Series</div>
+                                <div class="helmet-card-name">KYLO Graphics + Smoke Visor</div>
+                                <p class="helmet-card-desc">Le Kylo Graphics dans sa version Smoke — graphismes dynamiques et visière fumée extra pour les longues sorties en plein soleil. Une allure de compétition ouverte incomparable.</p>
+                                <ul class="helmet-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Graphismes Kylo exclusifs</li>
+                                    <li><i class="fas fa-check-circle"></i> Visière Smoke extra-visor</li>
+                                    <li><i class="fas fa-check-circle"></i> Ventilation aérodynamique</li>
+                                    <li><i class="fas fa-check-circle"></i> Intérieur amovible lavable</li>
+                                </ul>
+                                <div class="helmet-card-footer">
+                                    <span class="helmet-card-tag"><i class="fas fa-check"></i> Disponible</span>
+                                    <a href="contact.html" class="helmet-card-link">Devis <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== ACCESSORIES TAB ===== -->
+                <div class="tab-panel" id="panel-accessories">
+                    <div style="margin-bottom:2.5rem;">
+                        <p style="font-size:0.95rem;color:var(--text-secondary);text-align:center;max-width:600px;margin:0 auto;">
+                            Complétez votre équipement avec la gamme d'accessoires Axor — jaquettes de protection, gants techniques et sacs conçus pour le rider moderne exigeant.
+                        </p>
+                    </div>
+
+                    <div class="accessories-grid">
+
+                        <!-- NIMBUZ JACKET -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/NIMBUZ-JACKET.png"
+                                     alt="Axor Nimbuz Jacket">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-tshirt"></i> Jaquette Moto</div>
+                                <div class="accessory-card-name">NIMBUZ Jacket</div>
+                                <p class="accessory-card-desc">Jaquette de moto textile haut de gamme pour un usage quotidien en toutes saisons. Protections CE aux coudes et épaules, doublure amovible thermique et coupe motard ergonomique.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Protections CE niveau 1 intégrées</li>
+                                    <li><i class="fas fa-check-circle"></i> Doublure amovible toutes saisons</li>
+                                    <li><i class="fas fa-check-circle"></i> Textile haute résistance Cordura</li>
+                                    <li><i class="fas fa-check-circle"></i> Prêt pour dorsale de dos (optionnelle)</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- CRUISE 2 JACKET -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/CRUISE-2-JACKET.png"
+                                     alt="Axor Cruise 2 Jacket">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-tshirt"></i> Jaquette Touring</div>
+                                <div class="accessory-card-name">CRUISE 2 Jacket</div>
+                                <p class="accessory-card-desc">La veste touring nouvelle génération — idéale pour les grandes randonnées. Coupe aérodynamique, ventilation zippée sur les bras et la poitrine, protections CE et style contemporain pour rider avec élégance.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Aérations zippées avant/arrière</li>
+                                    <li><i class="fas fa-check-circle"></i> Coques de protection CE homologuées</li>
+                                    <li><i class="fas fa-check-circle"></i> Poches imperméables sécurisées</li>
+                                    <li><i class="fas fa-check-circle"></i> Coupe ergonomique rider</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- DIVA JACKET -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/DIVA-JACKET.png"
+                                     alt="Axor Diva Jacket">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-venus"></i> Jaquette Femme</div>
+                                <div class="accessory-card-name">DIVA Jacket</div>
+                                <p class="accessory-card-desc">Spécialement conçue pour les femmes qui roulent — coupe cintrée sans compromis sur la protection. Protections aux coudes et épaules, design féminin assumé et matériaux premium pour briller sur chaque route.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Coupe cintrée spéciale femme</li>
+                                    <li><i class="fas fa-check-circle"></i> Protections CE épaules + coudes</li>
+                                    <li><i class="fas fa-check-circle"></i> Fermetures YKK robustes</li>
+                                    <li><i class="fas fa-check-circle"></i> Design Axor exclusif femme</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- GLOVES VIPER -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/GLOVES-VIPER.png"
+                                     alt="Axor Gloves Viper">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-hand-paper"></i> Gants Protection</div>
+                                <div class="accessory-card-name">Gants VIPER</div>
+                                <p class="accessory-card-desc">Gants haute protection pour le rider exigeant — insert rigide aux articulations, doublure anti-abrasion en cuir synthétique, grip renforcé sur les doigts et fermeture velcro ajustable pour un maintien parfait au poignet.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Insert rigide articulations</li>
+                                    <li><i class="fas fa-check-circle"></i> Doublure anti-abrasion</li>
+                                    <li><i class="fas fa-check-circle"></i> Grip renforcé doigts</li>
+                                    <li><i class="fas fa-check-circle"></i> Fermeture velcro réglable</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- GLOVES AIRSTREAM -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/GLOVES-AIRSTREAM.jpg"
+                                     alt="Axor Gloves Airstream">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-wind"></i> Gants Été</div>
+                                <div class="accessory-card-name">Gants AIRSTREAM</div>
+                                <p class="accessory-card-desc">Spécialement conçus pour les rides estivaux — mesh ultra-respirant, renforts aux articulations et palme de préhension haute précision. Maintien parfait sans étouffer les mains, même sous la chaleur tunisienne.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Mesh respirant toutes zones</li>
+                                    <li><i class="fas fa-check-circle"></i> Renforts articulations</li>
+                                    <li><i class="fas fa-check-circle"></i> Grip haute précision</li>
+                                    <li><i class="fas fa-check-circle"></i> Idéal climat chaud</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- TOM HELMET BACKPACK -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/AXOR-TOM-HELMET-BAGPACK.png"
+                                     alt="Axor Tom Helmet Backpack">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-bag-shopping"></i> Sac à dos</div>
+                                <div class="accessory-card-name">TOM Backpack</div>
+                                <p class="accessory-card-desc">Le sac à dos pensé pour le rider — compartiment casque sécurisé avec revêtement intérieur doux, poches organisatrices multifonction, sangles dorsales ergonomiques et logo Axor brodé. Le compagnon indispensable de chaque sortie.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Compartiment casque protégé</li>
+                                    <li><i class="fas fa-check-circle"></i> Poches organisatrices</li>
+                                    <li><i class="fas fa-check-circle"></i> Sangles dorsales réglables</li>
+                                    <li><i class="fas fa-check-circle"></i> Matériaux résistants à l'eau</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- CHAP CROSS BODY BAG -->
+                        <div class="accessory-card" data-aos="fade-up" data-aos-delay="350">
+                            <div class="accessory-card-img-wrap">
+                                <img class="accessory-card-img"
+                                     src="img/casques/axor/accessories/AXOR-CHAP-CROSS-BODY-BAG.png"
+                                     alt="Axor Chap Cross Body Bag">
+                            </div>
+                            <div class="accessory-card-body">
+                                <div class="accessory-card-cat"><i class="fas fa-bag-shopping"></i> Sac Bandoulière</div>
+                                <div class="accessory-card-name">CHAP Cross Body</div>
+                                <p class="accessory-card-desc">Le sac crossbody urbain pour le rider — compact, résistant aux chocs et à l'humidité, sangle réglable et accès rapide latéral pour vos essentiels. Design Axor sobre et efficace pour la ville et les trajets quotidiens.</p>
+                                <ul class="accessory-card-features">
+                                    <li><i class="fas fa-check-circle"></i> Résistant aux chocs et humidité</li>
+                                    <li><i class="fas fa-check-circle"></i> Accès latéral rapide</li>
+                                    <li><i class="fas fa-check-circle"></i> Sangle réglable confort</li>
+                                    <li><i class="fas fa-check-circle"></i> Format compact urban rider</li>
+                                </ul>
+                                <a href="contact.html" class="accessory-card-cta">Demander un devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="cta-banner" data-aos="fade-up">
+                    <h2>Intéressé par un casque Axor ?</h2>
+                    <p>Contactez Moora Motors dès aujourd'hui pour connaître les disponibilités, les prix et passer votre commande. Livraison en Tunisie.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20les%20casques%20Axor"
+                           class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="vega.html" class="btn btn-secondary">
+                            <i class="fas fa-helmet-safety"></i> Voir aussi Vega
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire officiel de motos et scooters en Tunisie. Distributeur officiel <span style="color:var(--accent-primary)">Haojin</span>, <span style="color:var(--accent-primary)">Letbe</span>, <span style="color:var(--accent-primary)">Axor</span> &amp; <span style="color:var(--accent-primary)">Vega</span>.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/21628485424" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="axor.html">Casques Axor</a></li>
+                        <li><a href="vega.html">Casques Vega</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-secondary" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.25rem;">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur la carte
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // ===== SECTION TABS =====
+        document.querySelectorAll('.section-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.dataset.tab;
+                document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('panel-' + target).classList.add('active');
+
+                // Re-trigger AOS for newly visible cards
+                AOS.refresh();
+            });
+        });
+    </script>
+</body>
+</html>

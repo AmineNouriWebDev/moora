@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casques Vega — Équipements Moto | Moora Motors Tunisie</title>
+    <meta name="description" content="Découvrez la gamme de casques Vega disponibles chez Moora Motors en Tunisie. Casques moto et scooter à prix abordable sans compromis sur la sécurité.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page-loader.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ===== VEGA PAGE SPECIFIC STYLES ===== */
+
+        /* Vega uses a cyan/blue accent alongside the red */
+        :root {
+            --vega-accent: #00D4FF;
+            --vega-accent-dark: #0099BB;
+        }
+
+        /* ===== HERO ===== */
+        .vega-hero {
+            min-height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .vega-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 30% 50%, rgba(0,212,255,0.10) 0%, transparent 65%),
+                radial-gradient(ellipse 50% 70% at 80% 20%, rgba(255,30,58,0.06) 0%, transparent 55%);
+        }
+
+        .vega-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+        }
+
+        .vega-hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .vega-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid rgba(0,212,255,0.4);
+            border-radius: 999px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 1.5rem;
+            background: rgba(0,212,255,0.08);
+        }
+
+        .vega-hero-title {
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .vega-hero-title .brand-accent {
+            color: var(--accent-secondary);
+            display: block;
+            text-shadow: 0 0 40px rgba(0,212,255,0.4);
+        }
+
+        .vega-hero-title .brand-sub {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        .vega-hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .vega-hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vega-hero-img-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .vega-hero-img-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,212,255,0.2) 0%, transparent 70%);
+            animation: vegaGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes vegaGlow {
+            from { transform: scale(0.95); opacity: 0.5; }
+            to   { transform: scale(1.05); opacity: 1; }
+        }
+
+        .vega-hero-main-img {
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(0,212,255,0.3));
+            animation: floatVega 6s ease-in-out infinite;
+        }
+
+        @keyframes floatVega {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
+
+        /* Stats row */
+        .vega-hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .vega-stat-item { text-align: center; }
+
+        .vega-stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-secondary);
+            display: block;
+            line-height: 1;
+        }
+
+        .vega-stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* ===== BRAND STORY ===== */
+        .brand-story-vega {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-story-vega::before {
+            content: 'VEGA';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14rem;
+            font-weight: 900;
+            color: rgba(0,212,255,0.04);
+            letter-spacing: -10px;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .brand-story-vega-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vega-brand-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .vega-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: rgba(0,212,255,0.04);
+            border: 1px solid rgba(0,212,255,0.1);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+
+        .vega-feature-item:hover {
+            background: rgba(0,212,255,0.08);
+            border-color: rgba(0,212,255,0.25);
+        }
+
+        .vega-feature-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-secondary);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .vega-feature-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .vega-feature-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* ===== HELMET CARDS ===== */
+        .vega-helmets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .vega-helmet-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-med);
+            position: relative;
+        }
+
+        .vega-helmet-card:hover {
+            border-color: rgba(0,212,255,0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,212,255,0.12), 0 0 0 1px rgba(0,212,255,0.08);
+        }
+
+        .vega-helmet-img-wrap {
+            position: relative;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-card) 100%);
+            padding: 3rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .vega-helmet-img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, var(--bg-secondary), transparent);
+        }
+
+        /* Glow ring behind helmet */
+        .vega-helmet-img-wrap::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .vega-helmet-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+            position: relative;
+            z-index: 1;
+        }
+
+        .vega-helmet-card:hover .vega-helmet-img {
+            transform: scale(1.1) translateY(-6px);
+        }
+
+        .vega-helmet-type {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: linear-gradient(135deg, #00B4D8, #0077A8);
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .vega-coming-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 184, 0, 0.15);
+            border: 1px solid rgba(255, 184, 0, 0.4);
+            color: var(--accent-gold);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .vega-helmet-body {
+            padding: 1.5rem 1.75rem 1.75rem;
+        }
+
+        .vega-helmet-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 0.35rem;
+        }
+
+        .vega-helmet-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .vega-helmet-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .vega-helmet-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vega-spec-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .vega-spec-item i {
+            color: var(--accent-secondary);
+            width: 14px;
+        }
+
+        .vega-helmet-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(0,212,255,0.1);
+        }
+
+        .vega-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            transition: gap 0.2s ease;
+        }
+
+        .vega-cta-btn:hover { gap: 0.75rem; }
+
+        .vega-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            border-radius: 50%;
+            color: #25D366;
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+        }
+
+        .vega-wa-btn:hover {
+            background: #25D366;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .comparison-header {
+            padding: 2rem 2.5rem;
+            border-bottom: 1px solid var(--border-glass);
+            background: linear-gradient(135deg, rgba(0,212,255,0.05), transparent);
+        }
+
+        .comparison-header h3 {
+            font-size: 1.5rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: rgba(0,212,255,0.06);
+            padding: 1rem 1.5rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            text-align: left;
+            border-bottom: 1px solid rgba(0,212,255,0.1);
+        }
+
+        .comparison-table td {
+            padding: 0.9rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .comparison-table tr:last-child td { border-bottom: none; }
+
+        .comparison-table tr:hover td {
+            background: rgba(0,212,255,0.03);
+        }
+
+        .comparison-table td:first-child {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+        }
+
+        .check-icon { color: #00C853; }
+        .dash-icon { color: var(--text-muted); }
+
+        /* ===== CTA BANNER ===== */
+        .vega-cta-banner {
+            background: linear-gradient(135deg, rgba(0,212,255,0.1) 0%, rgba(0,212,255,0.03) 100%);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vega-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-secondary), transparent);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .vega-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .vega-hero-desc { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .vega-hero-stats { justify-content: center; }
+            .vega-hero-visual { display: none; }
+            .brand-story-vega-inner { grid-template-columns: 1fr; }
+            .brand-story-vega { padding: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .vega-helmets-grid { grid-template-columns: 1fr; }
+            .vega-brand-features { grid-template-columns: 1fr; }
+            .vega-cta-banner { padding: 2.5rem 1.5rem; }
+            .vega-helmet-specs { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link active">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="axor.html">Casques Axor</a></li>
+                            <li><a href="vega.html">Casques Vega</a></li>
+                            <li><a href="#">Huiles Putoline (Bientôt)</a></li>
+                            <li><a href="#">Pneus Eurogrip (Bientôt)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="vega-hero">
+            <div class="container">
+                <div class="vega-hero-inner">
+                    <div data-aos="fade-right">
+                        <div class="vega-hero-badge">
+                            <i class="fas fa-award"></i>
+                            Sécurité &amp; Style — Made in India
+                        </div>
+                        <h1 class="vega-hero-title">
+                            <span class="brand-accent">VEGA</span>
+                            <span>HELMETS</span>
+                            <span class="brand-sub">Safety with Style</span>
+                        </h1>
+                        <p class="vega-hero-desc">
+                            Depuis 1987, Vega équipe les riders du monde entier avec des casques alliant protection certifiée, design contemporain et accessibilité. Le choix de millions de motards à travers l'Asie, l'Afrique et l'Europe.
+                        </p>
+                        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                            <a href="#helmets-vega" class="btn btn-primary">
+                                <i class="fas fa-helmet-safety"></i> Voir les modèles
+                            </a>
+                            <a href="contact.html" class="btn btn-secondary">
+                                <i class="fas fa-file-invoice"></i> Demander un devis
+                            </a>
+                        </div>
+                        <div class="vega-hero-stats">
+                            <div class="vega-stat-item">
+                                <span class="vega-stat-number">1987</span>
+                                <span class="vega-stat-label">Fondée</span>
+                            </div>
+                            <div class="vega-stat-item">
+                                <span class="vega-stat-number">35+</span>
+                                <span class="vega-stat-label">Ans d'exp.</span>
+                            </div>
+                            <div class="vega-stat-item">
+                                <span class="vega-stat-number">ISI</span>
+                                <span class="vega-stat-label">Certifié</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vega-hero-visual" data-aos="fade-left" data-aos-delay="200">
+                        <div class="vega-hero-img-wrap">
+                            <img class="vega-hero-main-img"
+                                 src="img/casques/vega/VEGA-SPIKE-SC .png"
+                                 alt="Vega Spike — Casque Moto Premium">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BRAND STORY ===== -->
+        <section class="section-padding" id="about-vega">
+            <div class="container">
+                <div class="brand-story-vega" data-aos="fade-up">
+                    <div class="brand-story-vega-inner">
+                        <div>
+                            <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent-secondary);margin-bottom:1rem;">
+                                <i class="fas fa-star"></i> À propos de Vega
+                            </div>
+                            <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;margin-bottom:1.25rem;">
+                                Protéger des millions<br>de riders depuis 1987.
+                            </h2>
+                            <p style="font-size:0.95rem;line-height:1.85;color:var(--text-secondary);margin-bottom:1rem;">
+                                Vega est l'une des marques de casques moto les plus reconnues d'Asie et l'une des plus grandes au monde. Fondée en <strong style="color:var(--accent-secondary)">1987</strong>, Vega a bâti sa réputation sur l'excellence de ses casques certifiés ISI, offrant une protection maximale à des prix accessibles au plus grand nombre.
+                            </p>
+                            <p style="font-size:0.95rem;line-height:1.85;color:var(--text-secondary);">
+                                Avec une gamme allant des casques full face aux open face en passant par les casques femme et enfant, Vega répond à tous les besoins de protection. Désormais distribués par <strong style="color:var(--text-primary)">Moora Motors</strong> en Tunisie.
+                            </p>
+                        </div>
+                        <div class="vega-brand-features">
+                            <div class="vega-feature-item">
+                                <div class="vega-feature-icon"><i class="fas fa-certificate"></i></div>
+                                <div>
+                                    <div class="vega-feature-label">ISI Certifié</div>
+                                    <div class="vega-feature-sub">Bureau of Indian Standards — norme de sécurité reconnue mondialement</div>
+                                </div>
+                            </div>
+                            <div class="vega-feature-item">
+                                <div class="vega-feature-icon"><i class="fas fa-users"></i></div>
+                                <div>
+                                    <div class="vega-feature-label">Millions de riders</div>
+                                    <div class="vega-feature-sub">La marque de confiance de millions de motards à travers le monde</div>
+                                </div>
+                            </div>
+                            <div class="vega-feature-item">
+                                <div class="vega-feature-icon"><i class="fas fa-tags"></i></div>
+                                <div>
+                                    <div class="vega-feature-label">Meilleur rapport qualité/prix</div>
+                                    <div class="vega-feature-sub">Protection premium à un prix accessible pour tous</div>
+                                </div>
+                            </div>
+                            <div class="vega-feature-item">
+                                <div class="vega-feature-icon"><i class="fas fa-palette"></i></div>
+                                <div>
+                                    <div class="vega-feature-label">Design varié</div>
+                                    <div class="vega-feature-sub">Une gamme large pour chaque style, chaque usage et chaque rider</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HELMETS ===== -->
+        <section class="section-padding" id="helmets-vega">
+            <div class="container">
+                <h2 class="section-title" data-label="Nos Modèles" data-aos="fade-up">La Gamme Vega</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Quatre modèles soigneusement sélectionnés pour répondre aux besoins des riders tunisiens.
+                </p>
+
+                <div class="vega-helmets-grid">
+
+                    <!-- VEGA SPIKE SC -->
+                    <div class="vega-helmet-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="vega-helmet-img-wrap">
+                            <span class="vega-helmet-type">Open Face / Flip</span>
+                            <span class="vega-coming-badge" style="background:rgba(0,200,100,0.12);border-color:rgba(0,200,100,0.3);color:#00C864;"><i class="fas fa-check"></i> Disponible</span>
+                            <img class="vega-helmet-img"
+                                 src="img/casques/vega/VEGA-SPIKE-SC .png"
+                                 alt="Vega Spike SC">
+                        </div>
+                        <div class="vega-helmet-body">
+                            <div class="vega-helmet-brand">Vega · Flip Series</div>
+                            <div class="vega-helmet-name">SPIKE SC</div>
+                            <p class="vega-helmet-desc">
+                                Le Vega Spike est un casque modulable (flip-up) alliant la commodité d'un casque ouvert et la protection d'un intégral. Parfait pour les navetteurs urbains et les grandes routes — levez la mentonnière sans retirer le casque. Solid Color dans plusieurs finitions élégantes.
+                            </p>
+                            <div class="vega-helmet-specs">
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Certification ISI</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Mentonnière pivotante</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Visière anti-UV</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Mousse EPS renforcée</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Intérieur lavable</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Fermeture Double D-Ring</div>
+                            </div>
+                            <div class="vega-helmet-footer">
+                                <a href="contact.html" class="vega-cta-btn">
+                                    Demander un devis <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20casque%20Vega%20Spike%20SC"
+                                   class="vega-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Vega Spike SC">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VEGA SPIKE GRAPHICS -->
+                    <div class="vega-helmet-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="vega-helmet-img-wrap">
+                            <span class="vega-helmet-type">Open Face / Flip</span>
+                            <span class="vega-coming-badge" style="background:rgba(0,200,100,0.12);border-color:rgba(0,200,100,0.3);color:#00C864;"><i class="fas fa-check"></i> Disponible</span>
+                            <img class="vega-helmet-img"
+                                 src="img/casques/vega/VEGA-SPIKE-GRAPHICS.png"
+                                 alt="Vega Spike Graphics">
+                        </div>
+                        <div class="vega-helmet-body">
+                            <div class="vega-helmet-brand">Vega · Flip Series</div>
+                            <div class="vega-helmet-name">SPIKE Graphics</div>
+                            <p class="vega-helmet-desc">
+                                Le Spike en version graphique — toutes les fonctionnalités du modulaire avec une personnalisation visuelle audacieuse. Des graphismes dynamiques inspirés du monde de la course qui ne passent pas inaperçus sur la route.
+                            </p>
+                            <div class="vega-helmet-specs">
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Certification ISI</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Graphismes exclusifs</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Mentonnière pivotante</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Visière intégrée</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Aération menton + couronne</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Intérieur antistatique</div>
+                            </div>
+                            <div class="vega-helmet-footer">
+                                <a href="contact.html" class="vega-cta-btn">
+                                    Demander un devis <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20casque%20Vega%20Spike%20Graphics"
+                                   class="vega-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Vega Spike Graphics">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VEGA PUNCH SC -->
+                    <div class="vega-helmet-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="vega-helmet-img-wrap">
+                            <span class="vega-helmet-type">Open Face / Dual Visor</span>
+                            <span class="vega-coming-badge" style="background:rgba(0,200,100,0.12);border-color:rgba(0,200,100,0.3);color:#00C864;"><i class="fas fa-check"></i> Disponible</span>
+                            <img class="vega-helmet-img"
+                                 src="img/casques/vega/VEGA-PUNCH-SC.png"
+                                 alt="Vega Punch SC">
+                        </div>
+                        <div class="vega-helmet-body">
+                            <div class="vega-helmet-brand">Vega · Open Face</div>
+                            <div class="vega-helmet-name">PUNCH SC</div>
+                            <p class="vega-helmet-desc">
+                                Le Vega Punch est un casque open face à double visière — la praticité d'un casque ouvert combinée à la protection d'une visière solaire intégrée. Une seule touche pour passer du mode soleil au mode nuit. Idéal pour les scooters et les riders urbains.
+                            </p>
+                            <div class="vega-helmet-specs">
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Certification ISI</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Double visière intégrée</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Visière solaire rétractable</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Coque PC composite</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Jugulaire micrometric</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Design unisexe</div>
+                            </div>
+                            <div class="vega-helmet-footer">
+                                <a href="contact.html" class="vega-cta-btn">
+                                    Demander un devis <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20casque%20Vega%20Punch%20SC"
+                                   class="vega-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Vega Punch">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VEGA SWIFT SC -->
+                    <div class="vega-helmet-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="vega-helmet-img-wrap">
+                            <span class="vega-helmet-type">Open Face</span>
+                            <span class="vega-coming-badge" style="background:rgba(0,200,100,0.12);border-color:rgba(0,200,100,0.3);color:#00C864;"><i class="fas fa-check"></i> Disponible</span>
+                            <img class="vega-helmet-img"
+                                 src="img/casques/vega/VEGA-SWFT-SC.png"
+                                 alt="Vega Swift SC">
+                        </div>
+                        <div class="vega-helmet-body">
+                            <div class="vega-helmet-brand">Vega · Open Face</div>
+                            <div class="vega-helmet-name">SWIFT SC</div>
+                            <p class="vega-helmet-desc">
+                                Léger, aéré et pratique — le Vega Swift est le compagnon parfait des scooteristes urbains. Sa coque ultra-légère en polycarbonate et son design épuré en font le casque quotidien par excellence. Certification ISI, garniture intérieure douce et confortable.
+                            </p>
+                            <div class="vega-helmet-specs">
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Certification ISI</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Coque polycarbonate léger</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Visière anti-UV intégrée</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Poids ultra-léger &lt; 1 200g</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Garniture hypoallergénique</div>
+                                <div class="vega-spec-item"><i class="fas fa-check-circle check-icon"></i> Plusieurs coloris disponibles</div>
+                            </div>
+                            <div class="vega-helmet-footer">
+                                <a href="contact.html" class="vega-cta-btn">
+                                    Demander un devis <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20casque%20Vega%20Swift%20SC"
+                                   class="vega-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Vega Swift">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== COMPARISON TABLE ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title" data-label="Comparaison" data-aos="fade-up">Choisissez votre Vega</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Tous nos modèles Vega sont certifiés ISI. Comparez les caractéristiques pour trouver le casque qui vous correspond.
+                </p>
+
+                <div class="comparison-section" data-aos="fade-up" data-aos-delay="150">
+                    <div class="comparison-header">
+                        <h3><i class="fas fa-table" style="color:var(--accent-secondary);margin-right:0.75rem;"></i>Tableau Comparatif — Gamme Vega</h3>
+                    </div>
+                    <div style="overflow-x:auto;">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Caractéristique</th>
+                                    <th>Spike SC</th>
+                                    <th>Spike Graphics</th>
+                                    <th>Punch SC</th>
+                                    <th>Swift SC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Type de casque</td>
+                                    <td>Modulable (flip)</td>
+                                    <td>Modulable (flip)</td>
+                                    <td>Open Face DV</td>
+                                    <td>Open Face</td>
+                                </tr>
+                                <tr>
+                                    <td>Certification</td>
+                                    <td>ISI ✓</td>
+                                    <td>ISI ✓</td>
+                                    <td>ISI ✓</td>
+                                    <td>ISI ✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Mentonnière pivotante</td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Double visière</td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Visière solaire intégrée</td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Graphismes exclusifs</td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                    <td><i class="fas fa-minus dash-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Intérieur lavable</td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                    <td><i class="fas fa-check check-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Idéal pour</td>
+                                    <td>Ville &amp; route</td>
+                                    <td>Style &amp; route</td>
+                                    <td>Scooter &amp; ville</td>
+                                    <td>Usage quotidien</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="vega-cta-banner" data-aos="fade-up">
+                    <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1rem;">Votre prochain casque vous attend.</h2>
+                    <p style="max-width:500px;margin:0 auto 2rem;font-size:1rem;color:var(--text-secondary);">
+                        Contactez Moora Motors pour connaître les disponibilités et commander votre casque Vega. Livraison en Tunisie assurée.
+                    </p>
+                    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20les%20casques%20Vega"
+                           class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="axor.html" class="btn btn-secondary">
+                            <i class="fas fa-helmet-safety"></i> Voir aussi Axor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire officiel de motos et scooters en Tunisie. Distributeur officiel <span style="color:var(--accent-primary)">Haojin</span>, <span style="color:var(--accent-primary)">Letbe</span>, <span style="color:var(--accent-primary)">Axor</span> &amp; <span style="color:var(--accent-primary)">Vega</span>.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/21628485424" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="axor.html">Casques Axor</a></li>
+                        <li><a href="vega.html">Casques Vega</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-secondary" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.25rem;">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur la carte
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

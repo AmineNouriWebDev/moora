@@ -1,0 +1,14 @@
+- Supprimer le bouton de darkmode en navbar de la page contact.html 
+-vérifier la conformité du menu nav dans toutes les pages que ce soit desktop ou mobile
+- les couleurs de letbe neon:
+    -  bleu aqua
+    -  GRIS NARDO
+    - BLACK MAT
+    -Gold Silver (une seule couleur gold proche du silver )
+    -Vert Perle
+    -orange 
+    -rouge
+
+    La page letbe on ajoute un sorte de carousel d'image pour chaque couleur avec une video
+    j'ai déjà ajouté un dossier /img/moto/letbe/neon/gallerie puis un dossier pour chaque couleur qui contient les images et une video parce que je n'ai pas aimé la section Galerie Photo je veux parles plus de chaque couleur trouve des description depuis internet le model letbe est international
+on garde la video de test compteur letbe-test-reel-vitesse-compteur.mp4 et on supprime les autres videos avec la section Letbe Neon en Vidéo car on va afficher des videos pour chaque couleur
