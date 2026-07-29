@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneus Eurogrip — The Bike Tyre Specialist | Moora Motors Tunisie</title>
+    <meta name="description" content="Découvrez la gamme complète de pneus Eurogrip disponibles chez Moora Motors en Tunisie. 12 références de pneus moto tubeless et tube type pour toutes les cylindrées.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page-loader.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ===== EUROGRIP PAGE — CYBER DARK DESIGN ===== */
+
+        /* ── Hero ───────────────────────────────────── */
+        .eg-hero {
+            min-height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        /* Eurogrip signature blue glow */
+        .eg-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 65% 50%, rgba(30, 90, 200, 0.13) 0%, transparent 65%),
+                radial-gradient(ellipse 50% 80% at 10% 20%, rgba(255, 30, 58, 0.07) 0%, transparent 60%);
+        }
+
+        /* Grid lines */
+        .eg-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(30, 90, 200, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 90, 200, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+        }
+
+        .eg-hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .eg-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid rgba(30, 90, 200, 0.45);
+            border-radius: 999px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #5599FF;
+            margin-bottom: 1.5rem;
+            background: rgba(30, 90, 200, 0.1);
+        }
+
+        .eg-hero-title {
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .eg-hero-title .brand-blue {
+            color: #4A90E2;
+            display: block;
+        }
+
+        .eg-hero-title .brand-sub {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .eg-hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .eg-hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .eg-stat-item { text-align: center; }
+
+        .eg-stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4A90E2;
+            display: block;
+            line-height: 1;
+        }
+
+        .eg-stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Hero visual — rotating tyre */
+        .eg-hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .eg-hero-tyre-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .eg-hero-tyre-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(30, 90, 200, 0.22) 0%, transparent 70%);
+            animation: tyreGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes tyreGlow {
+            from { transform: scale(0.92); opacity: 0.5; }
+            to   { transform: scale(1.08); opacity: 1; }
+        }
+
+        .eg-hero-tyre-img {
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(30, 90, 200, 0.3));
+            animation: floatTyre 6s ease-in-out infinite;
+        }
+
+        @keyframes floatTyre {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50%       { transform: translateY(-16px) rotate(1.5deg); }
+        }
+
+        /* ── Accent line ─────────────────────────────── */
+        .eg-accent-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.4), rgba(255, 30, 58, 0.3), transparent);
+            margin: 0;
+        }
+
+        /* ── Stats banner ────────────────────────────── */
+        .eg-stats-banner {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 2.5rem 0;
+        }
+
+        .eg-stats-banner-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .eg-banner-stat {
+            text-align: center;
+            padding: 1rem 2rem;
+            border-right: 1px solid var(--border-glass);
+            position: relative;
+        }
+
+        .eg-banner-stat:last-child { border-right: none; }
+
+        .eg-banner-stat-icon {
+            font-size: 1.5rem;
+            color: #4A90E2;
+            margin-bottom: 0.5rem;
+        }
+
+        .eg-banner-stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+            display: block;
+        }
+
+        .eg-banner-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+        }
+
+        /* ── Tyre Cards ──────────────────────────────── */
+        .tyres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .tyre-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-med);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tyre-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.06) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            pointer-events: none;
+        }
+
+        .tyre-card:hover {
+            border-color: rgba(74, 144, 226, 0.4);
+            transform: translateY(-7px);
+            box-shadow: 0 24px 60px rgba(74, 144, 226, 0.15), 0 0 0 1px rgba(74, 144, 226, 0.1);
+        }
+
+        .tyre-card:hover::before { opacity: 1; }
+
+        /* Image zone */
+        .tyre-card-img-wrap {
+            position: relative;
+            background: linear-gradient(135deg, #0d0d1a 0%, #111125 100%);
+            padding: 2rem;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Subtle circular glow behind the tyre */
+        .tyre-card-img-wrap::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%);
+            animation: cardGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes cardGlow {
+            from { transform: scale(0.8); opacity: 0.4; }
+            to   { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .tyre-card-img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to top, var(--bg-secondary), transparent);
+        }
+
+        .tyre-card-img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.7));
+        }
+
+        .tyre-card:hover .tyre-card-img {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        /* Badge top-left: type */
+        .tyre-type-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 2;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .tyre-type-badge.tubeless {
+            background: rgba(74, 144, 226, 0.18);
+            border: 1px solid rgba(74, 144, 226, 0.35);
+            color: #6EB0FF;
+        }
+
+        .tyre-type-badge.tube-type {
+            background: rgba(255, 180, 50, 0.15);
+            border: 1px solid rgba(255, 180, 50, 0.3);
+            color: #FFD060;
+        }
+
+        /* EU flag badge top-right */
+        .tyre-eu-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 2;
+            font-size: 1.4rem;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        /* Card body */
+        .tyre-card-body {
+            padding: 1.25rem 1.5rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tyre-card-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #4A90E2;
+            margin-bottom: 0.35rem;
+        }
+
+        .tyre-card-size {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            line-height: 1.05;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.5px;
+        }
+
+        .tyre-card-ref {
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border-glass);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .tyre-card-specs {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tyre-card-specs li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .tyre-card-specs li i {
+            color: #4A90E2;
+            font-size: 0.68rem;
+            width: 14px;
+        }
+
+        .tyre-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .tyre-avail-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #00C878;
+            background: rgba(0, 200, 120, 0.1);
+            border: 1px solid rgba(0, 200, 120, 0.25);
+            padding: 0.28rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .tyre-card-cta {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #4A90E2;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: gap 0.2s ease;
+        }
+
+        .tyre-card-cta:hover { gap: 0.6rem; }
+
+        /* ── Filter bar ──────────────────────────────── */
+        .filter-bar {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.55rem 1.4rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-glass);
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: rgba(74, 144, 226, 0.4);
+            color: #6EB0FF;
+            background: rgba(74, 144, 226, 0.06);
+        }
+
+        .filter-btn.active {
+            background: rgba(74, 144, 226, 0.15);
+            border-color: rgba(74, 144, 226, 0.5);
+            color: #6EB0FF;
+        }
+
+        /* ── Brand Story ─────────────────────────────── */
+        .eg-brand-story {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eg-brand-story::before {
+            content: 'EUROGRIP';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10rem;
+            font-weight: 900;
+            color: rgba(74, 144, 226, 0.04);
+            letter-spacing: -8px;
+            pointer-events: none;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .eg-brand-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eg-brand-logo-img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            margin-bottom: 1.75rem;
+        }
+
+        .eg-brand-title {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            line-height: 1;
+        }
+
+        .eg-brand-title span { color: #4A90E2; }
+
+        .eg-brand-text {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .eg-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .eg-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: rgba(74, 144, 226, 0.04);
+            border: 1px solid rgba(74, 144, 226, 0.1);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+
+        .eg-feature-item:hover {
+            background: rgba(74, 144, 226, 0.09);
+            border-color: rgba(74, 144, 226, 0.25);
+        }
+
+        .eg-feature-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(74, 144, 226, 0.1);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4A90E2;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .eg-feature-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .eg-feature-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* ── Size guide table ────────────────────────── */
+        .size-guide-wrap {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .size-guide-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .size-guide-header i { color: #4A90E2; font-size: 1.1rem; }
+
+        .size-guide-header h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .size-table th {
+            background: rgba(74, 144, 226, 0.08);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.85rem 1.5rem;
+            text-align: left;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #4A90E2;
+        }
+
+        .size-table td {
+            padding: 0.85rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .size-table tr:last-child td { border-bottom: none; }
+
+        .size-table tr:hover td {
+            background: rgba(74, 144, 226, 0.04);
+            color: var(--text-primary);
+        }
+
+        .size-table .ref-mono {
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .size-table .type-pill {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.18rem 0.5rem;
+            border-radius: 3px;
+        }
+
+        .size-table .type-pill.tl {
+            background: rgba(74, 144, 226, 0.12);
+            border: 1px solid rgba(74, 144, 226, 0.25);
+            color: #6EB0FF;
+        }
+
+        .size-table .type-pill.tt {
+            background: rgba(255, 180, 50, 0.1);
+            border: 1px solid rgba(255, 180, 50, 0.25);
+            color: #FFD060;
+        }
+
+        /* ── CTA Banner ──────────────────────────────── */
+        .eg-cta-banner {
+            background: linear-gradient(135deg, rgba(30, 90, 200, 0.12) 0%, rgba(74, 144, 226, 0.04) 60%, rgba(255, 30, 58, 0.04) 100%);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eg-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4A90E2, rgba(255,30,58,0.6), transparent);
+        }
+
+        .eg-cta-banner h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .eg-cta-banner p {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 992px) {
+            .eg-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .eg-hero-desc  { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .eg-hero-stats { justify-content: center; }
+            .eg-hero-visual { display: none; }
+            .eg-stats-banner-inner { grid-template-columns: repeat(2, 1fr); }
+            .eg-brand-inner { grid-template-columns: 1fr; }
+            .eg-brand-story { padding: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .tyres-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+            .eg-stats-banner-inner { grid-template-columns: repeat(2, 1fr); }
+            .eg-features-grid { grid-template-columns: 1fr; }
+            .eg-cta-banner { padding: 2.5rem 1.5rem; }
+            .size-table th, .size-table td { padding: 0.7rem 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .eg-stats-banner-inner { grid-template-columns: 1fr 1fr; }
+            .eg-banner-stat { padding: 0.75rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link active">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="axor.html">Casques Axor</a></li>
+                            <li><a href="vega.html">Casques Vega</a></li>
+                            <li><a href="#">Huiles Putoline (Bientôt)</a></li>
+                            <li><a href="eurogrip.html">Pneus Eurogrip</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="eg-hero">
+            <div class="container">
+                <div class="eg-hero-inner">
+                    <div class="eg-hero-content" data-aos="fade-right">
+                        <div class="eg-hero-badge">
+                            <i class="fas fa-circle-dot"></i>
+                            The Bike Tyre Specialist
+                        </div>
+                        <h1 class="eg-hero-title">
+                            <span class="brand-blue">EUROGRIP</span>
+                            <span>TYRES</span>
+                            <span class="brand-sub">Grip. Performance. Sécurité.</span>
+                        </h1>
+                        <p class="eg-hero-desc">
+                            Spécialiste mondial du pneu moto depuis 1972, Eurogrip propose des pneumatiques homologués pour toutes les cylindrées — du scooter au superbike. Disponibles exclusivement chez Moora Motors en Tunisie.
+                        </p>
+                        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                            <a href="#catalogue" class="btn btn-primary">
+                                <i class="fas fa-circle-dot"></i> Voir le catalogue
+                            </a>
+                            <a href="contact.html" class="btn btn-secondary">
+                                <i class="fas fa-file-invoice"></i> Demander un devis
+                            </a>
+                        </div>
+                        <div class="eg-hero-stats">
+                            <div class="eg-stat-item">
+                                <span class="eg-stat-number">12</span>
+                                <span class="eg-stat-label">Références</span>
+                            </div>
+                            <div class="eg-stat-item">
+                                <span class="eg-stat-number">1972</span>
+                                <span class="eg-stat-label">Fondée</span>
+                            </div>
+                            <div class="eg-stat-item">
+                                <span class="eg-stat-number">🇪🇺</span>
+                                <span class="eg-stat-label">Homologué</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eg-hero-visual" data-aos="fade-left" data-aos-delay="200">
+                        <div class="eg-hero-tyre-wrap">
+                            <img class="eg-hero-tyre-img"
+                                 src="img/pneu/eg1.jpeg"
+                                 alt="Pneu Eurogrip 180/55ZR17 — Moora Motors Tunisie">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STATS BANNER ===== -->
+        <div class="eg-accent-divider"></div>
+        <div class="eg-stats-banner">
+            <div class="container">
+                <div class="eg-stats-banner-inner">
+                    <div class="eg-banner-stat" data-aos="fade-up" data-aos-delay="50">
+                        <div class="eg-banner-stat-icon"><i class="fas fa-shield-halved"></i></div>
+                        <span class="eg-banner-stat-num">Tubeless</span>
+                        <div class="eg-banner-stat-label">Technologie</div>
+                    </div>
+                    <div class="eg-banner-stat" data-aos="fade-up" data-aos-delay="100">
+                        <div class="eg-banner-stat-icon"><i class="fas fa-flag"></i></div>
+                        <span class="eg-banner-stat-num">🇪🇺 EU</span>
+                        <div class="eg-banner-stat-label">Homologation</div>
+                    </div>
+                    <div class="eg-banner-stat" data-aos="fade-up" data-aos-delay="150">
+                        <div class="eg-banner-stat-icon"><i class="fas fa-gauge-high"></i></div>
+                        <span class="eg-banner-stat-num">ZR17</span>
+                        <div class="eg-banner-stat-label">Sport Routier</div>
+                    </div>
+                    <div class="eg-banner-stat" data-aos="fade-up" data-aos-delay="200">
+                        <div class="eg-banner-stat-icon"><i class="fas fa-location-dot"></i></div>
+                        <span class="eg-banner-stat-num">Tunisie</span>
+                        <div class="eg-banner-stat-label">Disponible</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eg-accent-divider"></div>
+
+        <!-- ===== CATALOGUE DE PNEUS ===== -->
+        <section class="section-padding" id="catalogue">
+            <div class="container">
+                <h2 class="section-title" data-label="Catalogue Complet" data-aos="fade-up">Nos Pneus Eurogrip</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="80">
+                    12 références disponibles chez Moora Motors — du pneu sportif haute vitesse au pneu trail robuste.
+                </p>
+
+                <!-- Filter bar -->
+                <div class="filter-bar" data-aos="fade-up" data-aos-delay="120">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">Tous (12)</button>
+                    <button class="filter-btn" data-filter="tubeless" id="filter-tubeless">Tubeless</button>
+                    <button class="filter-btn" data-filter="tube-type" id="filter-tt">Tube Type</button>
+                    <button class="filter-btn" data-filter="zr17" id="filter-zr17">17 pouces</button>
+                    <button class="filter-btn" data-filter="autres" id="filter-autres">Autres tailles</button>
+                </div>
+
+                <!-- Grid -->
+                <div class="tyres-grid" id="tyres-grid">
+
+                    <!-- EG1 — 180/55ZR17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="50"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg1.jpeg"
+                                 alt="Pneu Eurogrip 180/55ZR17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Routier Sport</div>
+                            <div class="tyre-card-size">180/55 ZR17</div>
+                            <div class="tyre-card-ref">PN1805517TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless haute performance</li>
+                                <li><i class="fas fa-check-circle"></i> Jante 17 pouces — roue arrière</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺 — grande moto sport</li>
+                                <li><i class="fas fa-check-circle"></i> Compound haute adhérence</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG2 — 120/70-15 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="100"
+                         data-filter="tubeless autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg2.jpeg"
+                                 alt="Pneu Eurogrip 120/70-15 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Scooter</div>
+                            <div class="tyre-card-size">120/70–15</div>
+                            <div class="tyre-card-ref">PN1207015TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — scooter 15 pouces</li>
+                                <li><i class="fas fa-check-circle"></i> Roue avant maxi-scooter</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Profil bas sportatif</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG3 — 150/70R18 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="150"
+                         data-filter="tubeless autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg3.jpeg"
+                                 alt="Pneu Eurogrip 150/70R18 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Trail / Adventure</div>
+                            <div class="tyre-card-size">150/70 R18</div>
+                            <div class="tyre-card-ref">PN1507018TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — grand trail 18"</li>
+                                <li><i class="fas fa-check-circle"></i> Roue arrière trail / adventure</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Mixte route / piste</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG4 — 190/50ZR17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="200"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg4.jpeg"
+                                 alt="Pneu Eurogrip 190/50ZR17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Hypersport</div>
+                            <div class="tyre-card-size">190/50 ZR17</div>
+                            <div class="tyre-card-ref">PN1905017TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — superbike arrière</li>
+                                <li><i class="fas fa-check-circle"></i> Profil ZR haute vitesse</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Compound racing sportif</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG5 — 170/60R17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="250"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg5.jpeg"
+                                 alt="Pneu Eurogrip 170/60R17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Routier Sport</div>
+                            <div class="tyre-card-size">170/60 R17</div>
+                            <div class="tyre-card-ref">PN1706017TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — roadster arrière</li>
+                                <li><i class="fas fa-check-circle"></i> Jante 17 pouces standard</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Excellente longévité</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG6 — 120/70ZR17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="300"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg6.jpeg"
+                                 alt="Pneu Eurogrip 120/70ZR17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Sport Avant</div>
+                            <div class="tyre-card-size">120/70 ZR17</div>
+                            <div class="tyre-card-ref">PN1207017TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — sport avant 17"</li>
+                                <li><i class="fas fa-check-circle"></i> Profil ZR haute vitesse</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Précision de direction</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG7 — 130/90-10 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="350"
+                         data-filter="tubeless autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg7.jpeg"
+                                 alt="Pneu Eurogrip 130/90-10 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Scooter Urbain</div>
+                            <div class="tyre-card-size">130/90–10</div>
+                            <div class="tyre-card-ref">PN1309010TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — scooter 10 pouces</li>
+                                <li><i class="fas fa-check-circle"></i> Usage urbain quotidien</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Résistance à l'usure optimale</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG8 — 150/70R17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="400"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg8.jpeg"
+                                 alt="Pneu Eurogrip 150/70R17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Routier</div>
+                            <div class="tyre-card-size">150/70 R17</div>
+                            <div class="tyre-card-ref">PN1507017TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — naked / roadster</li>
+                                <li><i class="fas fa-check-circle"></i> Jante 17 pouces roue arrière</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Polyvalent ville / route</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG9 — 160/60ZR17 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="450"
+                         data-filter="tubeless zr17">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg9.jpeg"
+                                 alt="Pneu Eurogrip 160/60ZR17 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Sport</div>
+                            <div class="tyre-card-size">160/60 ZR17</div>
+                            <div class="tyre-card-ref">PN1606017TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — sport arrière</li>
+                                <li><i class="fas fa-check-circle"></i> Profil ZR haute vitesse</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Adhérence en courbe maximale</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG10 — 2.75-16 6PR -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="500"
+                         data-filter="tubeless autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg10.jpeg"
+                                 alt="Pneu Eurogrip 2.75-16 6PR Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Mobylette / 125cc</div>
+                            <div class="tyre-card-size">2.75–16 6PR</div>
+                            <div class="tyre-card-ref">PN16275TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — 125cc / mobylette</li>
+                                <li><i class="fas fa-check-circle"></i> 6 plis renforcé — 16 pouces</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Robustesse et durabilité</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG11 — 90/90-21 -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="550"
+                         data-filter="tubeless autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tubeless">Tubeless</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg11.jpeg"
+                                 alt="Pneu Eurogrip 90/90-21 Tubeless">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Trail / Enduro</div>
+                            <div class="tyre-card-size">90/90–21</div>
+                            <div class="tyre-card-ref">PN909021TE</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tubeless — trail 21 pouces avant</li>
+                                <li><i class="fas fa-check-circle"></i> Grand trail / enduro</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Mixte route et terrain</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EG12 — 2.25-17 TT -->
+                    <div class="tyre-card" data-aos="fade-up" data-aos-delay="600"
+                         data-filter="tube-type autres">
+                        <div class="tyre-card-img-wrap">
+                            <span class="tyre-type-badge tube-type">Tube Type</span>
+                            <span class="tyre-eu-badge">🇪🇺</span>
+                            <img class="tyre-card-img" src="img/pneu/eg12.png"
+                                 alt="Pneu Eurogrip 2.25-17 TT">
+                        </div>
+                        <div class="tyre-card-body">
+                            <div class="tyre-card-brand">Eurogrip · Moto Classique</div>
+                            <div class="tyre-card-size">2.25–17 TT</div>
+                            <div class="tyre-card-ref">PN17225E</div>
+                            <ul class="tyre-card-specs">
+                                <li><i class="fas fa-check-circle"></i> Tube Type (avec chambre à air)</li>
+                                <li><i class="fas fa-check-circle"></i> Jante 17" — 125cc classique</li>
+                                <li><i class="fas fa-check-circle"></i> Homologué 🇪🇺</li>
+                                <li><i class="fas fa-check-circle"></i> Construction traditionnelle fiable</li>
+                            </ul>
+                            <div class="tyre-card-footer">
+                                <span class="tyre-avail-tag"><i class="fas fa-check"></i> Disponible</span>
+                                <a href="contact.html" class="tyre-card-cta">Devis <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /tyres-grid -->
+            </div>
+        </section>
+
+        <!-- ===== BRAND STORY ===== -->
+        <section class="section-padding" id="about-eurogrip">
+            <div class="container">
+                <div class="eg-brand-story" data-aos="fade-up">
+                    <div class="eg-brand-inner">
+                        <div>
+                            <img src="img/pneu/euro-grip.jpeg" alt="Eurogrip — The Bike Tyre Specialist" class="eg-brand-logo-img">
+                            <div style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4A90E2;margin-bottom:1rem;">
+                                <i class="fas fa-circle-dot"></i> À propos d'Eurogrip
+                            </div>
+                            <h2 class="eg-brand-title">The Bike Tyre<br><span>Specialist</span></h2>
+                            <p class="eg-brand-text">
+                                Fondée en <strong style="color:#4A90E2">1972</strong> en Inde, Eurogrip est aujourd'hui l'une des marques de pneumatiques moto les plus reconnues dans le monde. Vendu par <strong style="color:var(--text-primary)">TVS Tyres</strong>, groupe centenaire, Eurogrip est présent dans plus de <strong style="color:var(--text-primary)">80 pays</strong>.
+                            </p>
+                            <p class="eg-brand-text">
+                                Conçus spécifiquement pour les deux-roues motorisés, les pneus Eurogrip sont homologués <strong style="color:#4A90E2">🇪🇺 norme européenne</strong> et couvrent toute la gamme : du scooter 10" aux superbikes sportifs ZR17, en passant par les trails et enduro.
+                            </p>
+                        </div>
+                        <div class="eg-features-grid">
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-flag"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">Homologation EU</div>
+                                    <div class="eg-feature-sub">Norme européenne de sécurité et performance</div>
+                                </div>
+                            </div>
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-gauge-high"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">Haute Vitesse</div>
+                                    <div class="eg-feature-sub">Profils ZR pour vitesses élevées superbike</div>
+                                </div>
+                            </div>
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-droplet"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">Grip Optimal</div>
+                                    <div class="eg-feature-sub">Compound spécial adhérence sur route mouillée</div>
+                                </div>
+                            </div>
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-rotate"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">Longévité</div>
+                                    <div class="eg-feature-sub">Résistance à l'usure exceptionnelle km/km</div>
+                                </div>
+                            </div>
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-circle-dot"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">Tubeless</div>
+                                    <div class="eg-feature-sub">11 références sans chambre à air intégrée</div>
+                                </div>
+                            </div>
+                            <div class="eg-feature-item">
+                                <div class="eg-feature-icon"><i class="fas fa-earth-europe"></i></div>
+                                <div>
+                                    <div class="eg-feature-label">80+ Pays</div>
+                                    <div class="eg-feature-sub">Distribution mondiale TVS Group</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TABLEAU RÉCAPITULATIF ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title" data-label="Toutes les tailles" data-aos="fade-up">Guide des dimensions</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="80">
+                    Retrouvez toutes nos références avec leur code de commande.
+                </p>
+                <div class="size-guide-wrap" data-aos="fade-up" data-aos-delay="120">
+                    <div class="size-guide-header">
+                        <i class="fas fa-table-list"></i>
+                        <h3>Tableau des références Eurogrip</h3>
+                    </div>
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Dimension</th>
+                                <th>Type</th>
+                                <th>Usage</th>
+                                <th>Référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td><strong>180/55 ZR17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Sport / Superbike arrière</td>
+                                <td class="ref-mono">PN1805517TE</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td><strong>120/70–15</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Maxi-scooter avant</td>
+                                <td class="ref-mono">PN1207015TE</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td><strong>150/70 R18</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Trail / Adventure arrière</td>
+                                <td class="ref-mono">PN1507018TE</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td><strong>190/50 ZR17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Hypersport arrière</td>
+                                <td class="ref-mono">PN1905017TE</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td><strong>170/60 R17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Roadster arrière</td>
+                                <td class="ref-mono">PN1706017TE</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td><strong>120/70 ZR17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Sport avant 17"</td>
+                                <td class="ref-mono">PN1207017TE</td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td><strong>130/90–10</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Scooter urbain</td>
+                                <td class="ref-mono">PN1309010TE</td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td><strong>150/70 R17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Naked / Roadster arrière</td>
+                                <td class="ref-mono">PN1507017TE</td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td><strong>160/60 ZR17</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Sport arrière</td>
+                                <td class="ref-mono">PN1606017TE</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>2.75–16 6PR</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>125cc / Mobylette</td>
+                                <td class="ref-mono">PN16275TE</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>90/90–21</strong></td>
+                                <td><span class="type-pill tl">Tubeless</span></td>
+                                <td>Trail avant 21"</td>
+                                <td class="ref-mono">PN909021TE</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>2.25–17 TT</strong></td>
+                                <td><span class="type-pill tt">Tube Type</span></td>
+                                <td>125cc Classique</td>
+                                <td class="ref-mono">PN17225E</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="eg-cta-banner" data-aos="fade-up">
+                    <h2>Besoin d'un pneu Eurogrip ?</h2>
+                    <p>Contactez Moora Motors pour connaître les disponibilités en stock, les prix et passer votre commande. Livraison en Tunisie.</p>
+                    <div class="cta-btn-group">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20les%20pneus%20Eurogrip"
+                           class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="axor.html" class="btn btn-secondary">
+                            <i class="fas fa-helmet-safety"></i> Voir aussi Axor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire officiel de motos et scooters en Tunisie. Distributeur officiel <span style="color:var(--accent-primary)">Haojin</span>, <span style="color:var(--accent-primary)">Letbe</span>, <span style="color:var(--accent-primary)">Axor</span>, <span style="color:var(--accent-primary)">Vega</span> &amp; <span style="color:var(--accent-primary)">Eurogrip</span>.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/21628485424" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="axor.html">Casques Axor</a></li>
+                        <li><a href="vega.html">Casques Vega</a></li>
+                        <li><a href="eurogrip.html">Pneus Eurogrip</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-secondary" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.25rem;">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur la carte
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 60 });
+
+        /* ===== FILTER SYSTEM ===== */
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const tyreCards  = document.querySelectorAll('.tyre-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                tyreCards.forEach(card => {
+                    const cardFilters = card.dataset.filter || '';
+                    if (filter === 'all' || cardFilters.includes(filter)) {
+                        card.style.display = '';
+                        card.style.animation = 'none';
+                        card.offsetHeight; // reflow
+                        card.style.animation = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                AOS.refresh();
+            });
+        });
+    </script>
+</body>
+</html>
