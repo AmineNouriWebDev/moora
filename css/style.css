@@ -654,8 +654,7 @@ footer::before {
 }
 
 .color-selector-interactive .color-dot:hover {
-  transform: scale(1.25);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  /* Suppression de l'effet hover pour les cercles de couleurs */
 }
 
 /* =====================================================

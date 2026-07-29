@@ -981,7 +981,7 @@
 
 @media (max-width: 768px) {
   .hero-title { font-size: 3rem; }
-  .hero-subtitle { font-size: 1rem; }
+  .hero-subtitle { font-size: 0.8rem; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-buttons .btn { width: 100%; max-width: 300px; }
   .card-actions { grid-template-columns: 1fr; }

@@ -274,6 +274,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =====================================================
+  // Mobile Reordering for Product Gallery (above colors)
+  // =====================================================
+  const gallery = document.querySelector('.product-gallery');
+  const info = document.querySelector('.product-info');
+  const colorSection = document.querySelector('.product-color-selector-section');
+  const container = document.querySelector('.product-container');
+
+  if (gallery && info && colorSection && container) {
+    const handleReorder = () => {
+      if (window.innerWidth <= 992) {
+        if (gallery.parentElement !== info) {
+          info.insertBefore(gallery, colorSection);
+        }
+      } else {
+        if (gallery.parentElement !== container) {
+          container.insertBefore(gallery, info);
+        }
+      }
+    };
+    handleReorder();
+    window.addEventListener('resize', handleReorder);
+  }
+
+  // =====================================================
   // Smooth image transition style
   // =====================================================
   document.querySelectorAll(

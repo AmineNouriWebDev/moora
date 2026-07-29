@@ -420,12 +420,6 @@
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.15);
   cursor: default;
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-.pcd:hover {
-  transform: scale(1.25);
-  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ─── Price + CTA row ─────────────────────────────── */
