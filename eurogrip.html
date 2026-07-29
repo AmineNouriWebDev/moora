@@ -613,6 +613,42 @@
             overflow: hidden;
         }
 
+        /* Scrollable container for the table on mobile */
+        .size-table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            /* Show subtle scrollbar on webkit */
+            scrollbar-width: thin;
+            scrollbar-color: rgba(74, 144, 226, 0.35) transparent;
+        }
+
+        .size-table-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+        .size-table-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .size-table-scroll::-webkit-scrollbar-thumb {
+            background: rgba(74, 144, 226, 0.4);
+            border-radius: 2px;
+        }
+
+        /* Swipe hint badge shown only on mobile */
+        .table-scroll-hint {
+            display: none;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-family: 'Barlow Condensed', sans-serif;
+            padding: 0.6rem 1.5rem;
+            border-bottom: 1px solid var(--border-glass);
+            background: rgba(74, 144, 226, 0.04);
+        }
+        .table-scroll-hint i { color: #4A90E2; font-size: 0.85rem; }
+
         .size-guide-header {
             padding: 1.5rem 2rem;
             border-bottom: 1px solid var(--border-glass);
@@ -749,11 +785,41 @@
             .eg-features-grid { grid-template-columns: 1fr; }
             .eg-cta-banner { padding: 2.5rem 1.5rem; }
             .size-table th, .size-table td { padding: 0.7rem 1rem; }
+
+            /* ── Brand story : pleine largeur, collée aux bords ── */
+            .eg-brand-story {
+                /* Annule le padding du container parent */
+                margin-left: calc(-1 * var(--container-padding, 1.25rem));
+                margin-right: calc(-1 * var(--container-padding, 1.25rem));
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+                padding: 2rem 1.25rem;
+            }
+
+            /* ── Tableau : scroll horizontal avec hint ── */
+            .table-scroll-hint { display: flex; }
+            .size-guide-wrap {
+                /* Casse les bords pour pleine largeur */
+                margin-left: calc(-1 * var(--container-padding, 1.25rem));
+                margin-right: calc(-1 * var(--container-padding, 1.25rem));
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+            .size-table {
+                min-width: 560px; /* force le scroll horizontal */
+            }
+            .size-table th, .size-table td {
+                padding: 0.7rem 1rem;
+                white-space: nowrap;
+            }
         }
 
         @media (max-width: 480px) {
             .eg-stats-banner-inner { grid-template-columns: 1fr 1fr; }
             .eg-banner-stat { padding: 0.75rem 1rem; }
+            .eg-brand-story { padding: 1.75rem 1rem; }
         }
     </style>
 </head>
@@ -1290,6 +1356,11 @@
                         <i class="fas fa-table-list"></i>
                         <h3>Tableau des références Eurogrip</h3>
                     </div>
+                    <!-- Swipe hint — visible only on mobile via CSS -->
+                    <div class="table-scroll-hint">
+                        <i class="fas fa-hand-pointer"></i> Glissez pour voir tout le tableau
+                    </div>
+                    <div class="size-table-scroll">
                     <table class="size-table">
                         <thead>
                             <tr>
@@ -1387,7 +1458,8 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                    </div><!-- /size-table-scroll -->
+                </div><!-- /size-guide-wrap -->
             </div>
         </section>
 
