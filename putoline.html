@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huiles Putoline — Lubrifiants Moto Premium | Moora Motors Tunisie</title>
+    <meta name="description" content="Putoline Oil — fabricant indépendant néerlandais de lubrifiants haut de gamme exclusivement dédiés aux deux-roues. Bientôt disponibles chez Moora Motors en Tunisie.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page-loader.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ===== PUTOLINE PAGE — CYBER DARK + JAUNE PUTOLINE ===== */
+
+        :root {
+            --pt-yellow: #FFD400;
+            --pt-yellow-dim: rgba(255, 212, 0, 0.15);
+            --pt-yellow-glow: rgba(255, 212, 0, 0.25);
+            --pt-dark: #0c1c2a;
+        }
+
+        /* ── Hero ───────────────────────────────────────── */
+        .pt-hero {
+            min-height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .pt-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 60% 45%, rgba(255, 212, 0, 0.08) 0%, transparent 65%),
+                radial-gradient(ellipse 50% 70% at 5% 20%, rgba(255, 30, 58, 0.06) 0%, transparent 60%);
+        }
+
+        .pt-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 212, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 212, 0, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+        }
+
+        .pt-hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0 4rem;
+        }
+
+        /* Coming soon chip */
+        .pt-coming-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 1.2rem;
+            border: 1px solid rgba(255, 212, 0, 0.45);
+            border-radius: 999px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--pt-yellow);
+            background: rgba(255, 212, 0, 0.08);
+            margin-bottom: 1.5rem;
+            animation: chipPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes chipPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 212, 0, 0); }
+            50%       { box-shadow: 0 0 0 6px rgba(255, 212, 0, 0.08); }
+        }
+
+        .pt-hero-title {
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .pt-hero-title .brand-yellow { color: var(--pt-yellow); display: block; }
+        .pt-hero-title .brand-sub {
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+        }
+
+        .pt-hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .pt-hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .pt-stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--pt-yellow);
+            display: block;
+            line-height: 1;
+        }
+
+        .pt-stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* Hero Visual — oil drop animation */
+        .pt-hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pt-hero-logo-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .pt-hero-logo-wrap::before {
+            content: '';
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 212, 0, 0.12) 0%, transparent 70%);
+            animation: oilGlow 4s ease-in-out infinite alternate;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes oilGlow {
+            from { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+            to   { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+        }
+
+        .pt-hero-logo-img {
+            width: 90%;
+            max-width: 320px;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 212, 0, 0.15);
+            animation: floatLogo 5s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-12px); }
+        }
+
+        /* "BIENTÔT" big badge on the visual */
+        .pt-soon-badge {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 212, 0, 0.12), rgba(255, 212, 0, 0.04));
+            border: 1px solid rgba(255, 212, 0, 0.3);
+            border-radius: 12px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--pt-yellow);
+            backdrop-filter: blur(10px);
+        }
+
+        .pt-soon-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--pt-yellow);
+            animation: dotBlink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.3; transform: scale(0.7); }
+        }
+
+        /* ── Accent line ─────────────────────────────────── */
+        .pt-accent-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 212, 0, 0.3), rgba(255, 30, 58, 0.2), transparent);
+        }
+
+        /* ── About Putoline — brand story ────────────────── */
+        .pt-brand-block {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pt-brand-block::before {
+            content: 'PUTOLINE';
+            position: absolute;
+            right: -30px;
+            bottom: -20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 9rem;
+            font-weight: 900;
+            color: rgba(255, 212, 0, 0.04);
+            letter-spacing: -8px;
+            pointer-events: none;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .pt-brand-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 4rem;
+            align-items: start;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pt-brand-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--pt-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .pt-brand-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .pt-brand-title span { color: var(--pt-yellow); }
+
+        .pt-brand-text {
+            font-size: 0.97rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        /* Key metrics row */
+        .pt-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pt-metric {
+            text-align: center;
+            padding: 1.25rem 1rem;
+            background: rgba(255, 212, 0, 0.04);
+            border: 1px solid rgba(255, 212, 0, 0.1);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+
+        .pt-metric:hover {
+            background: rgba(255, 212, 0, 0.08);
+            border-color: rgba(255, 212, 0, 0.2);
+        }
+
+        .pt-metric-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--pt-yellow);
+            display: block;
+            line-height: 1;
+        }
+
+        .pt-metric-label {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        /* ── What makes Putoline special ─────────────────── */
+        .pt-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .pt-feature-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-med);
+        }
+
+        .pt-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pt-yellow), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+        }
+
+        .pt-feature-card:hover {
+            border-color: rgba(255, 212, 0, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 212, 0, 0.08);
+        }
+
+        .pt-feature-card:hover::before { transform: scaleX(1); }
+
+        .pt-feature-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 212, 0, 0.1);
+            border: 1px solid rgba(255, 212, 0, 0.2);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pt-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .pt-feature-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .pt-feature-text {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* ── Product families — teaser ───────────────────── */
+        .pt-families-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .pt-family-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            transition: var(--transition-med);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pt-family-card:hover {
+            border-color: rgba(255, 212, 0, 0.2);
+            background: linear-gradient(135deg, rgba(255, 212, 0, 0.04), var(--bg-secondary));
+            transform: translateY(-4px);
+        }
+
+        .pt-family-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 212, 0, 0.1);
+            border: 1px solid rgba(255, 212, 0, 0.2);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pt-yellow);
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .pt-family-content {}
+
+        .pt-family-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .pt-family-desc {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .pt-family-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFA500;
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.2);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+        }
+
+        /* ── N-TECH technology strip ─────────────────────── */
+        .pt-ntech-strip {
+            background: linear-gradient(135deg, rgba(255, 212, 0, 0.08) 0%, rgba(255, 212, 0, 0.02) 100%);
+            border: 1px solid rgba(255, 212, 0, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pt-ntech-strip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--pt-yellow), transparent);
+        }
+
+        .pt-ntech-inner {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .pt-ntech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 212, 0, 0.15);
+            border: 1px solid rgba(255, 212, 0, 0.3);
+            border-radius: 6px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--pt-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .pt-ntech-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .pt-ntech-title span { color: var(--pt-yellow); }
+
+        .pt-ntech-text {
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            max-width: 560px;
+        }
+
+        .pt-ntech-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .pt-ntech-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .pt-ntech-list li i { color: var(--pt-yellow); font-size: 0.75rem; }
+
+        .pt-ntech-cta-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            min-width: 200px;
+        }
+
+        .pt-ntech-icon-big {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgba(255, 212, 0, 0.1);
+            border: 2px solid rgba(255, 212, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--pt-yellow);
+        }
+
+        /* ── Notify me CTA ───────────────────────────────── */
+        .pt-cta-banner {
+            background: linear-gradient(135deg, rgba(255, 212, 0, 0.08) 0%, rgba(255, 165, 0, 0.04) 50%, rgba(255, 30, 58, 0.03) 100%);
+            border: 1px solid rgba(255, 212, 0, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pt-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--pt-yellow), rgba(255, 30, 58, 0.5), transparent);
+        }
+
+        .pt-cta-banner h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .pt-cta-banner p {
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Responsive ──────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .pt-features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 992px) {
+            .pt-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .pt-hero-desc  { max-width: 100%; margin: 0 auto 2rem; }
+            .pt-hero-stats { justify-content: center; }
+            .pt-hero-visual { display: none; }
+            .pt-brand-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .pt-brand-block { padding: 2.5rem; }
+            .pt-ntech-inner { grid-template-columns: 1fr; }
+            .pt-ntech-cta-side { flex-direction: row; }
+        }
+
+        @media (max-width: 768px) {
+            .pt-features-grid { grid-template-columns: 1fr; }
+            .pt-families-grid { grid-template-columns: 1fr; }
+            .pt-metrics { grid-template-columns: repeat(3, 1fr); }
+            .pt-brand-block {
+                margin-left: calc(-1 * var(--container-padding, 1.25rem));
+                margin-right: calc(-1 * var(--container-padding, 1.25rem));
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+                padding: 2rem 1.25rem;
+            }
+            .pt-cta-banner { padding: 2.5rem 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .pt-metrics { grid-template-columns: 1fr 1fr; }
+            .pt-brand-block { padding: 1.75rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Moora Motors Logo">
+            </a>
+            <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="mobile-close-li" style="display:none;"><button class="mobile-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button></li>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">Motos <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                            <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link active">Équipements <i class="fas fa-chevron-down" style="font-size:0.75em;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="axor.html">Casques Axor</a></li>
+                            <li><a href="vega.html">Casques Vega</a></li>
+                            <li><a href="putoline.html">Huiles Putoline</a></li>
+                            <li><a href="eurogrip.html">Pneus Eurogrip</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="pt-hero">
+            <div class="container">
+                <div class="pt-hero-inner">
+                    <div data-aos="fade-right">
+                        <div class="pt-coming-chip">
+                            <i class="fas fa-clock"></i>
+                            Prochainement chez Moora Motors
+                        </div>
+                        <h1 class="pt-hero-title">
+                            <span class="brand-yellow">PUTOLINE</span>
+                            <span>OIL</span>
+                            <span class="brand-sub">L'huile des passionnés.</span>
+                        </h1>
+                        <p class="pt-hero-desc">
+                            Fabricant indépendant néerlandais d'huiles et lubrifiants haut de gamme depuis 1970, exclusivement dédiés aux deux-roues motorisés. Choisis par les professionnels du monde entier — bientôt disponibles chez Moora Motors en Tunisie.
+                        </p>
+                        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-bell"></i> Me notifier à la disponibilité
+                            </a>
+                            <a href="#about-putoline" class="btn btn-secondary">
+                                <i class="fas fa-info-circle"></i> En savoir plus
+                            </a>
+                        </div>
+                        <div class="pt-hero-stats">
+                            <div>
+                                <span class="pt-stat-number">50+</span>
+                                <div class="pt-stat-label">Ans d'expertise</div>
+                            </div>
+                            <div>
+                                <span class="pt-stat-number">🇳🇱</span>
+                                <div class="pt-stat-label">Fabriqué aux Pays-Bas</div>
+                            </div>
+                            <div>
+                                <span class="pt-stat-number">80+</span>
+                                <div class="pt-stat-label">Pays distribués</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-hero-visual" data-aos="fade-left" data-aos-delay="200">
+                        <div class="pt-hero-logo-wrap">
+                            <img class="pt-hero-logo-img"
+                                 src="img/oil/logo-putoline.jpeg"
+                                 alt="Putoline Oil — Lubrifiants Moto Premium">
+                            <div class="pt-soon-badge">
+                                <span class="dot"></span>
+                                Disponible très prochainement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DIVIDER ===== -->
+        <div class="pt-accent-divider"></div>
+
+        <!-- ===== ABOUT PUTOLINE ===== -->
+        <section class="section-padding" id="about-putoline">
+            <div class="container">
+                <div class="pt-brand-block" data-aos="fade-up">
+                    <div class="pt-brand-grid">
+                        <div>
+                            <div class="pt-brand-label"><i class="fas fa-circle-dot"></i> À propos de Putoline Oil</div>
+                            <h2 class="pt-brand-title">L'expertise<br><span>Néerlandaise</span><br>au service de votre moto</h2>
+                            <p class="pt-brand-text">
+                                Fondée en <strong style="color:var(--pt-yellow)">1970 aux Pays-Bas</strong>, Putoline Oil s'est imposée comme la référence mondiale des lubrifiants exclusivement dédiés aux deux-roues motorisés. Contrairement aux grands groupes pétroliers qui produisent pour toutes les applications, Putoline se concentre <strong style="color:var(--text-primary)">à 100% sur les motos, scooters et quads</strong>.
+                            </p>
+                            <p class="pt-brand-text">
+                                Cette spécialisation unique permet à Putoline de développer des formulations ultra-précises adaptées aux moteurs, transmissions et systèmes de freinage des deux-roues — avec une technologie brevetée <strong style="color:var(--pt-yellow)">N-TECH®</strong> qui protège vos composants même dans les conditions les plus extrêmes.
+                            </p>
+                            <p class="pt-brand-text">
+                                Distribué dans plus de <strong style="color:var(--text-primary)">80 pays</strong>, recommandé par les ateliers professionnels et les pilotes de compétition, Putoline sera bientôt disponible chez <strong style="color:var(--pt-yellow)">Moora Motors</strong> — votre partenaire moto de confiance en Tunisie.
+                            </p>
+
+                            <div class="pt-metrics">
+                                <div class="pt-metric">
+                                    <span class="pt-metric-num">1970</span>
+                                    <div class="pt-metric-label">Fondée</div>
+                                </div>
+                                <div class="pt-metric">
+                                    <span class="pt-metric-num">🇳🇱</span>
+                                    <div class="pt-metric-label">Pays-Bas</div>
+                                </div>
+                                <div class="pt-metric">
+                                    <span class="pt-metric-num">100%</span>
+                                    <div class="pt-metric-label">Dédié moto</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="pt-brand-label" style="margin-bottom:1.5rem;"><i class="fas fa-award"></i> Pourquoi choisir Putoline ?</div>
+
+                            <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+                                <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(255,212,0,0.04);border:1px solid rgba(255,212,0,0.1);border-radius:var(--radius-md);">
+                                    <div style="width:44px;height:44px;background:rgba(255,212,0,0.1);border:1px solid rgba(255,212,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--pt-yellow);font-size:1rem;flex-shrink:0;">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+                                    <div>
+                                        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:0.2rem;">Formulation 100% Moto</div>
+                                        <div style="font-size:0.83rem;color:var(--text-muted);line-height:1.5;">Développé exclusivement pour les deux-roues motorisés — aucun compromis avec d'autres applications</div>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(255,212,0,0.04);border:1px solid rgba(255,212,0,0.1);border-radius:var(--radius-md);">
+                                    <div style="width:44px;height:44px;background:rgba(255,212,0,0.1);border:1px solid rgba(255,212,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--pt-yellow);font-size:1rem;flex-shrink:0;">
+                                        <i class="fas fa-microchip"></i>
+                                    </div>
+                                    <div>
+                                        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:0.2rem;">Technologie N-TECH®</div>
+                                        <div style="font-size:0.83rem;color:var(--text-muted);line-height:1.5;">Additifs nanoparticulaires brevetés pour une protection moteur maximale et une longévité exceptionnelle</div>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(255,212,0,0.04);border:1px solid rgba(255,212,0,0.1);border-radius:var(--radius-md);">
+                                    <div style="width:44px;height:44px;background:rgba(255,212,0,0.1);border:1px solid rgba(255,212,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--pt-yellow);font-size:1rem;flex-shrink:0;">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div>
+                                        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:0.2rem;">Choisi par les Pros</div>
+                                        <div style="font-size:0.83rem;color:var(--text-muted);line-height:1.5;">Recommandé par les ateliers professionnels et engagé en compétition dans de nombreux championnats</div>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(255,212,0,0.04);border:1px solid rgba(255,212,0,0.1);border-radius:var(--radius-md);">
+                                    <div style="width:44px;height:44px;background:rgba(255,212,0,0.1);border:1px solid rgba(255,212,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--pt-yellow);font-size:1rem;flex-shrink:0;">
+                                        <i class="fas fa-earth-europe"></i>
+                                    </div>
+                                    <div>
+                                        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:0.2rem;">Distribution Mondiale</div>
+                                        <div style="font-size:0.83rem;color:var(--text-muted);line-height:1.5;">Présent dans plus de 80 pays avec un réseau de distribution structuré et fiable</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CE QUI ARRIVE ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title" data-label="Bientôt Disponible" data-aos="fade-up">Ce qui vous attend</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="80">
+                    Toute la gamme Putoline couvre chaque besoin de votre deux-roues — du moteur à la chaîne.
+                </p>
+
+                <div class="pt-families-grid" data-aos="fade-up" data-aos-delay="120">
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Huiles Moteur</div>
+                            <p class="pt-family-desc">Huiles synthétiques, semi-synthétiques et minérales 4T et 2T — pour chaque type de moteur, chaque usage, chaque viscosité.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-link"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Lubrifiants Chaîne</div>
+                            <p class="pt-family-desc">Sprays chaîne route, tout-terrain et spécial conditions humides — résistance à la centrifugation et protection longue durée.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-wind"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Entretien Filtre à Air</div>
+                            <p class="pt-family-desc">Huiles et dégraissants pour filtres à air mousse et papier — performances optimales à chaque nettoyage.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-circle-dot"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Huiles Fourche & Amortisseur</div>
+                            <p class="pt-family-desc">Fluides de suspension de précision pour fourches télescopiques et amortisseurs — confort et maniabilité garantis.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-car-burst"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Liquides de Frein</div>
+                            <p class="pt-family-desc">Liquides de frein DOT certifiés pour circuits hydrauliques moto — sécurité maximale et résistance aux hautes températures.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-family-card">
+                        <div class="pt-family-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                        <div class="pt-family-content">
+                            <div class="pt-family-title">Nettoyage & Protection</div>
+                            <p class="pt-family-desc">Produits de nettoyage moto, dégraissants, cires protectrices et traitements anti-rouille pour maintenir votre machine en parfait état.</p>
+                            <span class="pt-family-tag"><i class="fas fa-clock"></i> Bientôt disponible</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== N-TECH TECHNOLOGY ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="pt-ntech-strip" data-aos="fade-up">
+                    <div class="pt-ntech-inner">
+                        <div>
+                            <div class="pt-ntech-badge">
+                                <i class="fas fa-atom"></i> Technologie Brevetée
+                            </div>
+                            <h2 class="pt-ntech-title">La magie<br><span>N-TECH®</span></h2>
+                            <p class="pt-ntech-text">
+                                La technologie <strong style="color:var(--pt-yellow)">N-TECH®</strong> est le cœur des formulations Putoline. Ces additifs nanoparticulaires se déposent sur les surfaces métalliques pour créer une couche protectrice ultra-fine qui résiste à la chaleur, réduit la friction et prolonge significativement la durée de vie de votre moteur.
+                            </p>
+                            <ul class="pt-ntech-list">
+                                <li><i class="fas fa-check-circle"></i> Réduction de la friction jusqu'à 40% par rapport aux huiles conventionnelles</li>
+                                <li><i class="fas fa-check-circle"></i> Protection anti-usure active même à froid au démarrage</li>
+                                <li><i class="fas fa-check-circle"></i> Stabilité thermique extrême pour les moteurs sportifs haute performance</li>
+                                <li><i class="fas fa-check-circle"></i> Compatible avec tous les types de joints et matériaux internes</li>
+                            </ul>
+                        </div>
+                        <div class="pt-ntech-cta-side">
+                            <div class="pt-ntech-icon-big">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--pt-yellow);">N-TECH®</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:0.25rem;">Nano Protection</div>
+                            </div>
+                            <a href="https://www.putoline.com/fr/connaissance-et-soutien/n-tech/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.85rem;padding:0.6rem 1.25rem;white-space:nowrap;">
+                                <i class="fas fa-external-link-alt"></i> En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="pt-cta-banner" data-aos="fade-up">
+                    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pt-yellow);margin-bottom:1rem;">
+                        <i class="fas fa-bell"></i> &nbsp;Prochainement chez Moora Motors
+                    </div>
+                    <h2>Soyez le premier informé</h2>
+                    <p>Les huiles Putoline seront bientôt disponibles en Tunisie chez Moora Motors. Contactez-nous dès maintenant pour être notifié dès leur arrivée ou pour pré-réserver.</p>
+                    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Me notifier
+                        </a>
+                        <a href="https://wa.me/21628485424?text=Bonjour%20Moora%20Motors%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20les%20huiles%20Putoline%20-%20merci%20de%20me%20notifier%20%C3%A0%20leur%20disponibilit%C3%A9"
+                           class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.putoline.com/fr/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-globe"></i> Site officiel Putoline
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/21628485424" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Moora Motors" class="footer-logo">
+                    <p>Concessionnaire officiel de motos et scooters en Tunisie. Distributeur officiel <span style="color:var(--accent-primary)">Haojin</span>, <span style="color:var(--accent-primary)">Letbe</span>, <span style="color:var(--accent-primary)">Axor</span>, <span style="color:var(--accent-primary)">Vega</span> &amp; <span style="color:var(--accent-primary)">Eurogrip</span>.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573713938458" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/moora_motors_tn/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@letbe.haojin.moora" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/21628485424" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="letbe.html">Letbe Neon 125cc</a></li>
+                        <li><a href="haojin.html">Haojin Lyra 2 110cc</a></li>
+                        <li><a href="axor.html">Casques Axor</a></li>
+                        <li><a href="vega.html">Casques Vega</a></li>
+                        <li><a href="eurogrip.html">Pneus Eurogrip</a></li>
+                        <li><a href="putoline.html">Huiles Putoline</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Près de Mornag, Tunisie</li>
+                        <li><i class="fas fa-phone-alt"></i> +216 29 444 650</li>
+                        <li><i class="fab fa-whatsapp"></i> +216 28 485 424</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/ArsnfAQrcef8inCbA?g_st=ac" target="_blank" class="btn btn-secondary" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.25rem;">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur la carte
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Moora Motors</span>. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 60 });</script>
+</body>
+</html>
